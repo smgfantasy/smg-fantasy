@@ -14,7 +14,7 @@ const RatingChild = ({ statistic, value }) => {
 const Rating = () => {
     return (
         <div className='px-1'>
-            <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 20px, rgba(255, 255, 255, 0.5) 50px, white 80px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center;' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
+            <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 20px, rgba(255, 255, 255, 0.5) 50px, white 80px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
                 <div className='flex justify-between px-2 py-4'>
                     <div className='flex flex-col'>
                         <div className='text-sm text-purple'>Atanas Filipov</div>

@@ -1,14 +1,17 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 
-const NavbarLink = ({ children }) => {
+const NavbarLink = ({ children, href }) => {
     return (
         <>
-            <li className='flex flex-col text-lg p-2 py-4 text-white gap-2 items-center'>
-                <a className='mx-3'>{children}</a>
-                {/* <span className='bg-gray-400 h-px w-full'></span> */}
-            </li>
+            <a className='mx-3' href={href}>
+                <li className='flex flex-col text-lg p-2 py-4 text-white gap-2 items-center'>
+                    {children}
+                    {/* <span className='bg-gray-400 h-px w-full'></span> */}
+                </li>
+            </a>
         </>
     );
 }
@@ -30,7 +33,9 @@ const Navbar = () => {
         <>
             <nav className='relative w-screen bg-purple h-[80px] flex items-center px-4 gap-2 justify-between'>
                 <div>
-                    <img className='w-[90px]' src='/img/logo.png' />
+                    <a href="/">
+                        <img className='w-[90px]' src='/img/logo.png' />
+                    </a>
                 </div>
                 <div className='flex items-center gap-3'>
                     <div className="bg-white/20 h-[50px] w-px"></div>
@@ -41,10 +46,9 @@ const Navbar = () => {
                 <div className='navbar-links absolute left-0 border-t border-gray-400 max-h-0 top-[80px] w-screen bg-purple duration-300 overflow-hidden'>
                     <div className='w-2/3 mx-auto'>
                         <ul className='flex flex-col pb-5'>
-
                             <NavbarLink>Points</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
-                            <NavbarLink>Team</NavbarLink>
+                            <NavbarLink href="/team">Team</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
                             <NavbarLink>Standings</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
