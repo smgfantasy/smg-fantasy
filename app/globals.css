@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hamburger */
+
+.hamburger {
+	height: 32px;
+	width: 40px;
+	cursor: pointer;
+	transform: scale(0.8);
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+	background: #ffffff;
+	border-radius: 3px;
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 6px;
+	margin-top: 13px;
+
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.hamburger span::before {
+	margin-top: -12px;
+}
+
+.hamburger span::after {
+	margin-top: 12px;
+}
+.hamburger.active span {
+	background: transparent;
+}
+
+.hamburger.active span::before {
+	margin-top: 0;
+
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.hamburger.active span::after {
+	margin-top: 0;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
