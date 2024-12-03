@@ -30,7 +30,7 @@ const Navbar = () => {
         <>
             <nav className='relative w-screen bg-purple h-[80px] flex items-center px-4 gap-2 justify-between'>
                 <div>
-                    <img className='w-[90px]' src='https://media.discordapp.net/attachments/1313232515393261709/1313244823884665005/the_11_grade_league_smg_white_1.png?ex=674f6e0c&is=674e1c8c&hm=d3e176f5d2fa73b3ec0eb5da5df0a131d5e9269843b83046c8c741d063dea8fc&=&format=webp&quality=lossless&width=1100&height=1100' />
+                    <img className='w-[90px]' src='/img/logo.png' />
                 </div>
                 <div className='flex items-center gap-3'>
                     <div className="bg-white/20 h-[50px] w-px"></div>
