@@ -1,25 +1,51 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon, Pi } from 'lucide-react';
+
+const StatItem = ({ label, value, highlight }) => {
+    return (
+        <div className='flex flex-col justify-center w-1/3 gap-2'>
+            <div>{label}</div>
+            <div className={`font-bold ${highlight ? 'bg-green-500 rounded-sm' : ''}`}>{value}</div>
+        </div>
+    );
+}
+
+const TransferInfo = ({ freeTransfers, cost, budget }) => {
+    return (
+        <div className='flex justify-center text-xs font-light text-purple gap-4 mx-12'>
+            <StatItem label="Free transfers" value={freeTransfers} />
+            <StatItem label="Cost" value={`${cost} pts`} />
+            <StatItem label="Budget" value={budget} highlight={true} />
+        </div>
+    );
+}
 
 const Header = () => {
     return (
         <>
-            <div className='flex justify-between px-2 pt-3 pb-1 items-center'>
-                <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
-                    <ArrowLeftCircleIcon size={20} />
-                </div>
-                <div className='font-bold'>Gameweek 12</div>
-                <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
-                    <ArrowRightCircleIcon size={20} />
+            <div className='bg-[#ffffff99] mx-2 translate-y-3 rounded-lg'>
+                <div className='w-full pb-4 border-t border-gray-200 flex text-center justify-center flex-col gap-4'>
+                    <div>
+                        <span className='bg-purple px-4 py-1 rounded-b-xl'>
+                            <span style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}
+                                className='text-sm font-bold text-transparent'>
+                                Points/Rankings
+                            </span>
+                        </span>
+                    </div>
+                    <div className='text-xs text-purple'>
+                        Gameweek 15:
+                        <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
+                    </div>
+                    <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
+                    <TransferInfo freeTransfers={5} cost={0} budget={0.1} />
                 </div>
             </div>
-            <div className='h-px w-full' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
         </>
     );
 }
+
 const PlayerSlot = ({ active, img, name = 'Default', points = 'Nan' }) => {
 
     const handlePlayerClick = () => {
@@ -40,6 +66,7 @@ const PlayerSlot = ({ active, img, name = 'Default', points = 'Nan' }) => {
         </div >
     );
 }
+
 const Pitch = () => {
     return (
         <div className='mt-10 w-full min-h-[600px] flex flex-col items-center gap-5' style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
@@ -62,6 +89,7 @@ const Pitch = () => {
         </div>
     );
 }
+
 const Subs = () => {
     return (
         <>
@@ -81,26 +109,18 @@ const Subs = () => {
         </>
     );
 }
-const Points = () => {
+
+const Team = () => {
     return (
         <div className='pt-8 px-1'>
-            <h1 className='font-bold text-xl text-purple'>Points - Pergisha FC</h1>
-            <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 30px, rgba(255, 255, 255, 0.5) 75px, white 120px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
+            <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
+            <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0.5) 150px, white 240px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
                 <Header></Header>
-                <div className='flex justify-center mt-3'>
-                    <div className='flex flex-col items-center justify-around bg-purple px-10 py-4 rounded-lg'>
-                        <div className='text-white text-xs'>Final Points</div>
-                        <div className='text-transparent text-5xl font-bold' style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}>
-                            45
-                        </div>
-                    </div>
-                    {/* <div className='-mr-10'>Dropdown</div> */}
-                </div>
                 <Pitch />
             </div>
             <Subs />
-        </div >
+        </div>
     )
 }
 
-export default Points;
+export default Team;
