@@ -24,7 +24,7 @@ const TransferInfo = ({ freeTransfers, cost, budget }) => {
 const Header = () => {
     return (
         <>
-            <div className='bg-[#ffffff99] mx-2 my-3 rounded-lg'>
+            <div className='bg-[#ffffff99] mx-2 translate-y-3 rounded-lg'>
                 <div className='w-full pb-4 border-t border-gray-200 flex text-center justify-center flex-col gap-4'>
                     <div>
                         <span className='bg-purple px-4 py-1 rounded-b-xl'>

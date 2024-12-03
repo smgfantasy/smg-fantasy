@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='relative w-screen bg-purple h-[80px] flex items-center px-4 gap-2 justify-between'>
+            <nav className='z-10 relative w-screen bg-purple h-[80px] flex items-center px-4 gap-2 justify-between'>
                 <div>
                     <a href="/">
                         <img className='w-[90px]' src='/img/logo.png' />
