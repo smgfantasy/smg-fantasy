@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon, Pi } from 'lucide-react';
@@ -7,11 +9,11 @@ const Header = () => {
         <>
             <div className='flex justify-between px-2 pt-3 pb-1 items-center'>
                 <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
-                    <ArrowLeftCircleIcon size={28} />
+                    <ArrowLeftCircleIcon size={20} />
                 </div>
                 <div className='font-bold'>Gameweek 12</div>
                 <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
-                    <ArrowRightCircleIcon size={28} />
+                    <ArrowRightCircleIcon size={20} />
                 </div>
             </div>
             <div className='h-px w-full' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
@@ -19,8 +21,17 @@ const Header = () => {
     );
 }
 const PlayerSlot = ({ active, img, name = 'Default', points = 'Nan' }) => {
+
+    const handlePlayerClick = () => {
+        const playerMenu = document.querySelector('#player-menu');
+        if (playerMenu.style.maxHeight === '' || playerMenu.style.maxHeight === '0px') {
+            playerMenu.style.maxHeight = 600 + 'px';
+        } else {
+            playerMenu.style.maxHeight = '0px';
+        }
+    }
     return (
-        <div className={`${active ? '' : 'hidden'} w-[60px] flex flex-col`}>
+        <div onClick={handlePlayerClick} className={`${active ? '' : 'hidden'} w-[60px] flex flex-col relative`}>
             <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
                 <img src={img} />
             </div>
@@ -50,7 +61,6 @@ const Pitch = () => {
             </div>
         </div>
     );
-
 }
 const Subs = () => {
     return (
@@ -80,10 +90,11 @@ const Points = () => {
                 <div className='flex justify-center mt-3'>
                     <div className='flex flex-col items-center justify-around bg-purple px-10 py-4 rounded-lg'>
                         <div className='text-white text-xs'>Final Points</div>
-                        <div className='text-transparent text-6xl font-bold' style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}>
+                        <div className='text-transparent text-5xl font-bold' style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}>
                             45
                         </div>
                     </div>
+                    {/* <div className='-mr-10'>Dropdown</div> */}
                 </div>
                 <Pitch />
             </div>
