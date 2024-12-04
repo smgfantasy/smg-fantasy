@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { X } from 'lucide-react';
-
-const PlayerMatch = () => {
-    return (
-        <div className='p-7 bg-slate-400'>1</div>
-    );
-};
+import PlayerMatch from './PlayerMatch';
 
 const handleMenuClose = () => {
     const playerMenu = document.querySelector('#player-menu');
@@ -46,11 +41,11 @@ const TeamMemberMenu = () => {
                 <div></div>
             </div>
             <div className='mt-5 w-full flex gap-2 justify-around'>
-                <PlayerMatch />
-                <PlayerMatch />
-                <PlayerMatch />
-                <PlayerMatch />
-                <PlayerMatch />
+                <PlayerMatch gameWeek={1} points={8} opponent={'11E'} />
+                <PlayerMatch gameWeek={2} points={4} opponent={'11B'} />
+                <PlayerMatch gameWeek={3} points={6} opponent={'11V'} />
+                <PlayerMatch gameWeek={4} points={1} opponent={'10'} />
+                <PlayerMatch gameWeek={5} points={9} opponent={'11G'} />
             </div>
             <div className="mt-5 w-full flex flex-col justify-center gap-4">
                 <a href="#" className="w-full" onClick={handleMenuClose}>
