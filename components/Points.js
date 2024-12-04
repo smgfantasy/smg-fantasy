@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon, Pi } from 'lucide-react';
-
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
+const formation = '3-1-1';
 const Header = () => {
     return (
         <>
@@ -20,8 +20,12 @@ const Header = () => {
         </>
     );
 }
-const PlayerSlot = ({ active, img, name = 'Default', points = 'Nan' }) => {
-
+const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
+    let active = false;
+    if (formation === '2-1-2' && (position === 1 || position === 3 || position === 5 || position === 7 || position === 9)) active = true;
+    if (formation === '2-2-1' && (position === 1 || position === 3 | position === 4 || position === 5 || position === 8)) active = true;
+    if (formation === '3-1-1' && (position === 1 || position === 2 || position === 3 || position === 5 || position === 8)) active = true;
+    if (position === -1 || position === 0) active = true;
     const handlePlayerClick = () => {
         const playerMenu = document.querySelector('#player-menu');
         if (playerMenu.style.maxHeight === '' || playerMenu.style.maxHeight === '0px') {
@@ -42,30 +46,23 @@ const PlayerSlot = ({ active, img, name = 'Default', points = 'Nan' }) => {
 }
 const Pitch = () => {
     return (
-        <div className='mt-10 w-full min-h-[600px] flex flex-col items-center gap-5' style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
-            <PlayerSlot active={true} />
-            <div className='flex justify-around w-full'>
-                <PlayerSlot active={true} name='Raya' points={6} img={'https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp'} />
-                <PlayerSlot />
-                <PlayerSlot active={true} />
-            </div>
-            <div className='flex justify-around w-full'>
-                <PlayerSlot />
-                <PlayerSlot active={true} />
-                <PlayerSlot />
-            </div>
-            <div className='flex justify-around w-full'>
-                <PlayerSlot active={true} />
-                <PlayerSlot />
-                <PlayerSlot active={true} />
-            </div>
+        <div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
+            <PlayerSlot position={0} active={true} name="Raya" points={6} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
+            {[...Array(3)].map((_, rowIndex) => (
+                <div key={rowIndex} className="flex justify-around w-full">
+                    {[...Array(3)].map((_, colIndex) => {
+                        const position = rowIndex * 3 + colIndex + 1;
+                        return <PlayerSlot key={position} position={position} name="Raya" points={6} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
+                    })}
+                </div>
+            ))}
         </div>
+
     );
 }
 const Subs = () => {
     return (
         <>
-
             <div className='w-full bg-[#6acd98] py-2 rounded-b-md'>
                 <div className='flex justify-around w-full'>
                     <div className='font-bold text-xs'>1. DEF</div>
@@ -73,9 +70,9 @@ const Subs = () => {
                     <div className='font-bold text-xs'>3. MID</div>
                 </div>
                 <div className='flex justify-around'>
-                    <PlayerSlot active={true} />
-                    <PlayerSlot active={true} />
-                    <PlayerSlot active={true} />
+                    <PlayerSlot position={-1} />
+                    <PlayerSlot position={-1} />
+                    <PlayerSlot position={-1} />
                 </div>
             </div>
         </>

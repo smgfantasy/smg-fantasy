@@ -46,7 +46,7 @@ const Navbar = () => {
                 <div className='navbar-links absolute left-0 border-t border-gray-400 max-h-0 top-[80px] w-screen bg-purple duration-300 overflow-hidden'>
                     <div className='w-2/3 mx-auto'>
                         <ul className='flex flex-col pb-5'>
-                            <NavbarLink>Points</NavbarLink>
+                            <NavbarLink href='/'>Points</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
                             <NavbarLink href="/team">Team</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
