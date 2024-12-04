@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { VariantProvider } from "@/context/VariantContext";
 
 export const metadata = {
     title: "Smg Fantasy",
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Navbar />
-                {children}
+                <VariantProvider>
+                    <Navbar />
+                    {children}
+                </VariantProvider>
             </body>
         </html>
     );

@@ -3,8 +3,11 @@
 import React, { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import PlayerMatch from './PlayerMatch';
+import { useVariant } from '@/context/VariantContext';
 
-const PlayerInfoMenu = () => {
+const PlayerInfoMenu = ({ currVariant }) => {
+    const { variant, setVariant } = useVariant();
+
     const menuRef = useRef(null);
 
     const handleMenuClose = () => {
@@ -15,6 +18,9 @@ const PlayerInfoMenu = () => {
     };
 
     useEffect(() => {
+        console.log(currVariant);
+        setVariant(currVariant);
+
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 handleMenuClose();
@@ -38,7 +44,7 @@ const PlayerInfoMenu = () => {
                 backgroundPosition: '0px 0px, right -25px top -185px, 0px 0px',
                 backgroundSize: 'auto, 273px 387px, auto',
             }}
-            className='fixed bottom-0 left-0 w-screen h-[500px] px-6 max-h-0 duration-300'
+            className={`fixed bottom-0 left-0 w-screen ${variant === "points" ? "h-[500px]" : "h-[600px]"} px-6 max-h-0 duration-300`}
         >
             <div className='flex gap-4 py-5'>
                 <div>
@@ -75,9 +81,21 @@ const PlayerInfoMenu = () => {
                 <PlayerMatch gameWeek={4} points={1} opponent={'10'} />
                 <PlayerMatch gameWeek={5} points={9} opponent={'11G'} />
             </div>
-            <div className='mt-5 w-full flex flex-col justify-center gap-4'>
-                <div className='w-full bg-blue-500 text-center py-2 rounded-lg'>View Player Information</div>
+            <div className="mt-5 w-full flex flex-col justify-center gap-4">
+                {variant === "points" ? (
+
+                    <div className="w-full bg-blue-500 text-center py-2 rounded-lg">
+                        View Player Information
+                    </div>
+                ) : (
+                    <>
+                        <div className="w-full bg-[#963CFF] text-white text-center py-2 rounded-md">Switch</div>
+                        <div className="w-full text-center py-2 rounded-md" style={{ backgroundImage: 'linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255))', }}>Make captain</div>
+                        <div className="w-full bg-[#efefef] text-purple text-center py-2 rounded-md">Player Information</div>
+                    </>
+                )}
             </div>
+
             <div onClick={handleMenuClose} className='absolute top-[10px] right-[10px]'>
                 <X size={32} />
             </div>
