@@ -3,26 +3,30 @@
 import React, { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import PlayerMatch from './PlayerMatch';
-import { useVariant } from '@/context/VariantContext';
+import { useAppContext } from '@/context/AppContext';
 
 const PlayerInfoMenu = ({ currVariant }) => {
-    const { variant, setVariant } = useVariant();
+    const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode } = useAppContext();
 
     const menuRef = useRef(null);
 
-    const handleMenuClose = () => {
+    const handleMenuClose = (fromX) => {
         const playerMenu = document.querySelector('#player-menu');
         if (playerMenu) {
             playerMenu.style.maxHeight = '0px';
         }
-    };
-
+        if (fromX) {
+            setSelectedSlot(null);
+            console.log("cleared!");
+        };
+    }
     useEffect(() => {
-        console.log(currVariant);
         setVariant(currVariant);
 
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (menuRef.current && !menuRef.current.contains(event.target) && menuRef.current.style.maxHeight !== '0px') {
+                setSelectedSlot(null);
+                console.log("cleared");
                 handleMenuClose();
             }
         };
@@ -33,6 +37,12 @@ const PlayerInfoMenu = ({ currVariant }) => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    const handleSwitchClick = () => {
+        setSwitchMode(true);
+        console.log(selectedSlot);
+        handleMenuClose();
+    }
 
     return (
         <div
@@ -89,14 +99,14 @@ const PlayerInfoMenu = ({ currVariant }) => {
                     </div>
                 ) : (
                     <>
-                        <div className="w-full bg-[#963CFF] text-white text-center py-2 rounded-md">Switch</div>
+                        <div className="w-full bg-[#963CFF] text-white text-center py-2 rounded-md" onClick={handleSwitchClick}>Switch</div>
                         <div className="w-full text-center py-2 rounded-md" style={{ backgroundImage: 'linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255))', }}>Make captain</div>
                         <div className="w-full bg-[#efefef] text-purple text-center py-2 rounded-md">Player Information</div>
                     </>
                 )}
             </div>
 
-            <div onClick={handleMenuClose} className='absolute top-[10px] right-[10px]'>
+            <div onClick={() => handleMenuClose(true)} className='absolute top-[10px] right-[10px]'>
                 <X size={32} />
             </div>
         </div>
