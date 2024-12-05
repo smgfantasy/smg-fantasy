@@ -49,7 +49,7 @@ const Navbar = () => {
                             <span className='bg-gray-400 h-px w-full'></span>
                             <NavbarLink href="/team">Team</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
-                            <NavbarLink>Standings</NavbarLink>
+                            <NavbarLink href="/standings">Standings</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
                             <NavbarLink href='/matches'>Matches</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
