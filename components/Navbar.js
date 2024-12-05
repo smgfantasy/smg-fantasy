@@ -8,7 +8,6 @@ const NavbarLink = ({ children, href }) => {
             <a className='mx-3' href={href}>
                 <li className='flex flex-col text-lg p-2 py-4 text-white gap-2 items-center'>
                     {children}
-                    {/* <span className='bg-gray-400 h-px w-full'></span> */}
                 </li>
             </a>
         </>

@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowDown } from 'lucide-react';
 import { ChevronDown } from 'lucide-react';
+
 const Header = () => {
     return (
         <>
@@ -35,20 +38,37 @@ const MatchTime = ({ time }) => {
 
 }
 const MatchRow = ({ teamA, teamB, resultA, resultB, completed, time }) => {
-    return (
-        <div style={{ borderBottom: '1px solid rgba(55, 0, 60, 0.08)' }} className='flex w-full py-3  border-b border-gray-500 px-2'>
-            {completed &&
-                (<span>
-                    <ChevronDown />
-                </span>)
-            }
-            <div className='flex justify-center w-full items-center gap-5'>
-                <div className='text-lg font-bold'>{teamA}</div>
-                {completed ? (<MatchResult resultA={resultA} resultB={resultB} />) : <MatchTime time={time} />}
 
-                <div className='text-lg font-bold'>{teamB}</div>
+    const [opened, setOpened] = useState(false);
+
+    const hadnleMatchRowClick = () => {
+        console.log('opened...');
+        setOpened((prev) => !prev);
+    }
+
+
+    return (
+        <div onClick={hadnleMatchRowClick} style={{ borderBottom: '1px solid rgba(55, 0, 60, 0.08)' }} className='flex-col border-b border-gray-500'>
+            <div className='flex w-full py-3  px-2'>
+                {completed &&
+                    (<span>
+                        <ChevronDown />
+                    </span>)
+                }
+                <div className='flex justify-center w-full items-center gap-5'>
+                    <div className='text-lg font-bold'>{teamA}</div>
+                    {completed ? (<MatchResult resultA={resultA} resultB={resultB} />) : <MatchTime time={time} />}
+
+                    <div className='text-lg font-bold'>{teamB}</div>
+                </div>
             </div>
-        </div>
+            <div className={`${opened ? 'max-h-[200px]' : 'max-h-0'} overflow-hidden flex justify-center`}>
+                <div className='flex gap-1'>
+                    <div>Match Details</div>
+                    <div>Player Stats</div>
+                </div>
+            </div>
+        </div >
     );
 
 }
