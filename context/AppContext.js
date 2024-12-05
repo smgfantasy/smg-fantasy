@@ -14,14 +14,14 @@ export function ContextProvider({ children }) {
         { id: 2, name: '', points: '', team: '' },
         { id: 3, name: 'Krischo', points: 18, team: 'Team C', position: 'def' },
         { id: 4, name: '', points: null, team: '' },
-        { id: 5, name: 'Vuljaka', points: 8, team: 'Team A', position: 'mid' },
+        { id: 5, name: 'Tony', points: 8, team: 'Team A', position: 'mid' },
         { id: 6, name: '', points: null, team: '' },
         { id: 7, name: 'Kunchev', points: 20, team: 'Team B', position: 'fwd' },
         { id: 8, name: '', points: null, team: '' },
         { id: 9, name: 'Niki', points: 9, team: 'Team A', position: 'fwd' },
-        { id: 10, name: 'Vancho', points: 13, team: 'Team B', position: 'def' },
+        { id: 10, name: 'Nasko', points: 13, team: 'Team B', position: 'def' },
         { id: 11, name: 'Momchi', points: 17, team: 'Team A', position: 'mid' },
-        { id: 12, name: 'Popeto', points: 11, team: 'Team C', position: 'fwd' },
+        { id: 12, name: 'Icaka', points: 11, team: 'Team C', position: 'fwd' },
     ]);
     const [selectedSlotPos, setSelectedSlotPos] = useState(null);
     const [formation, setFormation] = useState('2-1-2');
