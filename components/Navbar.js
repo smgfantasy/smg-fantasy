@@ -51,7 +51,7 @@ const Navbar = () => {
                             <span className='bg-gray-400 h-px w-full'></span>
                             <NavbarLink>Standings</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
-                            <NavbarLink>Matches</NavbarLink>
+                            <NavbarLink href='/matches'>Matches</NavbarLink>
                             <span className='bg-gray-400 h-px w-full'></span>
                         </ul>
                     </div>
