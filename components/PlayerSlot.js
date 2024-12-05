@@ -50,36 +50,123 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     const handlePlayerClick = () => {
         if (switchMode) {
             console.log(selectedSlot, position);
-            const newFormation = checkPossibleFormation();
-            if (newFormation) {
-                swapPlayers(selectedSlot, position);
-                setFormation(newFormation);
-                const array = [...players];
-                if (newFormation === '2-2-1') {
-                    let flag = false;
-                    for (let i = 1; i <= 9; i++) {
-                        if (!flag && players[i].position === 'def') {
-                            array[1] = players[i];
-                            flag = true;
-                        } else {
-                            array[3] = players[i];
+            swapPlayers(selectedSlot, position, (newPlayers) => {
+                console.log("DBASDHBAIDHBASDUIHASUI", newPlayers);
+                const newFormation = checkPossibleFormation();
+                if (newFormation) {
+                    const updatedPlayers = players.slice(0, 10).map(player => ({
+                        id: player.id, // Keep the id same
+                        name: null,
+                        points: null,
+                        team: null,
+                        position: null,
+                    }));
+                    updatedPlayers[0] = newPlayers[0];
+                    updatedPlayers[10] = newPlayers[10];
+                    updatedPlayers[11] = newPlayers[11];
+                    updatedPlayers[12] = newPlayers[12];
+
+                    if (newFormation === "2-2-1") {
+                        let flag = false;
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "def") {
+                                if (!flag) {
+                                    updatedPlayers[1] = newPlayers[i];
+                                    flag = true;
+                                } else {
+                                    updatedPlayers[3] = newPlayers[i];
+                                    break;
+                                }
+                            }
+                        }
+                        flag = false;
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "mid") {
+                                if (!flag) {
+                                    updatedPlayers[4] = newPlayers[i];
+                                    flag = true;
+                                } else {
+                                    updatedPlayers[6] = newPlayers[i];
+                                    break;
+                                }
+                            }
+                        }
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "fwd") {
+                                updatedPlayers[8] = newPlayers[i];
+                                break;
+                            }
                         }
                     }
-                    flag = false;
-                    for (let i = 1; i <= 9; i++) {
-                        if (!flag && players[i].position === 'mid') {
-                            array[4] = players[i];
-                            flag = true;
-                        } else {
-                            array[6] = players[i];
+
+                    if (newFormation === "2-1-2") {
+                        let flag = false;
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "def") {
+                                if (!flag) {
+                                    updatedPlayers[1] = newPlayers[i];
+                                    flag = true;
+                                } else {
+                                    updatedPlayers[3] = newPlayers[i];
+                                    break;
+                                }
+                            }
+                        }
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "mid") {
+                                updatedPlayers[5] = newPlayers[i];
+                                break;
+                            }
+                        }
+                        flag = false;
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "fwd") {
+                                if (!flag) {
+                                    updatedPlayers[7] = newPlayers[i];
+                                    flag = true;
+                                } else {
+                                    updatedPlayers[9] = newPlayers[i];
+                                    break;
+                                }
+                            }
                         }
                     }
-                    for (let i = 1; i <= 9; i++) {
-                        if (players[i].position === 'fwd') array[8] = players[i];
+
+                    if (newFormation === "3-1-1") {
+                        let flag = 0;
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "def") {
+                                if (flag === 0) {
+                                    updatedPlayers[1] = newPlayers[i];
+                                    flag++;
+                                } else if (flag === 1) {
+                                    updatedPlayers[2] = newPlayers[i];
+                                    flag++;
+                                } else {
+                                    updatedPlayers[3] = newPlayers[i];
+                                    break;
+                                }
+                            }
+                        }
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "mid") {
+                                updatedPlayers[5] = newPlayers[i];
+                                break;
+                            }
+                        }
+                        for (let i = 1; i <= 9; i++) {
+                            if (newPlayers[i].position === "fwd") {
+                                updatedPlayers[8] = newPlayers[i];
+                                break;
+                            }
+                        }
                     }
-                    setPlayers(array);
+
+                    setPlayers(updatedPlayers);
+
+                    setFormation(newFormation);
                 }
-            }
+            });
         } else {
             setSelectedSlot(position);
             setSelectedSlotPos(players[position].position);
@@ -99,11 +186,11 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
         } else {
             playerMenu.style.maxHeight = '0px';
         }
-    };
+    }
 
     let active = false;
     if (formation === '2-1-2' && (position === 1 || position === 3 || position === 5 || position === 7 || position === 9)) active = true;
-    if (formation === '2-2-1' && (position === 1 || position === 3 || position === 4 || position === 5 || position === 8)) active = true;
+    if (formation === '2-2-1' && (position === 1 || position === 3 || position === 4 || position === 6 || position === 8)) active = true;
     if (formation === '3-1-1' && (position === 1 || position === 2 || position === 3 || position === 5 || position === 8)) active = true;
     if (position > 9 || position === 0) active = true;
 
