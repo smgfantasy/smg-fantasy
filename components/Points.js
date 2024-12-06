@@ -48,25 +48,35 @@ const Points = ({ sessionCookie, userData }) => {
 
     useEffect(() => {
         if (players.length > 0) return;
-        // Fetch team data only if players are not yet set
+
         const fetchTeamData = async () => {
             try {
-                const data = await getUserTeam(sessionCookie);
-                console.log(data);
-                if (data) {
-                    setPlayers(data.team);
+                const localStorageData = localStorage.getItem("players");
+
+                if (localStorageData) {
+                    // Parse and use data from localStorage
+                    const parsedData = JSON.parse(localStorageData);
+                    setPlayers(parsedData);
                 } else {
-                    console.error("Failed to fetch team data");
+                    // Fetch data from the server if not in localStorage
+                    const data = await getUserTeam(sessionCookie);
+                    console.log(data);
+                    if (data) {
+                        setPlayers(data.team);
+                        // Save the fetched data to localStorage
+                        localStorage.setItem("players", JSON.stringify(data.team));
+                    } else {
+                        console.error("Failed to fetch team data");
+                    }
                 }
             } catch (err) {
                 console.error(err.message);
             }
         };
 
-        if (players.length === 0) {
-            fetchTeamData();
-        }
+        fetchTeamData();
     }, [players.length, sessionCookie, setPlayers]);
+
 
     return (
         <div className='pt-8 px-1'>
