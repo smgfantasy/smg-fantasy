@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useAppContext } from '@/context/AppContext';
+import { UserPlus } from 'lucide-react';
+import PlayerPickerMenu from './PlayerPickerMenu';
 
 const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
-    const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers } = useAppContext();
+    const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos } = useAppContext();
 
     const calculateNewFormation = () => {
         const index1 = position, index2 = selectedSlot;
@@ -35,6 +37,12 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     };
 
     const handlePlayerClick = () => {
+        if (players[position].name === "") {
+            setIsPlayerPickerMenuOpen(true);
+            setPlayerPickerPos(position);
+            return;
+        }
+
         if (switchMode) {
             console.log(selectedSlot, position);
             if (!checkSwitch()) return;
@@ -173,6 +181,7 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
         } else {
             playerMenu.style.maxHeight = '0px';
         }
+
     }
 
     let active = false;
@@ -181,19 +190,42 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     if (formation === '3-1-1' && (position === 1 || position === 2 || position === 3 || position === 5 || position === 8)) active = true;
     if (position > 9 || position === 0) active = true;
 
-    return (
+    function getPlayerPosition() {
+        if (position === 0) return "GK"
+        if (position >= 1 && position <= 3) return 'DEF';
+        if (position >= 4 && position <= 6) return 'MID';
+        if (position >= 7 && position <= 9) return 'FWD';
+        if (position === 10) return 'DEF';
+        if (position === 11 || position === 12) return 'MID';
+        return 'POS'; // Default if pos is undefined or out of range
+    }
 
+    return (
         <div
             onClick={handlePlayerClick}
             className={`${active ? '' : 'hidden'} ${checkSwitch() ? '' : 'opacity-50'} w-[60px] flex flex-col relative rounded-md duration-300 ${selectedSlot === position ? 'scale-110 ' : ''} ${(switchMode && selectedSlot === position) ? 'outline outline-2 outline-red' : ''}`}
         >
-            <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
-                <img src={img} />
-            </div>
-            <div className='w-full bg-white text-center text-xs'>{name}</div>
-            <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{points}</div>
+            {name === '' ? (
+                <div className="w-[60px] h-[82px] bg-[#0e9d5e] rounded-md flex flex-col items-center justify-center text-white">
+                    <div className="w-6 h-6">
+                        <UserPlus />
+                    </div>
+                    <div className="mt-1 text-sm font-medium">
+                        {getPlayerPosition(players[position]?.position)}
+                    </div>
+                </div>
+            ) : (
+                <>
+                    <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
+                        <img src={img} />
+                    </div>
+                    <div className='w-full bg-white text-center text-xs'>{name}</div>
+                    <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{points}</div>
+                </>
+            )}
         </div>
     );
 };
 
 export default PlayerSlot;
+
