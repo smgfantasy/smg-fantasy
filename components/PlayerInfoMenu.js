@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import PlayerMatch from './PlayerMatch';
 import { useAppContext } from '@/context/AppContext';
+import PlayerStats from './PlayerStats';
 
 const PlayerInfoMenu = ({ currVariant }) => {
     const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode } = useAppContext();
@@ -81,9 +82,7 @@ const PlayerInfoMenu = ({ currVariant }) => {
                     <div className='font-bold text-xl'>10A</div>
                 </div>
             </div>
-            <div className='w-full h-[100px] bg-orange-500 rounded-lg'>
-                <div></div>
-            </div>
+            <PlayerStats />
             <div className='mt-5 w-full flex gap-2 justify-around'>
                 <PlayerMatch gameWeek={1} points={8} opponent={'11E'} />
                 <PlayerMatch gameWeek={2} points={4} opponent={'11B'} />
