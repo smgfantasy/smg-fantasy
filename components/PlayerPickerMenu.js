@@ -52,7 +52,9 @@ export default function PlayerPickerMenu() {
     };
     useEffect(() => {
         const filteredPlayers = playersData.filter(player =>
-            ((playerPickerPos < 10 && player.position === pos) || player.position === benchPos[playerPickerPos - 10]) &&
+            ((playerPickerPos < 10 && player.position === pos) || (benchPos[playerPickerPos - 10] !== ""
+                ? player.position === benchPos[playerPickerPos - 10]
+                : player.position === pos)) &&
             player.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
             !checkIfPlayerIsUsed(player.name) &&
             currBudget >= player.price &&
