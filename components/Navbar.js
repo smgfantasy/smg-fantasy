@@ -2,17 +2,17 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation'; // Import usePathname
-
+import Link from 'next/link';
 const NavbarLink = ({ children, href, isActive, onClick }) => {
     return (
         <li className={`w-full ${isActive ? 'bg-white/10' : ''}`}>
-            <a
+            <Link
                 className='block py-4 px-6 text-white text-lg font-medium transition-colors duration-200 hover:bg-white/5'
                 href={href}
                 onClick={onClick}
             >
                 {children}
-            </a>
+            </Link>
         </li>
     );
 };

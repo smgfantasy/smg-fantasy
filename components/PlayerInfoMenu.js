@@ -18,7 +18,6 @@ const PlayerInfoMenu = ({ currVariant }) => {
         }
         if (fromX) {
             setSelectedSlot(null);
-            console.log("cleared!");
         };
     }
     useEffect(() => {
@@ -27,7 +26,6 @@ const PlayerInfoMenu = ({ currVariant }) => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target) && menuRef.current.style.maxHeight !== '0px') {
                 setSelectedSlot(null);
-                console.log("cleared");
                 handleMenuClose();
             }
         };
@@ -41,7 +39,6 @@ const PlayerInfoMenu = ({ currVariant }) => {
 
     const handleSwitchClick = () => {
         setSwitchMode(true);
-        console.log(selectedSlot);
         handleMenuClose();
     }
 

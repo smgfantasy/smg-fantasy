@@ -6,6 +6,8 @@ import { auth } from '@/lib/firebase-config';
 import { useSearchParams } from 'next/navigation';
 
 const LoginForm = () => {
+
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

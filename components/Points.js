@@ -1,10 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
 import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
+import getUserTeam from '@/utils/team/getUserTeam';
 
 const Header = () => {
     return (
@@ -26,21 +27,47 @@ const Pitch = () => {
     const { players, setPlayers } = useAppContext();
 
     return (
-        <div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
-            <PlayerSlot position={0} name={players[0].name} points={players[0].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
-            {[...Array(3)].map((_, rowIndex) => (
-                <div key={rowIndex} className="flex justify-around w-full">
-                    {[...Array(3)].map((_, colIndex) => {
-                        const position = rowIndex * 3 + colIndex + 1;
-                        return <PlayerSlot key={position} position={position} name={players[position].name} points={players[position].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
-                    })}
-                </div>
-            ))}
-        </div>
+        (players.length > 0 &&
+            <div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
+                <PlayerSlot position={0} name={players[0].name} points={players[0].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
+                {[...Array(3)].map((_, rowIndex) => (
+                    <div key={rowIndex} className="flex justify-around w-full">
+                        {[...Array(3)].map((_, colIndex) => {
+                            const position = rowIndex * 3 + colIndex + 1;
+                            return <PlayerSlot key={position} position={position} name={players[position].name} points={players[position].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
+                        })}
+                    </div>
+                ))}
+            </div>
+        )
 
     );
 }
-const Points = () => {
+const Points = ({ sessionCookie }) => {
+    const { players, setPlayers } = useAppContext();
+
+    useEffect(() => {
+        if (players.length > 0) return;
+        // Fetch team data only if players are not yet set
+        const fetchTeamData = async () => {
+            try {
+                const data = await getUserTeam(sessionCookie);
+                console.log(data);
+                if (data) {
+                    setPlayers(data.team);
+                } else {
+                    console.error("Failed to fetch team data");
+                }
+            } catch (err) {
+                console.error(err.message);
+            }
+        };
+
+        if (players.length === 0) {
+            fetchTeamData();
+        }
+    }, [players.length, sessionCookie, setPlayers]);
+
     return (
         <div className='pt-8 px-1'>
             <h1 className='font-bold text-xl text-purple'>Points - Pergisha FC</h1>
