@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className='navbar-links absolute left-0 top-[80px] w-full bg-purple transition-all duration-300 overflow-hidden' style={{ maxHeight: '0px' }}>
                 <div className="h-px bg-white/20 w-full" />
                 <ul className='flex flex-col'>
-                    <NavbarLink href='/' isActive={pathname === '/'} onClick={() => handleLinkClick()}>
+                    <NavbarLink href='/points' isActive={pathname === '/points'} onClick={() => handleLinkClick()}>
                         Points
                     </NavbarLink>
                     <NavbarLink href='/team' isActive={pathname === '/team'} onClick={() => handleLinkClick()}>

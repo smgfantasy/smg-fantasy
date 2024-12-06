@@ -2,20 +2,7 @@ import React, { useState } from 'react';
 import { useAppContext } from '@/context/AppContext';
 
 const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
-    const {
-        variant,
-        selectedSlot,
-        setSelectedSlot,
-        switchMode,
-        setSwitchMode,
-        players,
-        swapPlayers,
-        selectedSlotPos,
-        setSelectedSlotPos,
-        formation,
-        setFormation,
-        setPlayers
-    } = useAppContext();
+    const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers } = useAppContext();
 
     const calculateNewFormation = () => {
         const index1 = position, index2 = selectedSlot;
@@ -195,6 +182,7 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     if (position > 9 || position === 0) active = true;
 
     return (
+
         <div
             onClick={handlePlayerClick}
             className={`${active ? '' : 'hidden'} ${checkSwitch() ? '' : 'opacity-50'} w-[60px] flex flex-col relative rounded-md duration-300 ${selectedSlot === position ? 'scale-110 ' : ''} ${(switchMode && selectedSlot === position) ? 'outline outline-2 outline-red' : ''}`}
