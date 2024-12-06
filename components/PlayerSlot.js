@@ -5,7 +5,7 @@ import PlayerPickerMenu from './PlayerPickerMenu';
 import playersData from '../data/players.json';
 
 const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
-    const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos } = useAppContext();
+    const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, benchPos } = useAppContext();
 
     const findPlayerByName = (name) => {
         return playersData.find(player => player.name.toLowerCase() === name.toLowerCase());
@@ -221,8 +221,9 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
         if (position >= 1 && position <= 3) return 'def';
         if (position >= 4 && position <= 6) return 'mid';
         if (position >= 7 && position <= 9) return 'fwd';
-        if (position === 10) return 'def';
-        if (position === 11 || position === 12) return 'mid';
+        if (position === 10) return benchPos[0] === '' ? 'def' : benchPos[0];
+        if (position === 11) return benchPos[1] === '' ? 'mid' : benchPos[1];
+        if (position === 12) return benchPos[2] === '' ? 'mid' : benchPos[2];
         return 'pos'; // Default if pos is undefined or out of range
     }
 

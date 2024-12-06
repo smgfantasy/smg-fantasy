@@ -3,7 +3,7 @@ import { useAppContext } from '@/context/AppContext';
 import playersData from '../data/players.json';
 
 export default function PlayerPickerMenu() {
-    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers, currBudget } = useAppContext();
+    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers, currBudget, benchPos } = useAppContext();
     const sheetRef = useRef(null);
     const [playersList, setPlayersList] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -26,8 +26,9 @@ export default function PlayerPickerMenu() {
     if (playerPickerPos >= 1 && playerPickerPos <= 3) pos = 'def';
     if (playerPickerPos >= 4 && playerPickerPos <= 6) pos = 'mid';
     if (playerPickerPos >= 7 && playerPickerPos <= 9) pos = 'fwd';
-    if (playerPickerPos === 10) pos = 'def';
-    if (playerPickerPos === 11 || playerPickerPos === 12) pos = 'mid';
+    if (playerPickerPos === 10) pos = benchPos[0] === '' ? 'def' : benchPos[0];
+    if (playerPickerPos === 11) pos = benchPos[1] === '' ? 'mid' : benchPos[1];
+    if (playerPickerPos === 12) pos = benchPos[2] === '' ? 'mid' : benchPos[2];
     const checkIfPlayerIsUsed = (name) => {
         for (let i in players) {
             if (players[i].name === name) {
@@ -51,11 +52,11 @@ export default function PlayerPickerMenu() {
     };
     useEffect(() => {
         const filteredPlayers = playersData.filter(player =>
-            player.position === pos &&
+            ((playerPickerPos < 10 && player.position === pos) || player.position === benchPos[playerPickerPos - 10]) &&
             player.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
             !checkIfPlayerIsUsed(player.name) &&
             currBudget >= player.price &&
-            canAddPlayer(player) // Check team constraint
+            canAddPlayer(player)
         );
         setPlayersList(filteredPlayers);
     }, [pos, searchTerm]);

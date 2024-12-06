@@ -8,7 +8,7 @@ import PlayerStats from './PlayerStats';
 import { ArrowRight, Star, Trash2 } from 'lucide-react';
 
 const PlayerInfoMenu = ({ currVariant }) => {
-    const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, setPlayers } = useAppContext();
+    const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, setPlayers, benchPos, setBenchPos } = useAppContext();
 
     const menuRef = useRef(null);
 
@@ -45,9 +45,13 @@ const PlayerInfoMenu = ({ currVariant }) => {
 
     const handleRemovePlayer = () => {
         const tempPlayers = [...players];
+        const copy = [...benchPos];
+        copy[selectedSlot - 10] = tempPlayers[selectedSlot].position;
+        if (selectedSlot >= 10) setBenchPos(copy);
         tempPlayers[selectedSlot] = { name: "", points: null, team: "", position: "", price: "" };
         setPlayers(tempPlayers);
         handleMenuClose(true);
+        console.log(copy);
     }
 
     const handleMakeCaptain = () => {
