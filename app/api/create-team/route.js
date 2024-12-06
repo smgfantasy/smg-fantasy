@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { customInitApp } from "@/lib/firebase-admin-config";
-import admin from 'firebase-admin';
+import admin from "firebase-admin";
 
 // Initialize Firebase Admin
 customInitApp();
@@ -15,22 +15,40 @@ export async function POST(request) {
         }
 
         try {
-            const docRef = db.collection('users-teams').doc(documentUID);
+            const docRef = db.collection("users-teams").doc(documentUID);
 
-            // Fetch the current "team" array
+            // Fetch the current document
             const docSnapshot = await docRef.get();
-            const existingTeam = docSnapshot.exists ? docSnapshot.data().team || [] : [];
+            const existingData = docSnapshot.exists ? docSnapshot.data() : {};
 
-            // Add all players (including duplicates) to the existing team
+            // Retrieve existing team or initialize as an empty array
+            const existingTeam = existingData.team || [];
             const updatedTeam = [...existingTeam, ...players];
 
-            // Update the document with the new team array
-            await docRef.set({ team: updatedTeam }, { merge: true });
+            // Compute statistics for the updated team
+            const totalPoints = updatedTeam.reduce((sum, player) => sum + (player.points || 0), 0);
+            const averagePoints = updatedTeam.length ? totalPoints / updatedTeam.length : 0;
+            const highestPoints = updatedTeam.reduce(
+                (max, player) => Math.max(max, player.points || 0),
+                0
+            );
+            const finalPoints = totalPoints; // Assuming finalPoints = totalPoints
 
-            console.log('Players successfully added to the team!');
-            return NextResponse.json({ message: "Players added successfully" }, { status: 200 });
+            // Update the document with the new team array and statistics
+            await docRef.set(
+                {
+                    team: updatedTeam,
+                    averagePoints: Math.round(averagePoints), // Rounded for simplicity
+                    finalPoints,
+                    highestPoints,
+                },
+                { merge: true }
+            );
+
+            console.log("Players and stats successfully updated!");
+            return NextResponse.json({ message: "Players and stats updated successfully" }, { status: 200 });
         } catch (error) {
-            console.error('Error updating document: ', error);
+            console.error("Error updating document: ", error);
             return NextResponse.json({ error: "Error updating document" }, { status: 500 });
         }
     } catch (error) {

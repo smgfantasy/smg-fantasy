@@ -48,3 +48,33 @@ export async function GET(request) {
         );
     }
 }
+
+export async function PUT(request) {
+
+    try {
+        const cookiesObject = await cookies();
+        const session = cookiesObject.get("session")?.value || "";
+        // Extract 'uid' from the request URL query
+        const { uid, error } = await getUserUid(session);
+
+        if (error) {
+            return NextResponse.json({ error: error.message }, { status: 401 });
+        }
+
+        try {
+            const docRef = db.collection('users-teams').doc(uid);
+
+            // Replace the team array with the new one
+            await docRef.set({ team: players }, { merge: true });
+
+            console.log('Team successfully updated!');
+            return NextResponse.json({ message: "Team updated successfully" }, { status: 200 });
+        } catch (error) {
+            console.error('Error updating document: ', error);
+            return NextResponse.json({ error: "Error updating document" }, { status: 500 });
+        }
+    } catch (error) {
+        console.error("Error parsing request body:", error);
+        return NextResponse.json({ error: "Invalid input" }, { status: 400 });
+    }
+}
