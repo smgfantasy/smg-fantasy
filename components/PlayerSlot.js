@@ -50,8 +50,8 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     const handlePlayerClick = () => {
         if (switchMode) {
             console.log(selectedSlot, position);
+            if (!checkSwitch()) return;
             swapPlayers(selectedSlot, position, (newPlayers) => {
-                console.log("DBASDHBAIDHBASDUIHASUI", newPlayers);
                 const newFormation = checkPossibleFormation();
                 if (newFormation) {
                     const updatedPlayers = players.slice(0, 10).map(player => ({

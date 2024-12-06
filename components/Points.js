@@ -4,6 +4,7 @@ import React from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
 import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
+import { useAppContext } from '@/context/AppContext';
 
 const Header = () => {
     return (
@@ -22,14 +23,16 @@ const Header = () => {
     );
 }
 const Pitch = () => {
+    const { players, setPlayers } = useAppContext();
+
     return (
         <div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
-            <PlayerSlot position={0} active={true} name="Raya" points={6} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
+            <PlayerSlot position={0} name={players[0].name} points={players[0].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
             {[...Array(3)].map((_, rowIndex) => (
                 <div key={rowIndex} className="flex justify-around w-full">
                     {[...Array(3)].map((_, colIndex) => {
                         const position = rowIndex * 3 + colIndex + 1;
-                        return <PlayerSlot key={position} position={position} name="Raya" points={6} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
+                        return <PlayerSlot key={position} position={position} name={players[position].name} points={players[position].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
                     })}
                 </div>
             ))}
