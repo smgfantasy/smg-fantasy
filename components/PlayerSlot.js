@@ -49,7 +49,7 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
     const checkSwitch = () => {
         if (!switchMode) return true;
         if (players[position].position === players[selectedSlot].position) return true;
-        if (position >= 10 || selectedSlot >= 10) {
+        if ((position >= 10) !== (selectedSlot >= 10)) {
             return Boolean(checkPossibleFormation());
         }
         return players[position].position === selectedSlotPos;
@@ -87,7 +87,6 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
                     updatedPlayers[10] = newPlayers[10];
                     updatedPlayers[11] = newPlayers[11];
                     updatedPlayers[12] = newPlayers[12];
-                    console.log("Updated players: " + updatedPlayers);
                     if (newFormation === "2-2-1") {
                         let flag = false;
                         for (let i = 1; i <= 9; i++) {
