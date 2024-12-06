@@ -69,34 +69,24 @@ const Pitch = ({ sessionCookie }) => {
 
     useEffect(() => {
         if (players.length > 0) return;
-
+        // Fetch team data only if players are not yet set
         const fetchTeamData = async () => {
             try {
-                const localStorageData = localStorage.getItem("playersData");
-
-                if (localStorageData) {
-                    // Parse and use data from localStorage
-                    const parsedData = JSON.parse(localStorageData);
-                    setPlayers(parsedData);
+                const data = await getUserTeam(sessionCookie);
+                if (data) {
+                    setPlayers(data.team);
                 } else {
-                    // Fetch data from the server if not in localStorage
-                    const data = await getUserTeam(sessionCookie);
-                    if (data) {
-                        setPlayers(data.team);
-                        // Save the fetched data to localStorage
-                        localStorage.setItem("playersData", JSON.stringify(data.team));
-                    } else {
-                        console.error("Failed to fetch team data");
-                    }
+                    console.error("Failed to fetch team data");
                 }
             } catch (err) {
                 console.error(err.message);
             }
         };
 
-        fetchTeamData();
+        if (players.length === 0) {
+            fetchTeamData();
+        }
     }, [players.length, sessionCookie, setPlayers]);
-
 
     return (
         (players.length > 0
