@@ -64,6 +64,20 @@ const PlayerInfoMenu = ({ currVariant }) => {
         setPlayers(array);
         handleMenuClose(true);
     }
+    const returnMatch = (team, index) => {
+        const masA = ['11Б', '11В', '11Е', '10', '11Г'];
+        const masB = ['11А', '10', '11Г', '11Е', '11В'];
+        const masC = ['11E', '11A', '10', '11Г', '11Б'];
+        const masD = ['10', '11Е', '11Б', '11В', '11А'];
+        const masE = ['11В', '11Г', '11А', '11Б', '10'];
+        const masF = ['11Г', '11Б', '11В', '11А', '11Е'];
+        if (team === '11А') return masA[index];
+        if (team === '11Б') return masB[index];
+        if (team === '11В') return masC[index];
+        if (team === '11Г') return masD[index];
+        if (team === '11Е') return masE[index];
+        if (team === '10') return masF[index];
+    };
     return (
         <div
             id='player-menu'
@@ -116,13 +130,14 @@ const PlayerInfoMenu = ({ currVariant }) => {
                 </div>
             </div>
             <PlayerStats />
-            <div className='mt-5 w-full flex gap-2 justify-around'>
-                <PlayerMatch gameWeek={1} points={'-'} opponent={'11E'} />
-                <PlayerMatch gameWeek={2} points={'-'} opponent={'11B'} />
-                <PlayerMatch gameWeek={3} points={'-'} opponent={'11V'} />
-                <PlayerMatch gameWeek={4} points={'-'} opponent={'10'} />
-                <PlayerMatch gameWeek={5} points={'-'} opponent={'11G'} />
-            </div>
+            {players[selectedSlot] && <div className='mt-5 w-full flex gap-2 justify-around'>
+                <PlayerMatch gameWeek={1} points="-" opponent={returnMatch(players[selectedSlot].team, 0)} />
+                <PlayerMatch gameWeek={2} points="-" opponent={returnMatch(players[selectedSlot].team, 1)} />
+                <PlayerMatch gameWeek={3} points="-" opponent={returnMatch(players[selectedSlot].team, 2)} />
+                <PlayerMatch gameWeek={4} points="-" opponent={returnMatch(players[selectedSlot].team, 3)} />
+                <PlayerMatch gameWeek={5} points="-" opponent={returnMatch(players[selectedSlot].team, 4)} />
+            </div>}
+
             <div className="mt-5 w-full flex flex-col justify-center gap-4">
                 {variant === "points" ? (
 
