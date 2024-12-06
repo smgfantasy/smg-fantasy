@@ -50,6 +50,16 @@ const PlayerInfoMenu = ({ currVariant }) => {
         handleMenuClose(true);
     }
 
+    const handleMakeCaptain = () => {
+        const array = [...players];
+
+        for (let i = 0; i < array.length; i++) {
+            array[i].captain = false;
+        }
+        array[selectedSlot].captain = true;
+        setPlayers(array);
+        handleMenuClose(true);
+    }
     return (
         <div
             id='player-menu'
@@ -126,7 +136,7 @@ const PlayerInfoMenu = ({ currVariant }) => {
                                 <span>Switch</span>
                             </div>
 
-                            <div
+                            <div onClick={handleMakeCaptain}
                                 className="w-full text-center py-2 rounded-md flex items-center justify-center gap-2"
                                 style={{
                                     backgroundImage: "linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255))",

@@ -243,6 +243,8 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
                 </div>
             ) : (
                 <>
+                    {players[position].captain && <div className='absolute right-0 rounded-full w-5 h-5 bg-blue-600 text-white flex justify-center items-center'>C</div>}
+
                     <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
                         {playerTeam !== '' && (<img className='rounded-t-md' src={
                             playerTeam === '11А'
@@ -264,6 +266,7 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
                     <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{points}</div>
                 </>
             )}
+
         </div>
     );
 };

@@ -14,7 +14,7 @@ const Header = () => {
                 <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
                     <ArrowLeftCircleIcon size={20} />
                 </div>
-                <div className='font-bold'>Gameweek 12</div>
+                <div className='font-bold'>Gameweek 1</div>
                 <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
                     <ArrowRightCircleIcon size={20} />
                 </div>
@@ -43,7 +43,7 @@ const Pitch = () => {
 
     );
 }
-const Points = ({ sessionCookie }) => {
+const Points = ({ sessionCookie, userData }) => {
     const { players, setPlayers } = useAppContext();
 
     useEffect(() => {
@@ -70,23 +70,23 @@ const Points = ({ sessionCookie }) => {
 
     return (
         <div className='pt-8 px-1'>
-            <h1 className='font-bold text-xl text-purple'>Points - Pergisha FC</h1>
+            <h1 className='font-bold text-xl text-purple'>Points - {userData.clubName}</h1>
             <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 30px, rgba(255, 255, 255, 0.5) 75px, white 120px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
                 <Header></Header>
                 <div className='flex justify-center mt-3 gap-2'>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Average Points</div>
-                        <div className='font-bold text-2xl'>60</div>
+                        <div className='font-bold text-2xl'>0</div>
                     </div>
                     <div className='flex flex-col items-center justify-around bg-purple px-9 py-4 rounded-lg'>
                         <div className='text-white text-xs'>Final Points</div>
                         <div className='text-transparent text-5xl font-bold' style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}>
-                            45
+                            0
                         </div>
                     </div>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Highest Points</div>
-                        <div className='font-bold text-2xl'>143</div>
+                        <div className='font-bold text-2xl'>0</div>
                     </div>
                     {/* <div className='-mr-10'>Dropdown</div> */}
                 </div>

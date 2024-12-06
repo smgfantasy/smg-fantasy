@@ -105,7 +105,7 @@ const Pitch = ({ sessionCookie }) => {
         )
     );
 }
-const Team = ({ sessionCookie }) => {
+const Team = ({ sessionCookie, userData }) => {
     const { players, setPlayers } = useAppContext();
     const [readySave, setReadySave] = useState(false);
 
@@ -140,7 +140,7 @@ const Team = ({ sessionCookie }) => {
         <>
             <div className='pt-8 px-1'>
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
-                    <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
+                    <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
                     <button onClick={handleTeamSave}
                         className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
                             }`}

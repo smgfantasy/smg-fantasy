@@ -5,27 +5,27 @@ import Link from 'next/link';
 
 const Table = () => {
     const data = [
-        { rank: 1, team: 'AlexFC', manager: 'Alexander Malinovsky', gw: 69, tot: 935 },
-        { rank: 2, team: 'Erty FC', manager: 'Nikolay Rogov', gw: 56, tot: 859 },
-        { rank: 3, team: 'SeksMashini', manager: 'Ники Вулджев', gw: 65, tot: 830 },
-        { rank: 4, team: 'BestSquad', manager: 'Hristo Mihaylov', gw: 39, tot: 811 },
-        { rank: 5, team: 'Qnchi FC', manager: 'Nikola Yanchev', gw: 48, tot: 798 },
-        { rank: 6, team: 'Pergisha FC', manager: 'Atanas Filipov', gw: 50, tot: 734, isUser: true, },
-        { rank: 7, team: 'chukundurite', manager: 'Nikola Lazarov', gw: 55, tot: 717 },
-        { rank: 8, team: 'Sauron', manager: 'Ivaylo Vasilev', gw: 44, tot: 712 },
-        { rank: 9, team: '1. FC Bankenstadt', manager: 'Martin Bogdanov', gw: 67, tot: 522 },
+        // { rank: 1, team: 'AlexFC', manager: 'Alexander Malinovsky', gw: 69, tot: 935 },
+        // { rank: 2, team: 'Erty FC', manager: 'Nikolay Rogov', gw: 56, tot: 859 },
+        // { rank: 3, team: 'SeksMashini', manager: 'Ники Вулджев', gw: 65, tot: 830 },
+        // { rank: 4, team: 'BestSquad', manager: 'Hristo Mihaylov', gw: 39, tot: 811 },
+        // { rank: 5, team: 'Qnchi FC', manager: 'Nikola Yanchev', gw: 48, tot: 798 },
+        // { rank: 6, team: 'Pergisha FC', manager: 'Atanas Filipov', gw: 50, tot: 734, isUser: true, },
+        // { rank: 7, team: 'chukundurite', manager: 'Nikola Lazarov', gw: 55, tot: 717 },
+        // { rank: 8, team: 'Sauron', manager: 'Ivaylo Vasilev', gw: 44, tot: 712 },
+        // { rank: 9, team: '1. FC Bankenstadt', manager: 'Martin Bogdanov', gw: 67, tot: 522 },
     ];
 
     return (
         <div className="w-full overflow-x-auto rounded-lg border border-gray-200">
             <table className="w-full text-left">
                 <thead className="border-b border-gray-200">
-                    <tr className="text-xs text-gray-500">
+                    {/* <tr className="text-xs text-gray-500">
                         <th className="whitespace-nowrap px-4 py-3 font-medium text-center">Rank</th>
                         <th className="whitespace-nowrap px-4 py-3 font-medium">Team & Manager</th>
                         <th className="whitespace-nowrap px-4 py-3 font-medium">GW</th>
                         <th className="whitespace-nowrap px-4 py-3 font-medium">TOT</th>
-                    </tr>
+                    </tr> */}
                 </thead>
                 <tbody className='text-sm'>
                     {data.map((item) => (
@@ -53,6 +53,7 @@ const Table = () => {
                     ))}
                 </tbody>
             </table>
+
         </div>
     );
 };
@@ -100,9 +101,9 @@ const Page = () => {
                         ))}
                     </select>
                 </div>
-                <Link href="/matches" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#2D004D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple">
+                {/* <Link href="/matches" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#2D004D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple">
                     View Next Matches
-                </Link>
+                </Link> */}
             </div>
             {isLoading ? (
                 <div className="flex justify-center items-center h-64">
@@ -111,6 +112,7 @@ const Page = () => {
             ) : (
                 <Table />
             )}
+            <div className='font-bold text-2xl mt-10 text-center'>Ranking will be available after the first match has finished</div>
         </div>
     )
 }

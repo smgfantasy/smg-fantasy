@@ -11,14 +11,14 @@ const RatingChild = ({ statistic, value }) => {
     );
 }
 
-const Rating = () => {
+const Rating = ({ userData }) => {
     return (
         <div className='px-1'>
             <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 20px, rgba(255, 255, 255, 0.5) 50px, white 80px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
                 <div className='flex justify-between px-2 py-4'>
                     <div className='flex flex-col'>
-                        <div className='text-sm text-purple'>Atanas Filipov</div>
-                        <div className='text-2xl font-bold text-purple'>Pergisha FC</div>
+                        <div className='text-sm text-purple'>{userData.name}</div>
+                        <div className='text-2xl font-bold text-purple'>{userData.clubName}</div>
                     </div>
                     <div>
                         <img className='max-w-[55px]' src='https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_of_Bulgaria.png' />
@@ -31,10 +31,10 @@ const Rating = () => {
                                 className='text-sm font-bold text-transparent'>Points/Rankings</span>
                         </span>
                     </div>
-                    <RatingChild statistic={'Overall points'} value={'688'} />
-                    <RatingChild statistic={'Overall rank'} value={'4,424,969'} />
-                    <RatingChild statistic={'Total players'} value={'10,851,286'} />
-                    <RatingChild statistic={'Gameweek points'} value={'57'} />
+                    <RatingChild statistic={'Overall points'} value={'0'} />
+                    <RatingChild statistic={'Overall rank'} value={'-'} />
+                    <RatingChild statistic={'Total players'} value={'8'} />
+                    <RatingChild statistic={'Gameweek points'} value={'0'} />
                 </div>
             </div>
         </div >
