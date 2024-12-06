@@ -5,6 +5,7 @@ import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
+import PlayerPickerMenu from './PlayerPickerMenu';
 
 const StatItem = ({ label, value, highlight }) => {
     return (
@@ -96,14 +97,17 @@ const Pitch = ({ sessionCookie }) => {
 
 const Team = ({ sessionCookie }) => {
     return (
-        <div className='pt-8 px-1'>
-            <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
-            <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0.5) 150px, white 240px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
-                <Header></Header>
-                <Pitch sessionCookie={sessionCookie} />
+        <>
+            <div className='pt-8 px-1'>
+                <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
+                <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0.5) 150px, white 240px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
+                    <Header></Header>
+                    <Pitch sessionCookie={sessionCookie} />
+                </div>
+                <Subs />
             </div>
-            <Subs />
-        </div>
+            <PlayerPickerMenu />
+        </>
     )
 }
 
