@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerPickerMenu from './PlayerPickerMenu';
+import { SaveAll } from 'lucide-react';
+import updateUserTeam from '@/utils/team/updateTeam';
 
 const StatItem = ({ label, value, highlight }) => {
     return (
@@ -27,6 +29,17 @@ const TransferInfo = ({ freeTransfers, cost, budget }) => {
 }
 
 const Header = () => {
+    const { players, currBudget, setCurrBudget } = useAppContext();
+    useEffect(() => {
+        let sum = 0;
+        for (let i in players) {
+            if (players[i].price) sum += players[i].price;
+            // console.log(players[i].price);
+        }
+        setCurrBudget(60 - sum);
+
+
+    }, [players, players.length]);
     return (
         <>
             <div className='bg-[#ffffff99] mx-2 translate-y-3 rounded-lg'>
@@ -44,7 +57,7 @@ const Header = () => {
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    <TransferInfo freeTransfers={5} cost={0} budget={0.1} />
+                    <TransferInfo freeTransfers={5} cost={0} budget={currBudget} />
                 </div>
             </div>
         </>
@@ -90,18 +103,75 @@ const Pitch = ({ sessionCookie }) => {
             </div>
             )
         )
-
-
     );
 }
-
 const Team = ({ sessionCookie }) => {
+    const { players, setPlayers } = useAppContext();
+    const [readySave, setReadySave] = useState(false);
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        let count = 0;
+        for (let i in players) {
+            if (players[i].name !== '') {
+                count++;
+
+            }
+        }
+        if (count === 9) setReadySave(true);
+        // console.log(players);
+        // console.log('vliza se');
+    }, [players, players.length]);
+
+    const handleTeamSave = async () => {
+        setLoading(true);
+        try {
+
+            await updateUserTeam(sessionCookie, players);
+        } catch (err) {
+            console.err(err);
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <>
             <div className='pt-8 px-1'>
-                <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
-                <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0.5) 150px, white 240px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
-                    <Header></Header>
+                <div className="flex flex-col justify-between items-center mb-2 gap-5">
+                    <h1 className='font-bold text-xl text-purple'>Pick Team - Pergisha FC</h1>
+                    <button onClick={handleTeamSave}
+                        className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
+                            }`}
+                        disabled={!readySave}
+                    >
+                        <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-out transform group-hover:scale-105"></span>
+                        <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
+                        <SaveAll className="w-5 h-5 mr-2 relative z-2" />
+                        <span className="relative z-2">{loading ?
+                            <span className='animate-spin text-2xl flex items-center justify-center'>
+                                <div style={{ width: '24px', height: '24px' }}>
+                                    <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
+                                        <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
+                                    </svg>
+                                </div>
+                            </span> :
+                            <>Save team</>
+                        }</span>
+                    </button>
+
+                </div>
+                <div
+                    style={{
+                        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0.5) 150px, white 240px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))',
+                        backgroundSize: 'auto, 90px 60px, auto',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: '0px center, right top, 0px center'
+                    }}
+                    className='mt-0 w-full bg-[#2C3E50] h-[650px] rounded-md'
+                >
+                    <Header />
                     <Pitch sessionCookie={sessionCookie} />
                 </div>
                 <Subs />
@@ -110,5 +180,4 @@ const Team = ({ sessionCookie }) => {
         </>
     )
 }
-
 export default Team;

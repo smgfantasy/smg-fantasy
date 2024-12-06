@@ -3,7 +3,7 @@ import { useAppContext } from '@/context/AppContext';
 import playersData from '../data/players.json';
 
 export default function PlayerPickerMenu() {
-    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers } = useAppContext();
+    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers, currBudget } = useAppContext();
     const sheetRef = useRef(null);
     const [playersList, setPlayersList] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -21,18 +21,41 @@ export default function PlayerPickerMenu() {
         };
     }, []);
 
-    let pos = "POS";
-    if (playerPickerPos === 0) pos = "GK"
-    if (playerPickerPos >= 1 && playerPickerPos <= 3) pos = 'DEF';
-    if (playerPickerPos >= 4 && playerPickerPos <= 6) pos = 'MID';
-    if (playerPickerPos >= 7 && playerPickerPos <= 9) pos = 'FWD';
-    if (playerPickerPos === 10) pos = 'DEF';
-    if (playerPickerPos === 11 || playerPickerPos === 12) pos = 'MID';
+    let pos = "pos";
+    if (playerPickerPos === 0) pos = "gk"
+    if (playerPickerPos >= 1 && playerPickerPos <= 3) pos = 'def';
+    if (playerPickerPos >= 4 && playerPickerPos <= 6) pos = 'mid';
+    if (playerPickerPos >= 7 && playerPickerPos <= 9) pos = 'fwd';
+    if (playerPickerPos === 10) pos = 'def';
+    if (playerPickerPos === 11 || playerPickerPos === 12) pos = 'mid';
+    const checkIfPlayerIsUsed = (name) => {
+        for (let i in players) {
+            if (players[i].name === name) {
+                return true;
+            }
+        }
+        return false;
+    }
+    const canAddPlayer = (newPlayer) => {
+        const teamCounts = {};
 
+        // Count the current number of players per team
+        players.forEach((player) => {
+            if (player?.team) {
+                teamCounts[player.team] = (teamCounts[player.team] || 0) + 1;
+            }
+        });
+
+        // Check if adding the new player exceeds the limit
+        return (teamCounts[newPlayer.team] || 0) < 2;
+    };
     useEffect(() => {
         const filteredPlayers = playersData.filter(player =>
             player.position === pos &&
-            player.name.toLowerCase().includes(searchTerm.toLowerCase())
+            player.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            !checkIfPlayerIsUsed(player.name) &&
+            currBudget >= player.price &&
+            canAddPlayer(player) // Check team constraint
         );
         setPlayersList(filteredPlayers);
     }, [pos, searchTerm]);
@@ -41,10 +64,8 @@ export default function PlayerPickerMenu() {
         setIsPlayerPickerMenuOpen(false);
         setPlayerPickerPos(false);
 
-        console.log(playersList[index]);
         const tempPlayers = [...players];
         tempPlayers[playerPickerPos] = playersList[index];
-        console.log(tempPlayers);
 
         setPlayers(tempPlayers);
     }
@@ -83,52 +104,53 @@ export default function PlayerPickerMenu() {
                                     style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}
                                     className='text-sm font-bold text-transparent'
                                 >
-                                    {pos === 'DEF' && 'Defenders'}
-                                    {pos === 'FWD' && 'Forwards'}
-                                    {pos === 'MID' && 'Midfielders'}
-                                    {pos === 'GK' && 'Goalkeepers'}
+                                    {pos === 'def' && 'Defenders'}
+                                    {pos === 'fwd' && 'Forwards'}
+                                    {pos === 'mid' && 'Midfielders'}
+                                    {pos === 'gk' && 'Goalkeepers'}
                                 </span>
                             </span>
                         </div>
                         <div className="space-y-2">
-                            {playersList.map((player, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center justify-between p-4 border-b"
-                                    onClick={() => handlePlayerClick(index)}
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <img
-                                            src={
-                                                player.team === '11А'
-                                                    ? '/img/A.svg'
-                                                    : player.team === '11Б'
-                                                        ? '/img/B.svg'
-                                                        : player.team === '11В'
-                                                            ? '/img/V.svg'
-                                                            : player.team === '11Г'
-                                                                ? '/img/G.svg'
-                                                                : player.team === '11Е'
-                                                                    ? '/img/E.svg'
-                                                                    : player.team === '10'
-                                                                        ? '/img/10.svg'
-                                                                        : '/img/10.svg' // Default fallback image
-                                            }
-                                            alt={`${player.team} jersey`}
-                                            className="w-20 h-20 object-cover"
-                                        />
-                                        <div>
-                                            <div className="font-semibold">{player.name}</div>
-                                            <div className="text-sm text-gray-600">
-                                                {player.team} {player.position}
+                            {playersList
+                                .map((player, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center justify-between p-4 border-b"
+                                        onClick={() => handlePlayerClick(index)}
+                                    >
+                                        <div className="flex items-center gap-4">
+                                            <img
+                                                src={
+                                                    player.team === '11А'
+                                                        ? '/img/A.svg'
+                                                        : player.team === '11Б'
+                                                            ? '/img/B.svg'
+                                                            : player.team === '11В'
+                                                                ? '/img/V.svg'
+                                                                : player.team === '11Г'
+                                                                    ? '/img/G.svg'
+                                                                    : player.team === '11Е'
+                                                                        ? '/img/E.svg'
+                                                                        : player.team === '10'
+                                                                            ? '/img/10.svg'
+                                                                            : '/img/10.svg' // Default fallback image
+                                                }
+                                                alt={`${player.team} jersey`}
+                                                className="w-20 h-20 object-cover"
+                                            />
+                                            <div>
+                                                <div className="font-semibold">{player.name}</div>
+                                                <div className="text-sm text-gray-600">
+                                                    {player.team} {player.position}
+                                                </div>
                                             </div>
                                         </div>
+                                        <div className="flex items-center gap-8">
+                                            <div className="text-lg font-medium text-green-500">{player.price}M$</div>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center gap-8">
-                                        <div className="text-lg font-medium text-green-500">{player.price}M$</div>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
                         </div>
                     </div>
                 </div>

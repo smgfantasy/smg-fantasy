@@ -13,7 +13,7 @@ export function ContextProvider({ children }) {
     const [formation, setFormation] = useState('2-1-2');
     const [isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen] = useState(false);
     const [playerPickerPos, setPlayerPickerPos] = useState(false);
-
+    const [currBudget, setCurrBudget] = useState(60);
     const swapPlayers = (index1, index2, callback) => {
         if (index1 === 0 || index2 === 0) return;
         const array = [...players];
@@ -25,7 +25,7 @@ export function ContextProvider({ children }) {
     };
 
     return (
-        <AppContext.Provider value={{ variant, setVariant, switchMode, setSwitchMode, selectedSlot, setSelectedSlot, players, setPlayers, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos }}>
+        <AppContext.Provider value={{ variant, setVariant, switchMode, setSwitchMode, selectedSlot, setSelectedSlot, players, setPlayers, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, currBudget, setCurrBudget }}>
             {children}
         </AppContext.Provider>
     );

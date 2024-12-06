@@ -1,290 +1,290 @@
 [
-  {
-    "name": "Александър Попов",
-    "team": "11Е",
-    "position": "GK",
-    "price": 4.0
-  },
-  {
-    "name": "Христиан Велинов",
-    "team": "11В",
-    "position": "GK",
-    "price": 4.5
-  },
-  {
-    "name": "Борис Ников",
-    "team": "11Г",
-    "position": "GK",
-    "price": 4.5
-  },
-  {
-    "name": "Даниел Гетов",
-    "team": "10",
-    "position": "GK",
-    "price": 4.5
-  },
-  {
-    "name": "Димитър Бегов",
-    "team": "11А",
-    "position": "GK",
-    "price": 5.5
-  },
-  {
-    "name": "Мартин Шопов",
-    "team": "11Б",
-    "position": "GK",
-    "price": 5.5
-  },
-  {
-    "name": "Георги Стоянов",
-    "team": "11Б",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Никола Янчев",
-    "team": "11Б",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Велимир Гочков",
-    "team": "11Г",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Кристиян Огнянов",
-    "team": "11Е",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Емо Мишков",
-    "team": "11Е",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Светослав Иванов",
-    "team": "11Е",
-    "position": "DEF",
-    "price": 4.0
-  },
-  {
-    "name": "Георги Николов",
-    "team": "11А",
-    "position": "DEF",
-    "price": 4.5
-  },
-  {
-    "name": "Андрей Петрински",
-    "team": "11Г",
-    "position": "DEF",
-    "price": 4.5
-  },
-  {
-    "name": "Бакарди Родригез",
-    "team": "11Е",
-    "position": "DEF",
-    "price": 4.5
-  },
-  {
-    "name": "Георги Тодоров",
-    "team": "10",
-    "position": "DEF",
-    "price": 5.0
-  },
-  {
-    "name": "Николай Рогов",
-    "team": "11А",
-    "position": "DEF",
-    "price": 5.0
-  },
-  {
-    "name": "Георги Колевски",
-    "team": "11В",
-    "position": "DEF",
-    "price": 5.0
-  },
-  {
-    "name": "Момчил Стаменов",
-    "team": "11В",
-    "position": "DEF",
-    "price": 5.0
-  },
-  {
-    "name": "Иван Петков",
-    "team": "11Г",
-    "position": "DEF",
-    "price": 5.0
-  },
-  {
-    "name": "Даниел Ралчев",
-    "team": "10",
-    "position": "DEF",
-    "price": 5.5
-  },
-  {
-    "name": "Кристиян Пенев",
-    "team": "11А",
-    "position": "DEF",
-    "price": 5.5
-  },
-  {
-    "name": "Атанас Филипов",
-    "team": "11Б",
-    "position": "DEF",
-    "price": 5.5
-  },
-  {
-    "name": "Виктор Аврамски",
-    "team": "11Б",
-    "position": "DEF",
-    "price": 6.0
-  },
-  {
-    "name": "Светлозар Йотов",
-    "team": "11А",
-    "position": "MID",
-    "price": 5.0
-  },
-  {
-    "name": "Михаил Гочев",
-    "team": "11А",
-    "position": "MID",
-    "price": 5.5
-  },
-  {
-    "name": "Никола Лазаров",
-    "team": "11Б",
-    "position": "MID",
-    "price": 5.5
-  },
-  {
-    "name": "Никола Минков",
-    "team": "11Е",
-    "position": "MID",
-    "price": 6.0
-  },
-  {
-    "name": "Самуил Деянов",
-    "team": "10",
-    "position": "MID",
-    "price": 6.5
-  },
-  {
-    "name": "Стефан Филев",
-    "team": "10",
-    "position": "MID",
-    "price": 7.0
-  },
-  {
-    "name": "Божил Ненов",
-    "team": "11Б",
-    "position": "MID",
-    "price": 7.0
-  },
-  {
-    "name": "Антон Янков",
-    "team": "11В",
-    "position": "MID",
-    "price": 7.0
-  },
-  {
-    "name": "Никола Вулджев",
-    "team": "11В",
-    "position": "MID",
-    "price": 7.5
-  },
-  {
-    "name": "Мартин Михайлов",
-    "team": "11Г",
-    "position": "MID",
-    "price": 7.0
-  },
-  {
-    "name": "Ивелин Неев",
-    "team": "11А",
-    "position": "MID",
-    "price": 8.5
-  },
-  {
-    "name": "Александър Малиновски",
-    "team": "11Б",
-    "position": "MID",
-    "price": 11.0
-  },
-  {
-    "name": "Калоян Радулов",
-    "team": "11Е",
-    "position": "MID",
-    "price": 7.0
-  },
-  {
-    "name": "Явор Цветков",
-    "team": "11Б",
-    "position": "FWD",
-    "price": 4.5
-  },
-  {
-    "name": "Веселин Пенев",
-    "team": "10",
-    "position": "FWD",
-    "price": 6.5
-  },
-  {
-    "name": "Юлиан Жечев",
-    "team": "11Е",
-    "position": "FWD",
-    "price": 6.5
-  },
-  {
-    "name": "Лъчезар Ралчев",
-    "team": "11Е",
-    "position": "FWD",
-    "price": 7.0
-  },
-  {
-    "name": "Димитър Дилчев",
-    "team": "10",
-    "position": "FWD",
-    "price": 7.5
-  },
-  {
-    "name": "Христо Младенов",
-    "team": "11А",
-    "position": "FWD",
-    "price": 7.5
-  },
-  {
-    "name": "Евгени Комсалов",
-    "team": "11Г",
-    "position": "FWD",
-    "price": 7.5
-  },
-  {
-    "name": "Георги Огнянов",
-    "team": "11Г",
-    "position": "FWD",
-    "price": 8.5
-  },
-  {
-    "name": "Ивайло Василев",
-    "team": "11A",
-    "position": "FWD",
-    "price": 9.5
-  },
-  {
-    "name": "Никола Тодоров",
-    "team": "11Б",
-    "position": "FWD",
-    "price": 10.5
-  },
-  {
-    "name": "Никола Кунчев",
-    "team": "11В",
-    "position": "FWD",
-    "price": 12.0
-  }
+	{
+		"name": "Александър Попов",
+		"team": "11Е",
+		"position": "gk",
+		"price": 4.0
+	},
+	{
+		"name": "Христиан Велинов",
+		"team": "11В",
+		"position": "gk",
+		"price": 4.5
+	},
+	{
+		"name": "Борис Ников",
+		"team": "11Г",
+		"position": "gk",
+		"price": 4.5
+	},
+	{
+		"name": "Даниел Гетов",
+		"team": "10",
+		"position": "gk",
+		"price": 4.5
+	},
+	{
+		"name": "Димитър Бегов",
+		"team": "11А",
+		"position": "gk",
+		"price": 5.5
+	},
+	{
+		"name": "Мартин Шопов",
+		"team": "11Б",
+		"position": "gk",
+		"price": 5.5
+	},
+	{
+		"name": "Георги Стоянов",
+		"team": "11Б",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Никола Янчев",
+		"team": "11Б",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Велимир Гочков",
+		"team": "11Г",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Кристиян Огнянов",
+		"team": "11Е",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Емо Мишков",
+		"team": "11Е",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Светослав Иванов",
+		"team": "11Е",
+		"position": "def",
+		"price": 4.0
+	},
+	{
+		"name": "Георги Николов",
+		"team": "11А",
+		"position": "def",
+		"price": 4.5
+	},
+	{
+		"name": "Андрей Петрински",
+		"team": "11Г",
+		"position": "def",
+		"price": 4.5
+	},
+	{
+		"name": "Бакарди Родригез",
+		"team": "11Е",
+		"position": "def",
+		"price": 4.5
+	},
+	{
+		"name": "Георги Тодоров",
+		"team": "10",
+		"position": "def",
+		"price": 5.0
+	},
+	{
+		"name": "Николай Рогов",
+		"team": "11А",
+		"position": "def",
+		"price": 5.0
+	},
+	{
+		"name": "Георги Колевски",
+		"team": "11В",
+		"position": "def",
+		"price": 5.0
+	},
+	{
+		"name": "Момчил Стаменов",
+		"team": "11В",
+		"position": "def",
+		"price": 5.0
+	},
+	{
+		"name": "Иван Петков",
+		"team": "11Г",
+		"position": "def",
+		"price": 5.0
+	},
+	{
+		"name": "Даниел Ралчев",
+		"team": "10",
+		"position": "def",
+		"price": 5.5
+	},
+	{
+		"name": "Кристиян Пенев",
+		"team": "11А",
+		"position": "def",
+		"price": 5.5
+	},
+	{
+		"name": "Атанас Филипов",
+		"team": "11Б",
+		"position": "def",
+		"price": 5.5
+	},
+	{
+		"name": "Виктор Аврамски",
+		"team": "11Б",
+		"position": "def",
+		"price": 6.0
+	},
+	{
+		"name": "Светлозар Йотов",
+		"team": "11А",
+		"position": "mid",
+		"price": 5.0
+	},
+	{
+		"name": "Михаил Гочев",
+		"team": "11А",
+		"position": "mid",
+		"price": 5.5
+	},
+	{
+		"name": "Никола Лазаров",
+		"team": "11Б",
+		"position": "mid",
+		"price": 5.5
+	},
+	{
+		"name": "Никола Минков",
+		"team": "11Е",
+		"position": "mid",
+		"price": 6.0
+	},
+	{
+		"name": "Самуил Деянов",
+		"team": "10",
+		"position": "mid",
+		"price": 6.5
+	},
+	{
+		"name": "Стефан Филев",
+		"team": "10",
+		"position": "mid",
+		"price": 7.0
+	},
+	{
+		"name": "Божил Ненов",
+		"team": "11Б",
+		"position": "mid",
+		"price": 7.0
+	},
+	{
+		"name": "Антон Янков",
+		"team": "11В",
+		"position": "mid",
+		"price": 7.0
+	},
+	{
+		"name": "Никола Вулджев",
+		"team": "11В",
+		"position": "mid",
+		"price": 7.5
+	},
+	{
+		"name": "Мартин Михайлов",
+		"team": "11Г",
+		"position": "mid",
+		"price": 7.0
+	},
+	{
+		"name": "Ивелин Неев",
+		"team": "11А",
+		"position": "mid",
+		"price": 8.5
+	},
+	{
+		"name": "Александър Малиновски",
+		"team": "11Б",
+		"position": "mid",
+		"price": 11.0
+	},
+	{
+		"name": "Калоян Радулов",
+		"team": "11Е",
+		"position": "mid",
+		"price": 7.0
+	},
+	{
+		"name": "Явор Цветков",
+		"team": "11Б",
+		"position": "fwd",
+		"price": 4.5
+	},
+	{
+		"name": "Веселин Пенев",
+		"team": "10",
+		"position": "fwd",
+		"price": 6.5
+	},
+	{
+		"name": "Юлиан Жечев",
+		"team": "11Е",
+		"position": "fwd",
+		"price": 6.5
+	},
+	{
+		"name": "Лъчезар Ралчев",
+		"team": "11Е",
+		"position": "fwd",
+		"price": 7.0
+	},
+	{
+		"name": "Димитър Дилчев",
+		"team": "10",
+		"position": "fwd",
+		"price": 7.5
+	},
+	{
+		"name": "Христо Младенов",
+		"team": "11А",
+		"position": "fwd",
+		"price": 7.5
+	},
+	{
+		"name": "Евгени Комсалов",
+		"team": "11Г",
+		"position": "fwd",
+		"price": 7.5
+	},
+	{
+		"name": "Георги Огнянов",
+		"team": "11Г",
+		"position": "fwd",
+		"price": 8.5
+	},
+	{
+		"name": "Ивайло Василев",
+		"team": "11A",
+		"position": "fwd",
+		"price": 9.5
+	},
+	{
+		"name": "Никола Тодоров",
+		"team": "11Б",
+		"position": "fwd",
+		"price": 10.5
+	},
+	{
+		"name": "Никола Кунчев",
+		"team": "11В",
+		"position": "fwd",
+		"price": 12.0
+	}
 ]

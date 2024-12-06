@@ -2,10 +2,20 @@ import React, { useState } from 'react';
 import { useAppContext } from '@/context/AppContext';
 import { UserPlus } from 'lucide-react';
 import PlayerPickerMenu from './PlayerPickerMenu';
+import playersData from '../data/players.json';
 
-const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
+const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
     const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos } = useAppContext();
 
+    const findPlayerByName = (name) => {
+        return playersData.find(player => player.name.toLowerCase() === name.toLowerCase());
+    };
+    let playerTeam = '';
+    try {
+        playerTeam = findPlayerByName(name).team;
+    } catch (err) {
+
+    }
     const calculateNewFormation = () => {
         const index1 = position, index2 = selectedSlot;
 
@@ -24,12 +34,21 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     };
 
     const checkPossibleFormation = () => {
+        let count = 0;
+        for (let i in players) {
+            if (players[i].name !== '') {
+                count++;
+            }
+        }
+        // if (count < 9 && players[position] === players[selectedSlot]) return '2-1-2';
+
         const possibleFormation = calculateNewFormation();
         return ['2-2-1', '2-1-2', '3-1-1'].includes(possibleFormation) ? possibleFormation : false;
     };
 
     const checkSwitch = () => {
         if (!switchMode) return true;
+        if (players[position].position === players[selectedSlot].position) return true;
         if (position >= 10 || selectedSlot >= 10) {
             return Boolean(checkPossibleFormation());
         }
@@ -37,30 +56,38 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     };
 
     const handlePlayerClick = () => {
-        if (players[position].name === "") {
+        console.log(players);
+
+        if (players[position].name === "" && !switchMode) {
             setIsPlayerPickerMenuOpen(true);
             setPlayerPickerPos(position);
             return;
         }
 
         if (switchMode) {
-            console.log(selectedSlot, position);
             if (!checkSwitch()) return;
+            console.log(players[selectedSlot].position, players[position].position);
             swapPlayers(selectedSlot, position, (newPlayers) => {
                 const newFormation = checkPossibleFormation();
+                let count = 0;
+                for (let i in players) {
+                    if (players[i].name !== '') {
+                        count++;
+                    }
+                }
                 if (newFormation) {
                     const updatedPlayers = players.slice(0, 10).map(player => ({
                         id: player.id, // Keep the id same
-                        name: null,
+                        name: '',
                         points: null,
-                        team: null,
-                        position: null,
+                        team: '',
+                        position: '',
                     }));
                     updatedPlayers[0] = newPlayers[0];
                     updatedPlayers[10] = newPlayers[10];
                     updatedPlayers[11] = newPlayers[11];
                     updatedPlayers[12] = newPlayers[12];
-
+                    console.log("Updated players: " + updatedPlayers);
                     if (newFormation === "2-2-1") {
                         let flag = false;
                         for (let i = 1; i <= 9; i++) {
@@ -165,7 +192,7 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
         } else {
             setSelectedSlot(position);
             setSelectedSlotPos(players[position].position);
-            console.log(position);
+            console.log('text ', players[position].position);
         }
 
         if (switchMode) {
@@ -191,13 +218,13 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
     if (position > 9 || position === 0) active = true;
 
     function getPlayerPosition() {
-        if (position === 0) return "GK"
-        if (position >= 1 && position <= 3) return 'DEF';
-        if (position >= 4 && position <= 6) return 'MID';
-        if (position >= 7 && position <= 9) return 'FWD';
-        if (position === 10) return 'DEF';
-        if (position === 11 || position === 12) return 'MID';
-        return 'POS'; // Default if pos is undefined or out of range
+        if (position === 0) return "gk"
+        if (position >= 1 && position <= 3) return 'def';
+        if (position >= 4 && position <= 6) return 'mid';
+        if (position >= 7 && position <= 9) return 'fwd';
+        if (position === 10) return 'def';
+        if (position === 11 || position === 12) return 'mid';
+        return 'pos'; // Default if pos is undefined or out of range
     }
 
     return (
@@ -217,9 +244,23 @@ const PlayerSlot = ({ img, name = 'Default', points = 'Nan', position }) => {
             ) : (
                 <>
                     <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
-                        <img src={img} />
+                        {playerTeam !== '' && (<img className='rounded-t-md' src={
+                            playerTeam === '11А'
+                                ? '/img/A.svg'
+                                : playerTeam === '11Б'
+                                    ? '/img/B.svg'
+                                    : playerTeam === '11В'
+                                        ? '/img/V.svg'
+                                        : playerTeam === '11Г'
+                                            ? '/img/G.svg'
+                                            : playerTeam === '11Е'
+                                                ? '/img/E.svg'
+                                                : playerTeam === '10'
+                                                    ? '/img/10.svg'
+                                                    : '' // Default fallback image
+                        } />)}
                     </div>
-                    <div className='w-full bg-white text-center text-xs'>{name}</div>
+                    <div className='w-full bg-white text-center text-xs overflow-hidden'>{name.split(" ")[1]}</div>
                     <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{points}</div>
                 </>
             )}

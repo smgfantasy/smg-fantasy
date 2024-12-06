@@ -50,15 +50,23 @@ export async function GET(request) {
 }
 
 export async function PUT(request) {
-
     try {
         const cookiesObject = await cookies();
         const session = cookiesObject.get("session")?.value || "";
-        // Extract 'uid' from the request URL query
+
+        // Extract 'uid' from the session
         const { uid, error } = await getUserUid(session);
 
         if (error) {
             return NextResponse.json({ error: error.message }, { status: 401 });
+        }
+
+        // Parse the request body to extract players
+        const body = await request.json();
+        const players = body.players;
+
+        if (!Array.isArray(players)) {
+            return NextResponse.json({ error: "Invalid players data" }, { status: 400 });
         }
 
         try {
@@ -74,7 +82,7 @@ export async function PUT(request) {
             return NextResponse.json({ error: "Error updating document" }, { status: 500 });
         }
     } catch (error) {
-        console.error("Error parsing request body:", error);
+        console.error("Error handling request:", error);
         return NextResponse.json({ error: "Invalid input" }, { status: 400 });
     }
 }

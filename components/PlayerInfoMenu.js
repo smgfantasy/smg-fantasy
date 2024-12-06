@@ -5,9 +5,10 @@ import { X } from 'lucide-react';
 import PlayerMatch from './PlayerMatch';
 import { useAppContext } from '@/context/AppContext';
 import PlayerStats from './PlayerStats';
+import { ArrowRight, Star, Trash2 } from 'lucide-react';
 
 const PlayerInfoMenu = ({ currVariant }) => {
-    const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode } = useAppContext();
+    const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, setPlayers } = useAppContext();
 
     const menuRef = useRef(null);
 
@@ -42,6 +43,13 @@ const PlayerInfoMenu = ({ currVariant }) => {
         handleMenuClose();
     }
 
+    const handleRemovePlayer = () => {
+        const tempPlayers = [...players];
+        tempPlayers[selectedSlot] = { name: "", points: null, team: "", position: "", price: "" };
+        setPlayers(tempPlayers);
+        handleMenuClose(true);
+    }
+
     return (
         <div
             id='player-menu'
@@ -56,13 +64,27 @@ const PlayerInfoMenu = ({ currVariant }) => {
         >
             <div className='flex gap-4 py-5'>
                 <div>
-                    <img
-                        className='w-[150px] rounded-xl'
-                        src='https://cdn.discordapp.com/attachments/1313232515393261709/1313512685320540170/468545631_495631170160211_5667478025078618482_n.png?ex=67506784&is=674f1604&hm=24bd1afafe4cf716cbdfc29a283bebe0b93f4f5366676ea6a23a71922e08e13c&'
+                    {players[selectedSlot] && (<img
+                        className='w-[100px] rounded-xl'
+                        src={
+                            players[selectedSlot].team === '11А'
+                                ? '/img/A.svg'
+                                : players[selectedSlot].team === '11Б'
+                                    ? '/img/B.svg'
+                                    : players[selectedSlot].team === '11В'
+                                        ? '/img/V.svg'
+                                        : players[selectedSlot].team === '11Г'
+                                            ? '/img/G.svg'
+                                            : players[selectedSlot].team === '11Е'
+                                                ? '/img/E.svg'
+                                                : players[selectedSlot].team === '10'
+                                                    ? '/img/10.svg'
+                                                    : '/img/10.svg' // Default fallback image
+                        }
                         alt='Player'
-                    />
+                    />)}
                 </div>
-                <div className='flex flex-col justify-center'>
+                <div className='flex flex-col justify-center max-w-[200px]'>
                     <div className='bg-black rounded-md'>
                         <div
                             style={{
@@ -70,22 +92,22 @@ const PlayerInfoMenu = ({ currVariant }) => {
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
                             }}
-                            className='text-center'
+                            className='text-center uppercase'
                         >
-                            Defender
+                            {players[selectedSlot] && players[selectedSlot].position}
                         </div>
                     </div>
-                    <div className='font-bold text-2xl underline'>Levi Colwill</div>
-                    <div className='font-bold text-xl'>10A</div>
+                    <div className='font-bold text-2xl underline'>{players[selectedSlot] && players[selectedSlot].name}</div>
+                    <div className='font-bold text-xl'>{players[selectedSlot] && players[selectedSlot].team}</div>
                 </div>
             </div>
             <PlayerStats />
             <div className='mt-5 w-full flex gap-2 justify-around'>
-                <PlayerMatch gameWeek={1} points={8} opponent={'11E'} />
-                <PlayerMatch gameWeek={2} points={4} opponent={'11B'} />
-                <PlayerMatch gameWeek={3} points={6} opponent={'11V'} />
-                <PlayerMatch gameWeek={4} points={1} opponent={'10'} />
-                <PlayerMatch gameWeek={5} points={9} opponent={'11G'} />
+                <PlayerMatch gameWeek={1} points={'-'} opponent={'11E'} />
+                <PlayerMatch gameWeek={2} points={'-'} opponent={'11B'} />
+                <PlayerMatch gameWeek={3} points={'-'} opponent={'11V'} />
+                <PlayerMatch gameWeek={4} points={'-'} opponent={'10'} />
+                <PlayerMatch gameWeek={5} points={'-'} opponent={'11G'} />
             </div>
             <div className="mt-5 w-full flex flex-col justify-center gap-4">
                 {variant === "points" ? (
@@ -95,9 +117,32 @@ const PlayerInfoMenu = ({ currVariant }) => {
                     </div>
                 ) : (
                     <>
-                        <div className="w-full bg-[#963CFF] text-white text-center py-2 rounded-md" onClick={handleSwitchClick}>Switch</div>
-                        <div className="w-full text-center py-2 rounded-md" style={{ backgroundImage: 'linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255))', }}>Make captain</div>
-                        <div className="w-full bg-[#efefef] text-purple text-center py-2 rounded-md">Player Information</div>
+                        <div className="space-y-4">
+                            <div
+                                className="w-full bg-[#963CFF] text-white text-center py-2 rounded-md flex items-center justify-center gap-2"
+                                onClick={handleSwitchClick}
+                            >
+                                <ArrowRight size={20} />
+                                <span>Switch</span>
+                            </div>
+
+                            <div
+                                className="w-full text-center py-2 rounded-md flex items-center justify-center gap-2"
+                                style={{
+                                    backgroundImage: "linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255))",
+                                }}
+                            >
+                                <Star size={20} />
+                                <span>Make Captain</span>
+                            </div>
+
+                            <div onClick={handleRemovePlayer}
+                                className="w-full bg-red text-white text-center py-2 rounded-md flex items-center justify-center gap-2"
+                            >
+                                <Trash2 size={20} />
+                                <span>Remove Player</span>
+                            </div>
+                        </div>
                     </>
                 )}
             </div>

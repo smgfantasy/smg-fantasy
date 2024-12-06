@@ -8,7 +8,8 @@ import { NextResponse } from "next/server";
 customInitApp();
 
 export async function POST(request, response) {
-    const authorization = headers().get("Authorization");
+    const headersValue = await headers();
+    const authorization = headersValue.get("Authorization");
     let clientCookie;
     if (authorization?.startsWith("Bearer ")) {
         const idToken = authorization.split("Bearer ")[1];

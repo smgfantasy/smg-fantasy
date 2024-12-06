@@ -1,7 +1,11 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useRef } from 'react'
+import { useRef } from 'react';
+import { useAppContext } from '@/context/AppContext';
 
-function PlayerStats() {
+const PlayerStats = () => {
+
+    const { selectedSlot, players } = useAppContext();
+
     const scrollContainerRef = useRef(null);
 
     const scroll = (direction) => {
@@ -21,7 +25,7 @@ function PlayerStats() {
                     className="absolute left-2 top-1/2 -translate-y-1/2 transform z-10 bg-white bg-opacity-50 rounded-full p-1"
                     onClick={() => scroll('left')}
                 >
-                    <ChevronLeft className="h-6 w-6 text-gray-600" />
+                    {/* <ChevronLeft className="h-6 w-6 text-gray-600" /> */}
                 </button>
                 <div
                     ref={scrollContainerRef}
@@ -29,21 +33,16 @@ function PlayerStats() {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     <div className="flex space-x-8 px-4">
-                        <StatItem title="Price" value="£7.7m" subtext="9 of 315" />
-                        <StatItem title="Form" value="3.0" />
-                        <StatItem title="Pts / Match" value="5.9" subtext="4 of 315" />
-                        <StatItem title="GW14 Pts" value="2" />
-                        <StatItem title="Total Pts" value="78" />
-                        <StatItem title="Total Bonus" value="12" />
-                        <StatItem title="ICT Index" value="134.2" />
-                        <StatItem title="TSB%" value="24.7%" />
+                        <StatItem title="Price" value={`${players[selectedSlot] && players[selectedSlot].price}M $ `} subtext="9 of 315" />
+                        <StatItem title="Avg Points" value="0" subtext="0 of 0" />
+                        <StatItem title="Total Pts" value="0" />
                     </div>
                 </div>
                 <button
                     className="absolute right-2 top-1/2 -translate-y-1/2 transform z-10 bg-white bg-opacity-50 rounded-full p-1"
                     onClick={() => scroll('right')}
                 >
-                    <ChevronRight className="h-6 w-6 text-gray-600" />
+                    {/* <ChevronRight className="h-6 w-6 text-gray-600" /> */}
                 </button>
             </div>
         </div>
