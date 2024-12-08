@@ -10,7 +10,6 @@ export default async function Home() {
     const sessionCookie = cookieStore.get('session');
     const userData = await getUserData(sessionCookie);
     return (
-        // <Navbar />
         <>
             <Points userData={userData} sessionCookie={sessionCookie} />
             <Rating userData={userData} />

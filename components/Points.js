@@ -6,6 +6,7 @@ import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
+import playersPoints from '../data/round1Points.json';
 
 const Header = () => {
     return (
@@ -44,7 +45,7 @@ const Pitch = () => {
     );
 }
 const Points = ({ sessionCookie, userData }) => {
-    const { players, setPlayers, setFormation } = useAppContext();
+    const { players, setPlayers, setFormation, points, setPoints } = useAppContext();
 
     const calculateNewFormation = (array) => {
 
@@ -56,6 +57,23 @@ const Points = ({ sessionCookie, userData }) => {
         }
         return `${defs}-${mids}-${fwds}`;
     };
+
+    useEffect(() => {
+        if (points === 0) {
+            let curPts = 0;
+            for (let i in players) {
+                let currPlayerPoints = 0;
+                try {
+                    currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
+                } catch {
+                    //no player in the round points json file
+                }
+                curPts += currPlayerPoints;
+            }
+            setPoints(curPts);
+        }
+
+    }, [players.length])
 
     useEffect(() => {
         const fetchTeamData = async () => {
@@ -103,17 +121,17 @@ const Points = ({ sessionCookie, userData }) => {
                 <div className='flex justify-center mt-3 gap-2'>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Average Points</div>
-                        <div className='font-bold text-2xl'>0</div>
+                        <div className='font-bold text-2xl'>{points}</div>
                     </div>
                     <div className='flex flex-col items-center justify-around bg-purple px-9 py-4 rounded-lg'>
                         <div className='text-white text-xs'>Final Points</div>
                         <div className='text-transparent text-5xl font-bold' style={{ backgroundImage: 'linear-gradient(to right, rgb(5, 240, 255), rgb(0, 255, 135))', backgroundClip: 'text' }}>
-                            0
+                            {points}
                         </div>
                     </div>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Highest Points</div>
-                        <div className='font-bold text-2xl'>0</div>
+                        <div className='font-bold text-2xl'>{points}</div>
                     </div>
                     {/* <div className='-mr-10'>Dropdown</div> */}
                 </div>

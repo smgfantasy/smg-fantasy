@@ -55,7 +55,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav ref={navbarRef} className='z-10 relative w-full bg-purple'>
+        <div ref={navbarRef} className='z-10 relative w-full bg-purple'>
             <div className='h-[80px] flex items-center px-4 justify-between'>
                 <a href="/" onClick={handleLinkClick}>
                     <img className='w-[90px]' src='/img/logo.png' alt="Logo" />
@@ -107,7 +107,7 @@ const Navbar = () => {
                     </NavbarLink>
                 </ul>
             </div>
-        </nav>
+        </div>
     );
 };
 

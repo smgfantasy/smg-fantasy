@@ -8,6 +8,7 @@ import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerPickerMenu from './PlayerPickerMenu';
 import { SaveAll } from 'lucide-react';
 import updateUserTeam from '@/utils/team/updateTeam';
+import round1Players from '../data/round1Players.json'
 
 const StatItem = ({ label, value, highlight }) => {
     return (
@@ -38,6 +39,8 @@ const Header = () => {
         }
         setCurrBudget(60 - sum);
 
+        console.log(round1Players);
+
 
     }, [players, players.length]);
     return (
@@ -53,11 +56,11 @@ const Header = () => {
                         </span>
                     </div>
                     <div className='text-xs text-purple'>
-                        Gameweek 15:
+                        Gameweek 1:
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    <TransferInfo freeTransfers={5} cost={0} budget={currBudget} />
+                    <TransferInfo freeTransfers={1} cost={0} budget={currBudget} />
                 </div>
             </div>
         </>

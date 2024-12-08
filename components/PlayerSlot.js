@@ -3,6 +3,7 @@ import { useAppContext } from '@/context/AppContext';
 import { UserPlus } from 'lucide-react';
 import PlayerPickerMenu from './PlayerPickerMenu';
 import playersData from '../data/players.json';
+import playersPoints from '../data/round1Points.json';
 
 const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
     const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, benchPos } = useAppContext();
@@ -227,6 +228,13 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
         return 'pos'; // Default if pos is undefined or out of range
     }
 
+    let currPlayerPoints = 0;
+    try {
+        currPlayerPoints = playersPoints.find(player => (player.name === name)).points;
+    } catch {
+        //no player in the round points json file
+    }
+
     return (
         <div
             onClick={handlePlayerClick}
@@ -263,7 +271,7 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
                         } />)}
                     </div>
                     <div className='w-full bg-white text-center text-xs overflow-hidden'>{name.split(" ")[1]}</div>
-                    <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{points}</div>
+                    <div className='w-full bg-purple text-white text-center text-xs rounded-b-md'>{currPlayerPoints}</div>
                 </>
             )}
 
