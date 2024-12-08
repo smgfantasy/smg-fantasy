@@ -44,17 +44,43 @@ const Pitch = () => {
     );
 }
 const Points = ({ sessionCookie, userData }) => {
-    const { players, setPlayers } = useAppContext();
+    const { players, setPlayers, setFormation } = useAppContext();
+
+    const calculateNewFormation = (array) => {
+
+        let defs = 0, mids = 0, fwds = 0;
+        for (let i = 0; i <= 9; i++) {
+            if (array[i].position === 'def') defs++;
+            if (array[i].position === 'mid') mids++;
+            if (array[i].position === 'fwd') fwds++;
+        }
+        return `${defs}-${mids}-${fwds}`;
+    };
 
     useEffect(() => {
-        if (players.length > 0) return;
-        // Fetch team data only if players are not yet set
         const fetchTeamData = async () => {
             try {
+                // Check if data exists in localStorage
+                const storedPlayers = localStorage.getItem("user-team");
+                if (storedPlayers) {
+                    // Parse and set players from localStorage
+                    setPlayers(JSON.parse(storedPlayers));
+                    const savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    setFormation(savedFormation);
+                    console.log('Formation calculated: ', savedFormation);
+                    console.log(storedPlayers);
+                    console.log('Team fetched from localStorage...');
+                    return; // Exit if data is found in localStorage
+                }
+
+                // Fetch data from the server if not in localStorage
                 const data = await getUserTeam(sessionCookie);
-                console.log(data);
                 if (data) {
                     setPlayers(data.team);
+                    const savedFormation = calculateNewFormation(data.team);
+                    setFormation(savedFormation);
+                    // Save the fetched data to localStorage
+                    localStorage.setItem("user-team", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -63,6 +89,7 @@ const Points = ({ sessionCookie, userData }) => {
             }
         };
 
+        // Call the function if players array is empty
         if (players.length === 0) {
             fetchTeamData();
         }

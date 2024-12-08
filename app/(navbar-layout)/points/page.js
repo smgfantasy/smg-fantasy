@@ -9,7 +9,6 @@ export default async function Home() {
     const cookieStore = await cookies();
     const sessionCookie = cookieStore.get('session');
     const userData = await getUserData(sessionCookie);
-    console.log(userData);
     return (
         // <Navbar />
         <>

@@ -65,16 +65,43 @@ const Header = () => {
 }
 
 const Pitch = ({ sessionCookie }) => {
-    const { players, setPlayers } = useAppContext();
+    const { players, setPlayers, setFormation } = useAppContext();
+
+    const calculateNewFormation = (array) => {
+
+        let defs = 0, mids = 0, fwds = 0;
+        for (let i = 0; i <= 9; i++) {
+            if (array[i].position === 'def') defs++;
+            if (array[i].position === 'mid') mids++;
+            if (array[i].position === 'fwd') fwds++;
+        }
+        return `${defs}-${mids}-${fwds}`;
+    };
 
     useEffect(() => {
-        if (players.length > 0) return;
-        // Fetch team data only if players are not yet set
         const fetchTeamData = async () => {
             try {
+                // Check if data exists in localStorage
+                const storedPlayers = localStorage.getItem("user-team");
+                if (storedPlayers) {
+                    // Parse and set players from localStorage
+                    setPlayers(JSON.parse(storedPlayers));
+                    const savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    setFormation(savedFormation);
+                    console.log('Formation calculated: ', savedFormation);
+                    console.log(storedPlayers);
+                    console.log('Team fetched from localStorage...');
+                    return; // Exit if data is found in localStorage
+                }
+
+                // Fetch data from the server if not in localStorage
                 const data = await getUserTeam(sessionCookie);
                 if (data) {
                     setPlayers(data.team);
+                    const savedFormation = calculateNewFormation(data.team);
+                    setFormation(savedFormation);
+                    // Save the fetched data to localStorage
+                    localStorage.setItem("user-team", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -83,6 +110,7 @@ const Pitch = ({ sessionCookie }) => {
             }
         };
 
+        // Call the function if players array is empty
         if (players.length === 0) {
             fetchTeamData();
         }
@@ -127,21 +155,43 @@ const Team = ({ sessionCookie, userData }) => {
     const handleTeamSave = async () => {
         setLoading(true);
         try {
-
+            // Update the server with the current players data
             await updateUserTeam(sessionCookie, players);
+
+            // Update localStorage with the new players data
+            localStorage.setItem("user-team", JSON.stringify(players));
         } catch (err) {
-            console.err(err);
+            console.error(err); // Fix typo: use console.error instead of console.err
         } finally {
             setLoading(false);
         }
-    }
+    };
+
 
     return (
         <>
             <div className='pt-8 px-1'>
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
-
+                    {/* <button onClick={handleTeamSave}
+                        className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
+                            }`}
+                        disabled={!readySave}
+                    >
+                        <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-out transform group-hover:scale-105"></span>
+                        <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
+                        <SaveAll className="w-5 h-5 mr-2 relative z-2" />
+                        <span className="relative z-2">{loading ?
+                            <span className='animate-spin text-2xl flex items-center justify-center'>
+                                <div style={{ width: '24px', height: '24px' }}>
+                                    <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
+                                        <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
+                                    </svg>
+                                </div>
+                            </span> :
+                            <>Save team</>
+                        }</span>
+                    </button> */}
                 </div>
                 <div
                     style={{
