@@ -231,6 +231,9 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
     let currPlayerPoints = 0;
     try {
         currPlayerPoints = playersPoints.find(player => (player.name === name)).points;
+        if (player.captain) {
+            currPlayerPoints = currPlayerPoints * 2;
+        }
     } catch {
         //no player in the round points json file
     }

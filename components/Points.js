@@ -62,11 +62,18 @@ const Points = ({ sessionCookie, userData }) => {
         if (points === 0) {
             let curPts = 0;
             for (let i in players) {
+                if (i === '10') {
+                    break;
+                }
+                console.log(i);
                 let currPlayerPoints = 0;
                 try {
                     currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
                 } catch {
                     //no player in the round points json file
+                }
+                if (players[i].captain) {
+                    currPlayerPoints = currPlayerPoints * 2;
                 }
                 curPts += currPlayerPoints;
             }
@@ -79,11 +86,12 @@ const Points = ({ sessionCookie, userData }) => {
         const fetchTeamData = async () => {
             try {
                 // Check if data exists in localStorage
-                const storedPlayers = localStorage.getItem("user-team");
+                const storedPlayers = localStorage.getItem("user-team-v1");
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
-                    const savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     console.log('Formation calculated: ', savedFormation);
                     console.log(storedPlayers);
@@ -95,10 +103,11 @@ const Points = ({ sessionCookie, userData }) => {
                 const data = await getUserTeam(sessionCookie);
                 if (data) {
                     setPlayers(data.team);
-                    const savedFormation = calculateNewFormation(data.team);
+                    let savedFormation = calculateNewFormation(data.team);
+                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     // Save the fetched data to localStorage
-                    localStorage.setItem("user-team", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v1", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
