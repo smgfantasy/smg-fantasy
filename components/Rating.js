@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { useAppContext } from '@/context/AppContext';
 
 const RatingChild = ({ statistic, value }) => {
     return (
@@ -12,6 +14,8 @@ const RatingChild = ({ statistic, value }) => {
 }
 
 const Rating = ({ userData }) => {
+    const { points } = useAppContext();
+
     return (
         <div className='px-1'>
             <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 20px, rgba(255, 255, 255, 0.5) 50px, white 80px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
@@ -31,10 +35,10 @@ const Rating = ({ userData }) => {
                                 className='text-sm font-bold text-transparent'>Points/Rankings</span>
                         </span>
                     </div>
-                    <RatingChild statistic={'Overall points'} value={'0'} />
+                    <RatingChild statistic={'Overall points'} value={points} />
                     <RatingChild statistic={'Overall rank'} value={'-'} />
-                    <RatingChild statistic={'Total players'} value={'8'} />
-                    <RatingChild statistic={'Gameweek points'} value={'0'} />
+                    <RatingChild statistic={'Total players'} value={'80'} />
+                    <RatingChild statistic={'Gameweek points'} value={points} />
                 </div>
             </div>
         </div >

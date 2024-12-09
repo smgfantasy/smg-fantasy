@@ -8,6 +8,7 @@ import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerPickerMenu from './PlayerPickerMenu';
 import { SaveAll } from 'lucide-react';
 import updateUserTeam from '@/utils/team/updateTeam';
+import round1Players from '../data/round1Players.json'
 
 const StatItem = ({ label, value, highlight }) => {
     return (
@@ -38,6 +39,8 @@ const Header = () => {
         }
         setCurrBudget(60 - sum);
 
+        console.log(round1Players);
+
 
     }, [players, players.length]);
     return (
@@ -53,11 +56,11 @@ const Header = () => {
                         </span>
                     </div>
                     <div className='text-xs text-purple'>
-                        Gameweek 15:
+                        Gameweek 1:
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    <TransferInfo freeTransfers={5} cost={0} budget={currBudget} />
+                    <TransferInfo freeTransfers={1} cost={0} budget={currBudget} />
                 </div>
             </div>
         </>
@@ -82,11 +85,13 @@ const Pitch = ({ sessionCookie }) => {
         const fetchTeamData = async () => {
             try {
                 // Check if data exists in localStorage
-                const storedPlayers = localStorage.getItem("user-team");
+                const storedPlayers = localStorage.getItem("user-team-v1");
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
-                    const savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
+                    console.log(savedFormation);
+                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     console.log('Formation calculated: ', savedFormation);
                     console.log(storedPlayers);
@@ -98,10 +103,11 @@ const Pitch = ({ sessionCookie }) => {
                 const data = await getUserTeam(sessionCookie);
                 if (data) {
                     setPlayers(data.team);
-                    const savedFormation = calculateNewFormation(data.team);
+                    let savedFormation = calculateNewFormation(data.team);
+                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     // Save the fetched data to localStorage
-                    localStorage.setItem("user-team", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v1", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -159,7 +165,7 @@ const Team = ({ sessionCookie, userData }) => {
             await updateUserTeam(sessionCookie, players);
 
             // Update localStorage with the new players data
-            localStorage.setItem("user-team", JSON.stringify(players));
+            localStorage.setItem("user-team-v1", JSON.stringify(players));
         } catch (err) {
             console.error(err); // Fix typo: use console.error instead of console.err
         } finally {

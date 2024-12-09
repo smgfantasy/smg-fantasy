@@ -24,27 +24,6 @@ export async function GET() {
             });
         });
 
-        // Check constraints for each team's array
-        teamsData.forEach(({ documentId, teams }) => {
-            const counts = {
-                def: 0,
-                mid: 0,
-                fwd: 0,
-            };
-
-            // Count the positions
-            teams.forEach((player) => {
-                if (player.position in counts) {
-                    counts[player.position]++;
-                }
-            });
-
-            // Log documentId if constraints are violated
-            if (counts.def > 3 || counts.mid > 3 || counts.fwd > 2) {
-                console.log(`Document ID: ${documentId} has an invalid team configuration:`, counts);
-            }
-        });
-
         return NextResponse.json({ teams: teamsData });
     } catch (error) {
         console.error("Error fetching documents:", error);

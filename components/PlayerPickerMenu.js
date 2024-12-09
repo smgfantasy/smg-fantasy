@@ -61,7 +61,7 @@ export default function PlayerPickerMenu() {
             canAddPlayer(player)
         );
         setPlayersList(filteredPlayers);
-    }, [pos, searchTerm]);
+    }, [pos, searchTerm, players, currBudget]);
 
     const handlePlayerClick = (index) => {
         setIsPlayerPickerMenuOpen(false);
