@@ -38,5 +38,5 @@ export async function middleware(request) {
 
 // Add your protected routes
 export const config = {
-    matcher: ['/login', '/sign-up', '/points', '/team'],
+    matcher: ['/login', '/standings', '/sign-up', '/points', '/team'],
 };
