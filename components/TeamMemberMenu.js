@@ -10,6 +10,7 @@ const handleMenuClose = () => {
 }
 
 const TeamMemberMenu = () => {
+
     return (
         <div id='player-menu' style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0) 320px, white 520px), url(https://fantasy.premierleague.com/static/media/pattern-1-437.2c3d86db.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))`, backgroundRepeat: 'no-repeat', backgroundPosition: '0px 0px, right -25px top -185px, 0px 0px', backgroundSize: 'auto, 273px 387px, auto', }} className='fixed bottom-0 left-0 w-screen h-[600px] px-6 max-h-0 duration-300'>
             <div className='flex gap-4 py-5'>
