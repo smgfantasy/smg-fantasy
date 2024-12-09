@@ -12,10 +12,10 @@ export function ContextProvider({ children }) {
     const [selectedSlotPos, setSelectedSlotPos] = useState(null);
     const [formation, setFormation] = useState('2-1-2');
     const [isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen] = useState(false);
-    const [playerPickerPos, setPlayerPickerPos] = useState(false);
     const [currBudget, setCurrBudget] = useState(60);
-    const [benchPos, setBenchPos] = useState(['', '', '']);
+    const [playerPickerPos, setPlayerPickerPos] = useState(false);
     const [points, setPoints] = useState(0);
+    const [benchPos, setBenchPos] = useState(['', '', '']);
 
     const swapPlayers = (index1, index2, callback) => {
         if (index1 === 0 || index2 === 0) return;
