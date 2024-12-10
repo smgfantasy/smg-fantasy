@@ -129,7 +129,7 @@ const Points = ({ sessionCookie, userData }) => {
                 <div className='flex justify-center mt-3 gap-2'>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Average Points</div>
-                        <div className='font-bold text-2xl'>{points}</div>
+                        <div className='font-bold text-2xl'>{53}</div>
                     </div>
                     <div className='flex flex-col items-center justify-around bg-purple px-9 py-4 rounded-lg'>
                         <div className='text-white text-xs'>Final Points</div>
