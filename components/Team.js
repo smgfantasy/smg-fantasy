@@ -85,7 +85,7 @@ const Pitch = ({ sessionCookie }) => {
         const fetchTeamData = async () => {
             try {
                 // Check if data exists in localStorage
-                const storedPlayers = localStorage.getItem("user-team-v1");
+                const storedPlayers = localStorage.getItem("user-team-v2");
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
@@ -107,7 +107,7 @@ const Pitch = ({ sessionCookie }) => {
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     // Save the fetched data to localStorage
-                    localStorage.setItem("user-team-v1", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v2", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -165,7 +165,7 @@ const Team = ({ sessionCookie, userData }) => {
             await updateUserTeam(sessionCookie, players);
 
             // Update localStorage with the new players data
-            localStorage.setItem("user-team-v1", JSON.stringify(players));
+            localStorage.setItem("user-team-v2", JSON.stringify(players));
         } catch (err) {
             console.error(err); // Fix typo: use console.error instead of console.err
         } finally {

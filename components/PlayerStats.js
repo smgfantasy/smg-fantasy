@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useAppContext } from '@/context/AppContext';
+import playersPoints from '../data/round1Points.json';
 
 const PlayerStats = () => {
 
@@ -18,6 +20,38 @@ const PlayerStats = () => {
         }
     }
 
+    const [currPlayerPoints, setCurrPlayerPoints] = useState(0);
+    let current = 0;
+    useEffect(() => {
+        try {
+            console.log(players);
+
+            if (Array.isArray(players) && players.length !== 0) { // Check if players is an array and not empty
+                const selectedPlayer = players[selectedSlot];
+                if (selectedPlayer && selectedPlayer.name) { // Ensure selectedPlayer exists and has a name
+                    const foundPlayer = playersPoints.find(player => player.name === selectedPlayer.name);
+                    const foundPlayerFromArr = players.find(playerFromArr => playerFromArr.name === selectedPlayer.name);
+
+                    if (foundPlayer) {
+                        console.log("Player found in points array");
+                        current = foundPlayer.points || 0;
+                        if (foundPlayerFromArr?.captain) { // Optional chaining for captain
+                            current *= 2;
+                        }
+                    }
+                    setCurrPlayerPoints(current);
+                } else {
+                    console.warn("Selected player is undefined or does not have a name");
+                }
+            } else {
+                console.warn("Players array is empty or not defined");
+            }
+        } catch (error) {
+            console.error("An error occurred:", error);
+        }
+    }, [players, selectedSlot, playersPoints]);
+
+
     return (
         <div className="relative">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-sky-50 to-sky-100 p-6">
@@ -34,8 +68,8 @@ const PlayerStats = () => {
                 >
                     <div className="flex space-x-8 px-4">
                         <StatItem title="Price" value={`${players[selectedSlot] && players[selectedSlot].price}M $ `} subtext="9 of 315" />
-                        <StatItem title="Avg Points" value="0" subtext="0 of 0" />
-                        <StatItem title="Total Pts" value="0" />
+                        <StatItem title="Avg Points" value={currPlayerPoints} subtext="0 of 0" />
+                        <StatItem title="Total Pts" value={currPlayerPoints} />
                     </div>
                 </div>
                 <button
