@@ -230,12 +230,16 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
 
     let currPlayerPoints = 0;
     try {
-        currPlayerPoints = playersPoints.find(player => (player.name === name)).points;
-        if (player.captain) {
-            currPlayerPoints = currPlayerPoints * 2;
+        const foundPlayer = playersPoints.find(player => player.name === name);
+        const foundPlayerFromArr = players.find(playerFromArr => playerFromArr.name === name);
+        if (foundPlayer) {
+            currPlayerPoints = foundPlayer.points || 0;
+            if (foundPlayerFromArr.captain) {
+                currPlayerPoints *= 2;
+            }
         }
-    } catch {
-        //no player in the round points json file
+    } catch (error) {
+        console.error("An error occurred:", error);
     }
 
     return (

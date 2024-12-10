@@ -65,7 +65,6 @@ const Points = ({ sessionCookie, userData }) => {
                 if (i === '10') {
                     break;
                 }
-                console.log(i);
                 let currPlayerPoints = 0;
                 try {
                     currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
@@ -86,7 +85,7 @@ const Points = ({ sessionCookie, userData }) => {
         const fetchTeamData = async () => {
             try {
                 // Check if data exists in localStorage
-                const storedPlayers = localStorage.getItem("user-team-v1");
+                const storedPlayers = localStorage.getItem("user-team-v2");
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
@@ -107,7 +106,7 @@ const Points = ({ sessionCookie, userData }) => {
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     // Save the fetched data to localStorage
-                    localStorage.setItem("user-team-v1", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v2", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -130,7 +129,7 @@ const Points = ({ sessionCookie, userData }) => {
                 <div className='flex justify-center mt-3 gap-2'>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Average Points</div>
-                        <div className='font-bold text-2xl'>{points}</div>
+                        <div className='font-bold text-2xl'>{53}</div>
                     </div>
                     <div className='flex flex-col items-center justify-around bg-purple px-9 py-4 rounded-lg'>
                         <div className='text-white text-xs'>Final Points</div>
