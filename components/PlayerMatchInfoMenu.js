@@ -30,26 +30,47 @@ const MatchRow = ({ teamA, teamB, resultA, resultB, time }) => {
 
 }
 const PlayerStats = ({ player }) => {
+    if (!player) return;
     const playerStatistic = round1PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
-    const breakdown = playerStatistic.breakdown;
+    let breakdown;
+    try {
+        breakdown = playerStatistic.breakdown;
+    } catch (err) {
+        return;
+    }
 
     // Filter keys where value is not 0
     const stats = Object.entries(breakdown).filter(([key, value]) => value !== 0);
+    console.log(stats);
+    const statisticKeys = [];
+    statisticKeys["goals"] = 'Goals';
+    statisticKeys["assists"] = 'Assists';
+    statisticKeys["cleanSheets"] = 'Clean Sheets';
+    statisticKeys["saves"] = 'Saves';
+    statisticKeys["minutes30"] = '30+ Minutes';
+    statisticKeys["participation"] = 'Participation';
+    statisticKeys["yellowCards"] = 'Yellow Cards';
+    statisticKeys["redCards"] = 'Red Cards';
+    statisticKeys["allowedGoals"] = 'Allowed Goals';
+    statisticKeys["missedPenalties"] = 'Missed Penalties';
+    statisticKeys["wonPenalties"] = 'Won Penalties';
+    statisticKeys["playerOfMatch"] = 'Player of the Match';
 
     return (
         <div className="mt-4 space-y-4">
             {stats.map(([key, value]) => (
-                <div key={key} className="flex items-center justify-between">
-                    <span className="text-lg text-purple-900 capitalize">
-                        {key.replace(/([A-Z])/g, " $1")} {/* Format key into readable text */}
-                    </span>
-                    <div className="flex gap-8">
-                        <span className="text-lg text-gray-600">{value}</span>
-                        <span className="font-bold text-purple-900">
-                            {value > 0 ? `${value}pts` : `${value}pts`}
+                (key !== 'total' &&
+                    <div key={key} className="flex items-center justify-between">
+                        <span className="text-lg text-purple-900 capitalize">
+                            {statisticKeys[key]}
                         </span>
+                        <div className="flex gap-8">
+                            <span className="font-bold text-purple-900">
+                                {value > 0 ? `${value} pts` : `${value} pts`}
+                            </span>
+                        </div>
                     </div>
-                </div>
+                )
             ))}
             <div className="mt-6 flex items-center justify-between border-t pt-4">
                 <span className="text-xl font-bold text-purple-900">Total Points</span>
@@ -140,11 +161,26 @@ const PlayerMatchInfoMenu = () => {
                         </div>
                     </div>
                     <div>
-                        <MatchRow teamA={'11 V'} resultA={1} resultB={2} teamB={'11 E'} />
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11А' || players[selectedSlot].team === '11Б') && (
+                                <MatchRow teamA="11А" resultA={3} resultB={5} teamB="11Б" />
+                            )
+                        }
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11Г' || players[selectedSlot].team === '10') && (
+                                <MatchRow teamA="11Г" resultA={2} resultB={4} teamB="10" />
+                            )
+                        }
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11В' || players[selectedSlot].team === '11Е') && (
+                                <MatchRow teamA="11В" resultA={1} resultB={0} teamB="11Е" />
+                            )
+                        }
+
                         {/* Points breakdown */}
                         <div className="p-10 bg-[#ffffff70]">
                             <h2 className="text-2xl font-bold text-gray-900">Points Breakdown</h2>
-                            <PlayerStats player={players[selectedSlot]} />
+                            {true && <PlayerStats player={players[selectedSlot]} />}
                         </div>
                     </div>
                     <div onClick={() => setIsPlayerMatchMenuOpen(false)} className='absolute top-[10px] right-[10px]'>
