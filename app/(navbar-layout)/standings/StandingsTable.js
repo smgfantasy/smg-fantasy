@@ -25,10 +25,11 @@ const Table = ({ userData }) => {
                     {data.map((item, index) => (
                         <tr
                             key={index}
-                            className={`border-b border-gray-100 last:border-0 ${userData.clubName === item.clubName ? 'bg-[#2D004D] text-white' :
+                            className={`border-b border-gray-100 last:border-0 ${(userData.clubName === item.clubName && userData.name === item.name) ? 'bg-[#2D004D] text-white' :
                                 index < 3 ? 'bg-gradient-to-r from-purple-50 to-purple-100' : 'hover:bg-gray-50'
                                 }`}
                         >
+
                             <td className="px-4 py-3 text-center">
                                 {index < 3 ? (
                                     <div className="flex items-center justify-center">
@@ -39,20 +40,22 @@ const Table = ({ userData }) => {
                                 )}
                             </td>
                             <td className="px-4 py-3">
-                                <div className="flex flex-col">
-                                    <span className={
-                                        userData.name === item.name ? 'text-[#4ADE80]' :
-                                            index < 3 ? 'text-[#2D004D] font-bold' : 'text-[#2D004D] font-medium'
-                                    }>
-                                        {item.clubName}
-                                    </span>
-                                    <span className={
-                                        userData.name === item.name ? 'text-gray-300' :
-                                            index < 3 ? 'text-purple-700' : 'text-gray-500'
-                                    }>
-                                        {item.name}
-                                    </span>
-                                </div>
+                                <Link href={`/spectate/${item.uid}`} passHref>
+                                    <div className="flex flex-col">
+                                        <span className={
+                                            userData.name === item.name ? 'text-[#4ADE80]' :
+                                                index < 3 ? 'text-[#2D004D] font-bold' : 'text-[#2D004D] font-medium'
+                                        }>
+                                            {item.clubName}
+                                        </span>
+                                        <div className={
+                                            userData.name === item.name ? 'text-gray-300 underline' :
+                                                index < 3 ? 'text-purple-700 underline' : 'text-gray-500 underline'
+                                        }>
+                                            {item.name}
+                                        </div>
+                                    </div>
+                                </Link>
                             </td>
                             <td className={`px-4 py-3 font-bold ${index < 3 ? 'text-lg' : ''
                                 }`}>
@@ -94,4 +97,3 @@ const StandingsTable = ({ userData }) => {
 }
 
 export default StandingsTable;
-

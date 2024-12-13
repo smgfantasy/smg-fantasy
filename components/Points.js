@@ -7,7 +7,7 @@ import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
 import playersPoints from '../data/round1Points.json';
-
+import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 const Header = () => {
     return (
         <>
@@ -146,6 +146,7 @@ const Points = ({ sessionCookie, userData }) => {
                 <Pitch />
             </div>
             <Subs />
+            <PlayerMatchInfoMenu />
         </div >
     )
 }

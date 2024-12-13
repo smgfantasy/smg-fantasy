@@ -5,8 +5,17 @@ import PlayerPickerMenu from './PlayerPickerMenu';
 import playersData from '../data/players.json';
 import playersPoints from '../data/round1Points.json';
 
-const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
+const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFormation }) => {
     const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, benchPos } = useAppContext();
+
+    let playersArray, currFormation;
+    if (spectatedPlayers) {
+        playersArray = spectatedPlayers;
+        currFormation = spectatedFormation;
+    } else {
+        playersArray = players;
+        currFormation = formation;
+    }
 
     const findPlayerByName = (name) => {
         return playersData.find(player => player.name.toLowerCase() === name.toLowerCase());
@@ -21,7 +30,7 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
         const index1 = position, index2 = selectedSlot;
 
         if (index1 === 0 || index2 === 0) return '';
-        const array = [...players];
+        const array = [...playersArray];
         const temp = array[index1];
         array[index1] = array[index2];
         array[index2] = temp;
@@ -36,12 +45,12 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
 
     const checkPossibleFormation = () => {
         let count = 0;
-        for (let i in players) {
-            if (players[i].name !== '') {
+        for (let i in playersArray) {
+            if (playersArray[i].name !== '') {
                 count++;
             }
         }
-        // if (count < 9 && players[position] === players[selectedSlot]) return '2-1-2';
+        // if (count < 9 && playersArray[position] === playersArray[selectedSlot]) return '2-1-2';
 
         const possibleFormation = calculateNewFormation();
         return ['2-2-1', '2-1-2', '3-1-1'].includes(possibleFormation) ? possibleFormation : false;
@@ -49,16 +58,18 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
 
     const checkSwitch = () => {
         if (!switchMode) return true;
-        if (players[position].position === players[selectedSlot].position) return true;
+        if (playersArray[position].position === playersArray[selectedSlot].position) return true;
         if ((position >= 10) !== (selectedSlot >= 10)) {
             return Boolean(checkPossibleFormation());
         }
-        return players[position].position === selectedSlotPos;
+        return playersArray[position].position === selectedSlotPos;
     };
 
     const handlePlayerClick = () => {
 
-        if (players[position].name === "" && !switchMode) {
+        if (spectatedPlayers) return;
+
+        if (playersArray[position].name === "" && !switchMode) {
             setIsPlayerPickerMenuOpen(true);
             setPlayerPickerPos(position);
             return;
@@ -66,17 +77,17 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
 
         if (switchMode) {
             if (!checkSwitch()) return;
-            console.log(players[selectedSlot].position, players[position].position);
+            console.log(playersArray[selectedSlot].position, playersArray[position].position);
             swapPlayers(selectedSlot, position, (newPlayers) => {
                 const newFormation = checkPossibleFormation();
                 let count = 0;
-                for (let i in players) {
-                    if (players[i].name !== '') {
+                for (let i in playersArray) {
+                    if (playersArray[i].name !== '') {
                         count++;
                     }
                 }
                 if (newFormation) {
-                    const updatedPlayers = players.slice(0, 10).map(player => ({
+                    const updatedPlayers = playersArray.slice(0, 10).map(player => ({
                         id: player.id, // Keep the id same
                         name: '',
                         points: null,
@@ -190,7 +201,7 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
             });
         } else {
             setSelectedSlot(position);
-            setSelectedSlotPos(players[position].position);
+            setSelectedSlotPos(playersArray[position].position);
         }
 
         if (switchMode) {
@@ -200,19 +211,20 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
         }
 
         const playerMenu = document.querySelector('#player-menu');
-        if (playerMenu.style.maxHeight === '' || playerMenu.style.maxHeight === '0px') {
-            if (variant === "points") playerMenu.style.maxHeight = 550 + 'px';
-            else playerMenu.style.maxHeight = 600 + 'px';
-        } else {
-            playerMenu.style.maxHeight = '0px';
+        if (playerMenu) {
+            if (playerMenu.style.maxHeight === '' || playerMenu.style.maxHeight === '0px') {
+                if (variant === "points") playerMenu.style.maxHeight = 550 + 'px';
+                else playerMenu.style.maxHeight = 600 + 'px';
+            } else {
+                playerMenu.style.maxHeight = '0px';
+            }
         }
-
     }
 
     let active = false;
-    if (formation === '2-1-2' && (position === 1 || position === 3 || position === 5 || position === 7 || position === 9)) active = true;
-    if (formation === '2-2-1' && (position === 1 || position === 3 || position === 4 || position === 6 || position === 8)) active = true;
-    if (formation === '3-1-1' && (position === 1 || position === 2 || position === 3 || position === 5 || position === 8)) active = true;
+    if (currFormation === '2-1-2' && (position === 1 || position === 3 || position === 5 || position === 7 || position === 9)) active = true;
+    if (currFormation === '2-2-1' && (position === 1 || position === 3 || position === 4 || position === 6 || position === 8)) active = true;
+    if (currFormation === '3-1-1' && (position === 1 || position === 2 || position === 3 || position === 5 || position === 8)) active = true;
     if (position > 9 || position === 0) active = true;
 
     function getPlayerPosition() {
@@ -229,15 +241,15 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
     let currPlayerPoints = 0;
     try {
         const foundPlayer = playersPoints.find(player => player.name === name);
-        const foundPlayerFromArr = players.find(playerFromArr => playerFromArr.name === name);
+        const foundPlayerFromArr = playersArray.find(playerFromArr => playerFromArr.name === name);
         if (foundPlayer) {
             currPlayerPoints = foundPlayer.points || 0;
-            if (foundPlayerFromArr.captain) {
+            if (foundPlayerFromArr?.captain) {
                 currPlayerPoints *= 2;
             }
         }
     } catch (error) {
-        console.error("An error occurred:", error);
+        console.log("An error occurred:", error);
     }
 
     return (
@@ -251,12 +263,12 @@ const PlayerSlot = ({ img, name = 'Default', points = '0', position }) => {
                         <UserPlus />
                     </div>
                     <div className="mt-1 text-sm font-medium">
-                        {getPlayerPosition(players[position]?.position)}
+                        {getPlayerPosition(playersArray[position]?.position)}
                     </div>
                 </div>
             ) : (
                 <>
-                    {players[position].captain && <div className='absolute right-0 rounded-full w-5 h-5 bg-blue-600 text-white flex justify-center items-center'>C</div>}
+                    {playersArray[position] && playersArray[position].captain && <div className='absolute right-0 rounded-full w-5 h-5 bg-blue-600 text-white flex justify-center items-center'>C</div>}
 
                     <div className='w-[60px] h-[58px] bg-[#0e9d5e] rounded-t-md'>
                         {playerTeam !== '' && (<img className='rounded-t-md' src={

@@ -41,7 +41,6 @@ const PlayerStats = ({ player }) => {
 
     // Filter keys where value is not 0
     const stats = Object.entries(breakdown).filter(([key, value]) => value !== 0);
-    console.log(stats);
     const statisticKeys = [];
     statisticKeys["goals"] = 'Goals';
     statisticKeys["assists"] = 'Assists';
