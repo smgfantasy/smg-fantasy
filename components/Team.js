@@ -11,27 +11,35 @@ import updateUserTeam from '@/utils/team/updateTeam';
 import round1Players from '../data/round1Players.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 
-const StatItem = ({ label, value, highlight }) => {
+const StatItem = ({ label, value, highlightClass }) => {
     return (
-        <div className='flex flex-col justify-center w-1/3 gap-2'>
+        <div className="flex flex-col justify-center w-1/3 gap-2">
             <div>{label}</div>
-            <div className={`font-bold ${highlight ? 'bg-green-500 rounded-sm' : ''}`}>{value}</div>
+            <div className={`font-bold ${highlightClass || ''}`}>{value}</div>
         </div>
     );
-}
+};
 
 const TransferInfo = ({ freeTransfers, cost, budget }) => {
     return (
-        <div className='flex justify-center text-xs font-light text-purple gap-4 mx-12'>
+        <div className="flex justify-center text-xs font-light text-purple gap-4 mx-12">
             <StatItem label="Free transfers" value={freeTransfers} />
-            <StatItem label="Cost" value={`${cost} pts`} />
-            <StatItem label="Budget" value={budget} highlight={true} />
+            <StatItem
+                label="Cost"
+                value={`${cost} pts`}
+                highlightClass={cost > 0 ? 'bg-red text-white rounded-sm' : ''}
+            />
+            <StatItem
+                label="Budget"
+                value={budget}
+                highlightClass={"bg-green-500 text-white rounded-sm"}
+            />
         </div>
     );
-}
+};
 
 const Header = () => {
-    const { players, currBudget, setCurrBudget } = useAppContext();
+    const { players, currBudget, setCurrBudget, madeTransfers } = useAppContext();
     useEffect(() => {
         let sum = 0;
         for (let i in players) {
@@ -44,6 +52,14 @@ const Header = () => {
 
 
     }, [players, players.length]);
+
+    let cost = (madeTransfers - 1) * 8;
+    const MAX_TRANSFERS = 1;
+    if (1 - madeTransfers === MAX_TRANSFERS) cost = 0;
+
+    let freeTransfers = 1 - madeTransfers;
+    if (freeTransfers < 0) freeTransfers = 0;
+
     return (
         <>
             <div className='bg-[#ffffff99] mx-2 translate-y-3 rounded-lg'>
@@ -61,15 +77,15 @@ const Header = () => {
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    <TransferInfo freeTransfers={1} cost={0} budget={currBudget} />
+                    <TransferInfo freeTransfers={freeTransfers} cost={cost} budget={currBudget} />
                 </div>
             </div>
         </>
     );
 }
 
-const Pitch = ({ sessionCookie }) => {
-    const { players, setPlayers, setFormation } = useAppContext();
+const Pitch = ({ sessionCookie, userData }) => {
+    const { players, setPlayers, setFormation, setOriginalPlayers } = useAppContext();
 
     const calculateNewFormation = (array) => {
 
@@ -85,6 +101,15 @@ const Pitch = ({ sessionCookie }) => {
     useEffect(() => {
         const fetchTeamData = async () => {
             try {
+                const currUserUid = userData.uid;
+                console.log("uid:", currUserUid);
+
+                const element = round1Players.teams.find((a) => a.documentId === currUserUid);
+                console.log("el team:", element.team);
+                setOriginalPlayers(element.team);
+
+                console.log("players:", players);
+
                 // Check if data exists in localStorage
                 const storedPlayers = localStorage.getItem("user-team-v2");
                 if (storedPlayers) {
@@ -121,6 +146,23 @@ const Pitch = ({ sessionCookie }) => {
         if (players.length === 0) {
             fetchTeamData();
         }
+
+        function countNameDifferences(arr1, arr2) {
+            // Helper function to get valid names from an array
+            const extractValidNames = (arr) =>
+                arr
+                    .map(player => player.name.trim())
+                    .filter(name => name !== ""); // Skip empty names
+
+            // Extract valid names
+            const names1 = new Set(extractValidNames(arr2)); // Convert arr1 names to a Set
+            const names2 = extractValidNames(arr1); // Extract names from arr2
+
+            // Count how many names in arr2 are not in names1
+            const differences = names2.filter(name => !names1.has(name)).length;
+
+            return differences;
+        }
     }, [players.length, sessionCookie, setPlayers]);
 
     return (
@@ -141,11 +183,11 @@ const Pitch = ({ sessionCookie }) => {
     );
 }
 const Team = ({ sessionCookie, userData }) => {
-    const { players, setPlayers } = useAppContext();
+    const { players, setPlayers, madeTransfers } = useAppContext();
     const [readySave, setReadySave] = useState(false);
 
     const [loading, setLoading] = useState(false);
-
+    const [loadingReset, setLoadingReset] = useState(false);
     useEffect(() => {
         let count = 0;
         for (let i in players) {
@@ -163,7 +205,7 @@ const Team = ({ sessionCookie, userData }) => {
         setLoading(true);
         try {
             // Update the server with the current players data
-            await updateUserTeam(sessionCookie, players);
+            await updateUserTeam(sessionCookie, players, madeTransfers);
 
             // Update localStorage with the new players data
             localStorage.setItem("user-team-v2", JSON.stringify(players));
@@ -174,31 +216,69 @@ const Team = ({ sessionCookie, userData }) => {
         }
     };
 
+    const handleTeamReset = async () => {
+
+        setLoadingReset(true)
+        try {
+
+            const element = round1Players.teams.find((a) => a.documentId === userData.uid);
+            await updateUserTeam(sessionCookie, element.team, 0);
+            localStorage.setItem("user-team-v2", JSON.stringify(element.team));
+            setPlayers(element.team);
+            location.reload();
+        } catch (err) {
+            console.log(err);
+        } finally {
+            setLoadingReset(false);
+        }
+    }
+
 
     return (
         <>
             <div className='pt-8 px-1'>
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
-                    {/* <button onClick={handleTeamSave}
-                        className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
-                            }`}
-                        disabled={!readySave}
-                    >
-                        <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-out transform group-hover:scale-105"></span>
-                        <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
-                        <SaveAll className="w-5 h-5 mr-2 relative z-2" />
-                        <span className="relative z-2">{loading ?
-                            <span className='animate-spin text-2xl flex items-center justify-center'>
-                                <div style={{ width: '24px', height: '24px' }}>
-                                    <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
-                                        <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
-                                    </svg>
-                                </div>
-                            </span> :
-                            <>Save team</>
-                        }</span>
-                    </button> */}
+                    <div className='flex gap-5'>
+                        <button onClick={handleTeamSave}
+                            className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
+                                }`}
+                            disabled={!readySave}
+                        >
+                            <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-out transform group-hover:scale-105"></span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
+                            <SaveAll className="w-5 h-5 mr-2 relative z-2" />
+                            <span className="relative z-2">{loading ?
+                                <span className='animate-spin text-2xl flex items-center justify-center'>
+                                    <div style={{ width: '24px', height: '24px' }}>
+                                        <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
+                                            <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
+                                        </svg>
+                                    </div>
+                                </span> :
+                                <>Save team</>
+                            }</span>
+                        </button>
+                        <button onClick={handleTeamReset}
+                            className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
+                                }`}
+                            disabled={!readySave}
+                        >
+                            <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red transition-all duration-300 ease-out transform group-hover:scale-105"></span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
+                            <SaveAll className="w-5 h-5 mr-2 relative z-2" />
+                            <span className="relative z-2">{loadingReset ?
+                                <span className='animate-spin text-2xl flex items-center justify-center'>
+                                    <div style={{ width: '24px', height: '24px' }}>
+                                        <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
+                                            <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
+                                        </svg>
+                                    </div>
+                                </span> :
+                                <>Reset Team</>
+                            }</span>
+                        </button>
+                    </div>
                 </div>
                 <div
                     style={{
@@ -210,7 +290,7 @@ const Team = ({ sessionCookie, userData }) => {
                     className='mt-0 w-full bg-[#2C3E50] h-[650px] rounded-md'
                 >
                     <Header />
-                    <Pitch sessionCookie={sessionCookie} />
+                    <Pitch sessionCookie={sessionCookie} userData={userData} />
                 </div>
                 <Subs />
             </div>

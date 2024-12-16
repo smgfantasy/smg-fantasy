@@ -3,7 +3,7 @@ import { useAppContext } from '@/context/AppContext';
 import playersData from '../data/players.json';
 
 export default function PlayerPickerMenu() {
-    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers, currBudget, benchPos } = useAppContext();
+    const { isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, players, setPlayers, currBudget, benchPos, originalPlayers, setMadeTransfers } = useAppContext();
     const sheetRef = useRef(null);
     const [playersList, setPlayersList] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -63,6 +63,23 @@ export default function PlayerPickerMenu() {
         setPlayersList(filteredPlayers);
     }, [pos, searchTerm, players, currBudget]);
 
+    function countNameDifferences(arr1, arr2) {
+        // Helper function to get valid names from an array
+        const extractValidNames = (arr) =>
+            arr
+                .map(player => player.name.trim())
+                .filter(name => name !== ""); // Skip empty names
+
+        // Extract valid names
+        const names1 = new Set(extractValidNames(arr2)); // Convert arr1 names to a Set
+        const names2 = extractValidNames(arr1); // Extract names from arr2
+
+        // Count how many names in arr2 are not in names1
+        const differences = names2.filter(name => !names1.has(name)).length;
+
+        return differences;
+    }
+
     const handlePlayerClick = (index) => {
         setIsPlayerPickerMenuOpen(false);
         setPlayerPickerPos(false);
@@ -70,8 +87,21 @@ export default function PlayerPickerMenu() {
         const tempPlayers = [...players];
         tempPlayers[playerPickerPos] = playersList[index];
 
+        console.log("temp:", tempPlayers, "orig:", originalPlayers);
+
+        console.log(countNameDifferences(tempPlayers, originalPlayers));
+
+        setMadeTransfers(countNameDifferences(tempPlayers, originalPlayers))
+
         setPlayers(tempPlayers);
     }
+
+    useEffect(() => {
+        if (players.length === 0) return;
+
+        const tempPlayers = [...players];
+        setMadeTransfers(countNameDifferences(tempPlayers, originalPlayers));
+    }, [players]);
 
     return (
         <>

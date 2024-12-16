@@ -64,6 +64,8 @@ export async function PUT(request) {
         // Parse the request body to extract players
         const body = await request.json();
         const players = body.players;
+        const madeTransfers = body.madeTransfers;
+
 
         if (!Array.isArray(players)) {
             return NextResponse.json({ error: "Invalid players data" }, { status: 400 });
@@ -73,9 +75,7 @@ export async function PUT(request) {
             const docRef = db.collection('users-teams').doc(uid);
 
             // Replace the team array with the new one
-            await docRef.set({ team: players }, { merge: true });
-
-            console.log('Team successfully updated!');
+            await docRef.set({ team: players, madeTransfers: madeTransfers }, { merge: true });
             return NextResponse.json({ message: "Team updated successfully" }, { status: 200 });
         } catch (error) {
             console.error('Error updating document: ', error);
