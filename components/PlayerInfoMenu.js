@@ -8,7 +8,7 @@ import PlayerStats from './PlayerStats';
 import { ArrowRight, Star, Trash2 } from 'lucide-react';
 import playersPointsRound1 from '../data/round1Points.json';
 
-const enableChanges = false;
+const enableChanges = true;
 
 const PlayerInfoMenu = ({ currVariant }) => {
     const { variant, setVariant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, setPlayers, benchPos, setBenchPos } = useAppContext();
@@ -67,7 +67,6 @@ const PlayerInfoMenu = ({ currVariant }) => {
         tempPlayers[selectedSlot] = { name: "", points: null, team: "", position: "", price: "" };
         setPlayers(tempPlayers);
         handleMenuClose(true);
-        console.log(copy);
     }
 
     const handleMakeCaptain = () => {

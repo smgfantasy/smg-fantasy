@@ -11,27 +11,35 @@ import updateUserTeam from '@/utils/team/updateTeam';
 import round1Players from '../data/round1Players.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 
-const StatItem = ({ label, value, highlight }) => {
+const StatItem = ({ label, value, highlightClass }) => {
     return (
-        <div className='flex flex-col justify-center w-1/3 gap-2'>
+        <div className="flex flex-col justify-center w-1/3 gap-2">
             <div>{label}</div>
-            <div className={`font-bold ${highlight ? 'bg-green-500 rounded-sm' : ''}`}>{value}</div>
+            <div className={`font-bold ${highlightClass || ''}`}>{value}</div>
         </div>
     );
-}
+};
 
 const TransferInfo = ({ freeTransfers, cost, budget }) => {
     return (
-        <div className='flex justify-center text-xs font-light text-purple gap-4 mx-12'>
+        <div className="flex justify-center text-xs font-light text-purple gap-4 mx-12">
             <StatItem label="Free transfers" value={freeTransfers} />
-            <StatItem label="Cost" value={`${cost} pts`} />
-            <StatItem label="Budget" value={budget} highlight={true} />
+            <StatItem
+                label="Cost"
+                value={`${cost} pts`}
+                highlightClass={cost > 0 ? 'bg-red text-white rounded-sm' : ''}
+            />
+            <StatItem
+                label="Budget"
+                value={budget}
+                highlightClass={budget > 0 ? 'bg-green-500 text-white rounded-sm' : 'bg-red-500 text-white rounded-sm'}
+            />
         </div>
     );
-}
+};
 
 const Header = () => {
-    const { players, currBudget, setCurrBudget } = useAppContext();
+    const { players, currBudget, setCurrBudget, madeTransfers } = useAppContext();
     useEffect(() => {
         let sum = 0;
         for (let i in players) {
@@ -44,6 +52,14 @@ const Header = () => {
 
 
     }, [players, players.length]);
+
+    let cost = (madeTransfers - 1) * 8;
+    const MAX_TRANSFERS = 1;
+    if (1 - madeTransfers === MAX_TRANSFERS) cost = 0;
+
+    let freeTransfers = 1 - madeTransfers;
+    if (freeTransfers < 0) freeTransfers = 0;
+
     return (
         <>
             <div className='bg-[#ffffff99] mx-2 translate-y-3 rounded-lg'>
@@ -61,7 +77,7 @@ const Header = () => {
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    <TransferInfo freeTransfers={1} cost={0} budget={currBudget} />
+                    <TransferInfo freeTransfers={freeTransfers} cost={cost} budget={currBudget} />
                 </div>
             </div>
         </>
@@ -69,7 +85,7 @@ const Header = () => {
 }
 
 const Pitch = ({ sessionCookie }) => {
-    const { players, setPlayers, setFormation } = useAppContext();
+    const { players, setPlayers, setFormation, setOriginalPlayers } = useAppContext();
 
     const calculateNewFormation = (array) => {
 
@@ -90,6 +106,7 @@ const Pitch = ({ sessionCookie }) => {
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
+                    setOriginalPlayers(JSON.parse(storedPlayers));
                     let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
                     // console.log(savedFormation);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
@@ -104,6 +121,7 @@ const Pitch = ({ sessionCookie }) => {
                 const data = await getUserTeam(sessionCookie);
                 if (data) {
                     setPlayers(data.team);
+                    setOriginalPlayers(data.team);
                     let savedFormation = calculateNewFormation(data.team);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
