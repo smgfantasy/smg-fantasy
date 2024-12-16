@@ -32,7 +32,7 @@ const TransferInfo = ({ freeTransfers, cost, budget }) => {
             <StatItem
                 label="Budget"
                 value={budget}
-                highlightClass={budget > 0 ? 'bg-green-500 text-white rounded-sm' : 'bg-red-500 text-white rounded-sm'}
+                highlightClass={"bg-green-500 text-white rounded-sm"}
             />
         </div>
     );
@@ -84,7 +84,7 @@ const Header = () => {
     );
 }
 
-const Pitch = ({ sessionCookie }) => {
+const Pitch = ({ sessionCookie, userData }) => {
     const { players, setPlayers, setFormation, setOriginalPlayers } = useAppContext();
 
     const calculateNewFormation = (array) => {
@@ -101,12 +101,20 @@ const Pitch = ({ sessionCookie }) => {
     useEffect(() => {
         const fetchTeamData = async () => {
             try {
+                const currUserUid = userData.uid;
+                console.log("uid:", currUserUid);
+
+                const element = round1Players.teams.find((a) => a.documentId === currUserUid);
+                console.log("el team:", element.team);
+                setOriginalPlayers(element.team);
+
+                console.log("players:", players);
+
                 // Check if data exists in localStorage
                 const storedPlayers = localStorage.getItem("user-team-v2");
                 if (storedPlayers) {
                     // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
-                    setOriginalPlayers(JSON.parse(storedPlayers));
                     let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
                     // console.log(savedFormation);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
@@ -121,7 +129,6 @@ const Pitch = ({ sessionCookie }) => {
                 const data = await getUserTeam(sessionCookie);
                 if (data) {
                     setPlayers(data.team);
-                    setOriginalPlayers(data.team);
                     let savedFormation = calculateNewFormation(data.team);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
@@ -138,6 +145,23 @@ const Pitch = ({ sessionCookie }) => {
         // Call the function if players array is empty
         if (players.length === 0) {
             fetchTeamData();
+        }
+
+        function countNameDifferences(arr1, arr2) {
+            // Helper function to get valid names from an array
+            const extractValidNames = (arr) =>
+                arr
+                    .map(player => player.name.trim())
+                    .filter(name => name !== ""); // Skip empty names
+
+            // Extract valid names
+            const names1 = new Set(extractValidNames(arr2)); // Convert arr1 names to a Set
+            const names2 = extractValidNames(arr1); // Extract names from arr2
+
+            // Count how many names in arr2 are not in names1
+            const differences = names2.filter(name => !names1.has(name)).length;
+
+            return differences;
         }
     }, [players.length, sessionCookie, setPlayers]);
 
@@ -159,7 +183,7 @@ const Pitch = ({ sessionCookie }) => {
     );
 }
 const Team = ({ sessionCookie, userData }) => {
-    const { players, setPlayers } = useAppContext();
+    const { players, setPlayers, madeTransfers } = useAppContext();
     const [readySave, setReadySave] = useState(false);
 
     const [loading, setLoading] = useState(false);
@@ -181,7 +205,7 @@ const Team = ({ sessionCookie, userData }) => {
         setLoading(true);
         try {
             // Update the server with the current players data
-            await updateUserTeam(sessionCookie, players);
+            await updateUserTeam(sessionCookie, players, madeTransfers);
 
             // Update localStorage with the new players data
             localStorage.setItem("user-team-v2", JSON.stringify(players));
@@ -198,7 +222,7 @@ const Team = ({ sessionCookie, userData }) => {
             <div className='pt-8 px-1'>
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
-                    {/* <button onClick={handleTeamSave}
+                    <button onClick={handleTeamSave}
                         className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
                             }`}
                         disabled={!readySave}
@@ -216,7 +240,7 @@ const Team = ({ sessionCookie, userData }) => {
                             </span> :
                             <>Save team</>
                         }</span>
-                    </button> */}
+                    </button>
                 </div>
                 <div
                     style={{
@@ -228,7 +252,7 @@ const Team = ({ sessionCookie, userData }) => {
                     className='mt-0 w-full bg-[#2C3E50] h-[650px] rounded-md'
                 >
                     <Header />
-                    <Pitch sessionCookie={sessionCookie} />
+                    <Pitch sessionCookie={sessionCookie} userData={userData} />
                 </div>
                 <Subs />
             </div>

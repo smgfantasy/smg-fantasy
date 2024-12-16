@@ -71,8 +71,8 @@ export default function PlayerPickerMenu() {
                 .filter(name => name !== ""); // Skip empty names
 
         // Extract valid names
-        const names1 = new Set(extractValidNames(arr1)); // Convert arr1 names to a Set
-        const names2 = extractValidNames(arr2); // Extract names from arr2
+        const names1 = new Set(extractValidNames(arr2)); // Convert arr1 names to a Set
+        const names2 = extractValidNames(arr1); // Extract names from arr2
 
         // Count how many names in arr2 are not in names1
         const differences = names2.filter(name => !names1.has(name)).length;
@@ -91,10 +91,17 @@ export default function PlayerPickerMenu() {
 
         console.log(countNameDifferences(tempPlayers, originalPlayers));
 
-        setMadeTransfers(countNameDifferences(tempPlayers, originalPlayers));
+        setMadeTransfers(countNameDifferences(tempPlayers, originalPlayers))
 
         setPlayers(tempPlayers);
     }
+
+    useEffect(() => {
+        if (players.length === 0) return;
+
+        const tempPlayers = [...players];
+        setMadeTransfers(countNameDifferences(tempPlayers, originalPlayers));
+    }, [players]);
 
     return (
         <>

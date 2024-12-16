@@ -118,7 +118,7 @@ const SpectateView = ({ userData, players }) => {
                     </div>
                     <div className='flex flex-col justify-center items-center rounded-lg'>
                         <div className='font-thin'>Highest Points</div>
-                        <div className='font-bold text-2xl'>{points}</div>
+                        <div className='font-bold text-2xl'>{82}</div>
                     </div>
                     {/* <div className='-mr-10'>Dropdown</div> */}
                 </div>

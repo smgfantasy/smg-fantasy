@@ -1,4 +1,4 @@
-async function updateUserTeam(sessionCookie, players) {
+async function updateUserTeam(sessionCookie, players, madeTransfers) {
     try {
         // Send a PUT request to the API endpoint with the players data
         const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/team`, {
@@ -7,7 +7,7 @@ async function updateUserTeam(sessionCookie, players) {
                 "Content-Type": "application/json",
                 Cookie: `session=${sessionCookie.value}`,
             },
-            body: JSON.stringify({ players }), // Pass the players array in the body
+            body: JSON.stringify({ players, madeTransfers }), // Pass the players array in the body
         });
 
         // Check if the response is successful
