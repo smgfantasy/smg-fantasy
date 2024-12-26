@@ -102,27 +102,19 @@ const Pitch = ({ sessionCookie, userData }) => {
         const fetchTeamData = async () => {
             try {
                 const currUserUid = userData.uid;
-                console.log("uid:", currUserUid);
 
                 const element = round1Players.teams.find((a) => a.documentId === currUserUid);
-                console.log("el team:", element.team);
                 setOriginalPlayers(element.team);
 
-                console.log("players:", players);
 
                 // Check if data exists in localStorage
                 const storedPlayers = localStorage.getItem("user-team-v2");
                 if (storedPlayers) {
-                    // Parse and set players from localStorage
                     setPlayers(JSON.parse(storedPlayers));
                     let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
-                    // console.log(savedFormation);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
-                    // console.log('Formation calculated: ', savedFormation);
-                    // console.log(storedPlayers);
-                    // console.log('Team fetched from localStorage...');
-                    return; // Exit if data is found in localStorage
+                    return;
                 }
 
                 // Fetch data from the server if not in localStorage
@@ -154,11 +146,10 @@ const Pitch = ({ sessionCookie, userData }) => {
                     .map(player => player.name.trim())
                     .filter(name => name !== ""); // Skip empty names
 
-            // Extract valid names
-            const names1 = new Set(extractValidNames(arr2)); // Convert arr1 names to a Set
-            const names2 = extractValidNames(arr1); // Extract names from arr2
 
-            // Count how many names in arr2 are not in names1
+            const names1 = new Set(extractValidNames(arr2));
+            const names2 = extractValidNames(arr1);
+
             const differences = names2.filter(name => !names1.has(name)).length;
 
             return differences;
@@ -197,8 +188,6 @@ const Team = ({ sessionCookie, userData }) => {
             }
         }
         if (count === 9) setReadySave(true);
-        // console.log(players);
-        // console.log('vliza se');
     }, [players, players.length]);
 
     const handleTeamSave = async () => {
@@ -240,7 +229,7 @@ const Team = ({ sessionCookie, userData }) => {
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
                     <div className='flex gap-5'>
-                        
+
                         <button onClick={handleTeamReset}
                             className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
                                 }`}

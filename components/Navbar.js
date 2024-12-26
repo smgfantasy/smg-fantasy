@@ -18,7 +18,7 @@ const NavbarLink = ({ children, href, isActive, onClick }) => {
 };
 
 const Navbar = () => {
-    const pathname = usePathname(); // Get the current pathname
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const navbarRef = useRef(null);
 

@@ -4899,6 +4899,12 @@
 					"price": 5
 				},
 				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
 					"name": "Александър Малиновски",
 					"team": "11Б",
 					"position": "mid",
@@ -4911,11 +4917,12 @@
 					"team": "",
 					"position": ""
 				},
+
 				{
-					"name": "Божил Ненов",
-					"team": "11Б",
-					"position": "mid",
-					"price": 7
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
 				},
 				{
 					"name": "",
@@ -4930,12 +4937,6 @@
 					"price": 7.5
 				},
 				{
-					"name": "",
-					"points": null,
-					"team": "",
-					"position": ""
-				},
-				{
 					"name": "Кристиян Пенев",
 					"team": "11А",
 					"position": "def",
@@ -4948,10 +4949,10 @@
 					"price": 6
 				},
 				{
-					"name": "Веселин Пенев",
-					"team": "10",
-					"position": "fwd",
-					"price": 6.5
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
 				}
 			]
 		},

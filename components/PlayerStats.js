@@ -24,27 +24,21 @@ const PlayerStats = () => {
     let current = 0;
     useEffect(() => {
         try {
-            // console.log(players);
 
-            if (Array.isArray(players) && players.length !== 0) { // Check if players is an array and not empty
+            if (Array.isArray(players) && players.length !== 0) {
                 const selectedPlayer = players[selectedSlot];
-                if (selectedPlayer && selectedPlayer.name) { // Ensure selectedPlayer exists and has a name
+                if (selectedPlayer && selectedPlayer.name) {
                     const foundPlayer = playersPoints.find(player => player.name === selectedPlayer.name);
                     const foundPlayerFromArr = players.find(playerFromArr => playerFromArr.name === selectedPlayer.name);
 
                     if (foundPlayer) {
-                        // console.log("Player found in points array");
                         current = foundPlayer.points || 0;
-                        if (foundPlayerFromArr?.captain) { // Optional chaining for captain
+                        if (foundPlayerFromArr?.captain) {
                             current *= 2;
                         }
                     }
                     setCurrPlayerPoints(current);
-                } else {
-                    // console.warn("Selected player is undefined or does not have a name");
                 }
-            } else {
-                // console.warn("Players array is empty or not defined");
             }
         } catch (error) {
             console.error("An error occurred:", error);
@@ -59,7 +53,6 @@ const PlayerStats = () => {
                     className="absolute left-2 top-1/2 -translate-y-1/2 transform z-10 bg-white bg-opacity-50 rounded-full p-1"
                     onClick={() => scroll('left')}
                 >
-                    {/* <ChevronLeft className="h-6 w-6 text-gray-600" /> */}
                 </button>
                 <div
                     ref={scrollContainerRef}
@@ -76,7 +69,6 @@ const PlayerStats = () => {
                     className="absolute right-2 top-1/2 -translate-y-1/2 transform z-10 bg-white bg-opacity-50 rounded-full p-1"
                     onClick={() => scroll('right')}
                 >
-                    {/* <ChevronRight className="h-6 w-6 text-gray-600" /> */}
                 </button>
             </div>
         </div>

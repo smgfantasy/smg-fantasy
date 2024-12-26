@@ -4,10 +4,9 @@ import PlayerInfoMenu from "@/components/PlayerInfoMenu";
 import { cookies } from "next/headers";
 import { getUserData } from "@/utils/user/getUserData";
 
-export default async function Home() {
-
+export default async function Home({ searchParams }) {
     const cookieStore = await cookies();
-    const sessionCookie = cookieStore.get('session');
+    const sessionCookie = cookieStore.get("session");
     const userData = await getUserData(sessionCookie);
 
     return (

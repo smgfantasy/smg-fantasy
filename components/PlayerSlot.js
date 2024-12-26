@@ -50,7 +50,6 @@ const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFor
                 count++;
             }
         }
-        // if (count < 9 && playersArray[position] === playersArray[selectedSlot]) return '2-1-2';
 
         const possibleFormation = calculateNewFormation();
         return ['2-2-1', '2-1-2', '3-1-1'].includes(possibleFormation) ? possibleFormation : false;
@@ -88,7 +87,7 @@ const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFor
                 }
                 if (newFormation) {
                     const updatedPlayers = playersArray.slice(0, 10).map(player => ({
-                        id: player.id, // Keep the id same
+                        id: player.id,
                         name: '',
                         points: null,
                         team: '',
@@ -235,7 +234,7 @@ const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFor
         if (position === 10) return benchPos[0] === '' ? 'def' : benchPos[0];
         if (position === 11) return benchPos[1] === '' ? 'mid' : benchPos[1];
         if (position === 12) return benchPos[2] === '' ? 'mid' : benchPos[2];
-        return 'pos'; // Default if pos is undefined or out of range
+        return 'pos';
     }
 
     let currPlayerPoints = 0;
