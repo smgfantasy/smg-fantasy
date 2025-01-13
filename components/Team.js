@@ -217,7 +217,7 @@ const Team = ({ sessionCookie, userData }) => {
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
                     <div className='flex gap-5'>
 
-                        <button onClick={handleTeamReset}
+                        {/* <button onClick={handleTeamReset}
                             className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
                                 }`}
                             disabled={!readySave}
@@ -235,7 +235,7 @@ const Team = ({ sessionCookie, userData }) => {
                                 </span> :
                                 <>Reset Team</>
                             }</span>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 <div
