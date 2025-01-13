@@ -10,6 +10,7 @@ import playersPoints from '../data/round1Points.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import { useSearchParams } from 'next/navigation';
 import round1Players from '../data/round1Players.json';
+import PitchContent from './PitchContent';
 
 const Header = ({ gameweek, setGameweek }) => {
     const minGameweek = 1, maxGameweek = 2;
@@ -18,7 +19,6 @@ const Header = ({ gameweek, setGameweek }) => {
         gameweek += dir === 'prev' ? -1 : 1;
         if (gameweek < minGameweek) gameweek = minGameweek;
         if (gameweek > minGameweek) gameweek = maxGameweek;
-        console.log('New gameweek: ', gameweek);
         setGameweek(gameweek);
 
     }
@@ -42,20 +42,7 @@ const Pitch = () => {
     const { players } = useAppContext();
 
     return (
-        (players.length > 0 &&
-            <div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
-                <PlayerSlot position={0} name={players[0].name} points={players[0].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
-                {[...Array(3)].map((_, rowIndex) => (
-                    <div key={rowIndex} className="flex justify-around w-full">
-                        {[...Array(3)].map((_, colIndex) => {
-                            const position = rowIndex * 3 + colIndex + 1;
-                            return <PlayerSlot key={position} position={position} name={players[position].name} points={players[position].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
-                        })}
-                    </div>
-                ))}
-            </div>
-        )
-
+        <PitchContent players={players}></PitchContent>
     );
 }
 const Points = ({ sessionCookie, userData }) => {
@@ -73,7 +60,7 @@ const Points = ({ sessionCookie, userData }) => {
         console.log(gameweek);
     }, [searchParams]);
 
-    const { players, setPlayers, setFormation, points, setPoints, originalPlayers } = useAppContext();
+    const { players, setPlayers, setFormation, points, setPoints } = useAppContext();
 
     const calculateNewFormation = (array) => {
 
@@ -87,26 +74,26 @@ const Points = ({ sessionCookie, userData }) => {
     };
 
     useEffect(() => {
-        if (points === 0) {
-            let curPts = 0;
-            for (let i in players) {
-                if (i === '10') {
-                    break;
-                }
-                let currPlayerPoints = 0;
-                try {
-                    currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
-                } catch {
-                }
-                if (players[i].captain) {
-                    currPlayerPoints = currPlayerPoints * 2;
-                }
-                curPts += currPlayerPoints;
+        // if (points === 0) {
+        let curPts = 0;
+        for (let i in players) {
+            if (i === '10') {
+                break;
             }
-            setPoints(curPts);
+            let currPlayerPoints = 0;
+            try {
+                currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
+            } catch {
+            }
+            if (players[i].captain) {
+                currPlayerPoints = currPlayerPoints * 2;
+            }
+            curPts += currPlayerPoints;
         }
+        setPoints(curPts);
+        // }
 
-    }, [players.length]);
+    }, [players, gameweek]);
 
     useEffect(() => {
         const fetchTeamData = async () => {

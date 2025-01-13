@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
@@ -10,6 +9,7 @@ import { SaveAll } from 'lucide-react';
 import updateUserTeam from '@/utils/team/updateTeam';
 import round1Players from '../data/round1Players.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
+import PitchContent from './PitchContent';
 
 const StatItem = ({ label, value, highlightClass }) => {
     return (
@@ -157,20 +157,7 @@ const Pitch = ({ sessionCookie, userData }) => {
     }, [players.length, sessionCookie, setPlayers]);
 
     return (
-        (players.length > 0
-            && (<div className="mt-10 w-full min-h-[600px] flex flex-col items-center gap-5" style={{ background: 'url(https://pitch.free.bg/pitch.svg) center top / 625px 460px no-repeat' }}>
-                <PlayerSlot position={0} name={players[0].name} points={players[0].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />
-                {[...Array(3)].map((_, rowIndex) => (
-                    <div key={rowIndex} className="flex justify-around w-full">
-                        {[...Array(3)].map((_, colIndex) => {
-                            const position = rowIndex * 3 + colIndex + 1;
-                            return <PlayerSlot key={position} position={position} name={players[position].name} points={players[position].points} img="https://fantasy.premierleague.com/dist/img/shirts/standard/shirt_3_1-110.webp" />;
-                        })}
-                    </div>
-                ))}
-            </div>
-            )
-        )
+        <PitchContent players={players}></PitchContent>
     );
 }
 const Team = ({ sessionCookie, userData }) => {
