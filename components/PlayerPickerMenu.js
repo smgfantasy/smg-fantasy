@@ -65,6 +65,9 @@ export default function PlayerPickerMenu() {
 
     function countNameDifferences(arr1, arr2) {
         // Helper function to get valid names from an array
+        // try {
+
+
         const extractValidNames = (arr) =>
             arr
                 .map(player => player.name.trim())
@@ -76,8 +79,12 @@ export default function PlayerPickerMenu() {
 
         // Count how many names in arr2 are not in names1
         const differences = names2.filter(name => !names1.has(name)).length;
-
         return differences;
+        // } catch (err) {
+        // window.location.reload();
+        console.log(err.message)
+        // }
+
     }
 
     const handlePlayerClick = (index) => {

@@ -7,7 +7,7 @@ import calculateNewFormation from '@/functions/calculateNewFormation';
 import checkPlayerSlotActive from '@/functions/checkPlayerSlotActive';
 import calculateCurrPlayerPoints from '@/functions/caclulateCurrPlayerPoints';
 
-const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFormation }) => {
+const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFormation, gameweek }) => {
     const { variant, selectedSlot, setSelectedSlot, switchMode, setSwitchMode, players, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, setPlayers, setIsPlayerPickerMenuOpen, setPlayerPickerPos } = useAppContext();
 
     let playersArray, currFormation;
@@ -207,7 +207,7 @@ const PlayerSlot = ({ name = 'Default', position, spectatedPlayers, spectatedFor
     }
 
     const active = checkPlayerSlotActive(position, currFormation);
-    const currPlayerPoints = calculateCurrPlayerPoints(name, playersArray);
+    const currPlayerPoints = calculateCurrPlayerPoints(name, playersArray, gameweek);
     return (
         <div
             onClick={handlePlayerClick}

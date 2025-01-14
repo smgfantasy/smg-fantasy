@@ -6,11 +6,13 @@ import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
-import playersPoints from '../data/round1Points.json';
+import playersPoints1 from '../data/round1Points.json';
+import playersPoints2 from '../data/round2Points.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import { useSearchParams } from 'next/navigation';
 import round1Players from '../data/round1Players.json';
 import PitchContent from './PitchContent';
+import round2Players from '../data/round2Players.json';
 
 const Header = ({ gameweek, setGameweek }) => {
     const minGameweek = 1, maxGameweek = 2;
@@ -38,11 +40,11 @@ const Header = ({ gameweek, setGameweek }) => {
         </>
     );
 }
-const Pitch = () => {
+const Pitch = ({ gameweek }) => {
     const { players } = useAppContext();
 
     return (
-        <PitchContent players={players}></PitchContent>
+        <PitchContent gameweek={gameweek} players={players}></PitchContent>
     );
 }
 const Points = ({ sessionCookie, userData }) => {
@@ -82,7 +84,11 @@ const Points = ({ sessionCookie, userData }) => {
             }
             let currPlayerPoints = 0;
             try {
-                currPlayerPoints = playersPoints.find(player => (player.name === players[i].name)).points;
+                if (gameweek === 1) {
+                    currPlayerPoints = playersPoints1.find(player => (player.name === players[i].name)).points;
+                } else if (gameweek === 2) {
+                    currPlayerPoints = playersPoints2.find(player => (player.name === players[i].name)).points;
+                }
             } catch {
             }
             if (players[i].captain) {
@@ -105,8 +111,23 @@ const Points = ({ sessionCookie, userData }) => {
                 const currUserUid = userData.uid;
                 console.log(currUserUid);
                 const element = round1Players.teams.find((a) => a.documentId === currUserUid);
+                console.log(element.team);
                 setPlayers(element.team);
                 let savedFormation = calculateNewFormation(element.team);
+                if (savedFormation === '0-0-0') savedFormation = '2-1-2';
+                console.log(savedFormation);
+                setFormation(savedFormation);
+                console.log('Team fetched from prev gameweek');
+                return;
+            }
+            if (gameweek === 2) {
+                console.log('Wow!');
+                const currUserUid = userData.uid;
+                console.log(currUserUid);
+                const element = round2Players.teams.find((a) => a.documentId === currUserUid);
+                console.log(element.teams);
+                setPlayers(element.teams);
+                let savedFormation = calculateNewFormation(element.teams);
                 if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                 console.log(savedFormation);
                 setFormation(savedFormation);
@@ -165,9 +186,9 @@ const Points = ({ sessionCookie, userData }) => {
                         <div className='font-bold text-2xl'>{82}</div>
                     </div>
                 </div>
-                <Pitch />
+                <Pitch gameweek={gameweek} />
             </div>
-            <Subs />
+            <Subs gameweek={gameweek} />
             <PlayerMatchInfoMenu />
         </div >
     )

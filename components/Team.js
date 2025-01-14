@@ -7,9 +7,10 @@ import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerPickerMenu from './PlayerPickerMenu';
 import { SaveAll } from 'lucide-react';
 import updateUserTeam from '@/utils/team/updateTeam';
-import round1Players from '../data/round1Players.json';
+import roundPlayers from '../data/round2Players.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import PitchContent from './PitchContent';
+import getUserMadeTransfers from '@/utils/team/getUserTransfers';
 
 const StatItem = ({ label, value, highlightClass }) => {
     return (
@@ -39,7 +40,9 @@ const TransferInfo = ({ freeTransfers, cost, budget }) => {
 };
 
 const Header = () => {
-    const { players, currBudget, setCurrBudget, madeTransfers } = useAppContext();
+    const { players, currBudget, setCurrBudget, madeTransfers, originalTransfers } = useAppContext();
+    const [freeTransfers, setFreeTransfers] = useState(null);
+    const [cost, setCost] = useState(null);
     useEffect(() => {
         let sum = 0;
         for (let i in players) {
@@ -53,12 +56,20 @@ const Header = () => {
 
     }, [players, players.length]);
 
-    let cost = (madeTransfers - 1) * 8;
-    const MAX_TRANSFERS = 1;
-    if (1 - madeTransfers === MAX_TRANSFERS) cost = 0;
+    useEffect(() => {
+        const MAX_TRANSFERS = 2;
+        console.log("Tits", madeTransfers, MAX_TRANSFERS, originalTransfers);
+        // window.location.reload();
+        let currCost = (madeTransfers - (MAX_TRANSFERS - originalTransfers)) * 8;
+        if (madeTransfers <= MAX_TRANSFERS - originalTransfers) currCost = 0;
+        setCost(currCost);
 
-    let freeTransfers = 1 - madeTransfers;
-    if (freeTransfers < 0) freeTransfers = 0;
+        let freeTrans = (MAX_TRANSFERS - originalTransfers) - madeTransfers;
+        if (freeTrans < 0) freeTrans = 0;
+        setFreeTransfers(freeTrans);
+        console.log(madeTransfers);
+    }, [players, originalTransfers]);
+
 
     return (
         <>
@@ -77,6 +88,8 @@ const Header = () => {
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
+                    {console.log("Transfers log")}
+                    {console.log(freeTransfers, cost, currBudget)}
                     <TransferInfo freeTransfers={freeTransfers} cost={cost} budget={currBudget} />
                 </div>
             </div>
@@ -85,8 +98,7 @@ const Header = () => {
 }
 
 const Pitch = ({ sessionCookie, userData }) => {
-    const { players, setPlayers, setFormation, setOriginalPlayers } = useAppContext();
-
+    const { players, setPlayers, setFormation, setOriginalPlayers, setOriginalTransfers } = useAppContext();
     const calculateNewFormation = (array) => {
 
         let defs = 0, mids = 0, fwds = 0;
@@ -100,11 +112,15 @@ const Pitch = ({ sessionCookie, userData }) => {
 
     useEffect(() => {
         const fetchTeamData = async () => {
+            const origTrans = await getUserMadeTransfers(sessionCookie);
+            console.log("Curr made transfers: ", origTrans);
+            setOriginalTransfers(origTrans);
+
             try {
                 const currUserUid = userData.uid;
 
-                const element = round1Players.teams.find((a) => a.documentId === currUserUid);
-                setOriginalPlayers(element.team);
+                const element = roundPlayers.teams.find((a) => a.documentId === currUserUid);
+                setOriginalPlayers(element.teams);
 
 
                 // Check if data exists in localStorage
@@ -139,21 +155,22 @@ const Pitch = ({ sessionCookie, userData }) => {
             fetchTeamData();
         }
 
-        function countNameDifferences(arr1, arr2) {
-            // Helper function to get valid names from an array
-            const extractValidNames = (arr) =>
-                arr
-                    .map(player => player.name.trim())
-                    .filter(name => name !== ""); // Skip empty names
+        //! TODO: Remove this function if it is not used. 
+        // function countNameDifferences(arr1, arr2) {
+        //     // Helper function to get valid names from an array
+        //     const extractValidNames = (arr) =>
+        //         arr
+        //             .map(player => player.name.trim())
+        //             .filter(name => name !== ""); // Skip empty names
 
 
-            const names1 = new Set(extractValidNames(arr2));
-            const names2 = extractValidNames(arr1);
+        //     const names1 = new Set(extractValidNames(arr2));
+        //     const names2 = extractValidNames(arr1);
 
-            const differences = names2.filter(name => !names1.has(name)).length;
+        //     const differences = names2.filter(name => !names1.has(name)).length;
 
-            return differences;
-        }
+        //     return differences;
+        // }
     }, [players.length, sessionCookie, setPlayers]);
 
     return (
@@ -197,7 +214,7 @@ const Team = ({ sessionCookie, userData }) => {
         setLoadingReset(true)
         try {
 
-            const element = round1Players.teams.find((a) => a.documentId === userData.uid);
+            const element = roundPlayers.teams.find((a) => a.documentId === userData.uid);
             await updateUserTeam(sessionCookie, element.team, 0);
             localStorage.setItem("user-team-v2", JSON.stringify(element.team));
             setPlayers(element.team);
@@ -216,8 +233,26 @@ const Team = ({ sessionCookie, userData }) => {
                 <div className="flex flex-col justify-between items-center mb-2 gap-5">
                     <h1 className='font-bold text-xl text-purple'>Pick Team - {userData.name}</h1>
                     <div className='flex gap-5'>
-
-                        {/* <button onClick={handleTeamReset}
+                        {/* <button onClick={handleTeamSave}
+                            className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
+                                }`}
+                            disabled={!readySave}
+                        >
+                            <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-out transform group-hover:scale-105"></span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"></span>
+                            <SaveAll className="w-5 h-5 mr-2 relative z-2" />
+                            <span className="relative z-2">{loading ?
+                                <span className='animate-spin text-2xl flex items-center justify-center'>
+                                    <div style={{ width: '24px', height: '24px' }}>
+                                        <svg className="group-hover:stroke-primary stroke-white" viewBox="22 22 44 44" style={{ width: '100%', height: '100%' }}>
+                                            <circle cx="44" cy="44" r="20.2" fill="none" strokeWidth="3.6" strokeDasharray="80px, 200px" strokeDashoffset="0" className='spinner-circle'></circle>
+                                        </svg>
+                                    </div>
+                                </span> :
+                                <>Save team</>
+                            }</span>
+                        </button>
+                        <button onClick={handleTeamReset}
                             className={`relative overflow-hidden text-white px-6 py-2 rounded-md flex items-center group ${!readySave ? "opacity-50 cursor-not-allowed" : ""
                                 }`}
                             disabled={!readySave}

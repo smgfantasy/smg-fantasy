@@ -1,0 +1,8106 @@
+{
+	"teams": [
+		{
+			"documentId": "0IriQQnBmXXoAQGVktlJxR0IikI2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "11YtmURSb7eueSSBgWO3EtasOoe2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "1EQ28NC9Qqf7IqxDhXVrBRXTb7q1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "2ja4tsJIBOdYvrE18RtnzLcrw2A2",
+			"teams": [
+				{
+					"name": "Борис Ников",
+					"team": "11Г",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Лъчезар Ралчев",
+					"team": "11Е",
+					"position": "fwd",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "2kebNvnIWPcfpKWK9ALbHbcZfdx2",
+			"teams": [
+				{
+					"price": 5.5,
+					"team": "11А",
+					"name": "Димитър Бегов",
+					"position": "gk"
+				},
+				{
+					"price": 5.5,
+					"team": "11Б",
+					"name": "Атанас Филипов",
+					"position": "def"
+				},
+				{
+					"position": "",
+					"points": null,
+					"team": "",
+					"name": ""
+				},
+				{
+					"position": "def",
+					"price": 5.5,
+					"team": "10",
+					"name": "Даниел Ралчев"
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"team": "11Б",
+					"name": "Никола Тодоров",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"points": null,
+					"position": "",
+					"team": "",
+					"name": ""
+				},
+				{
+					"price": 6.5,
+					"position": "fwd",
+					"team": "10",
+					"name": "Веселин Пенев"
+				},
+				{
+					"position": "def",
+					"name": "Велимир Гочков",
+					"price": 4,
+					"team": "11Г"
+				},
+				{
+					"name": "Михаил Гочев",
+					"position": "mid",
+					"price": 5.5,
+					"team": "11А"
+				},
+				{
+					"price": 6,
+					"team": "11Е",
+					"name": "Никола Минков",
+					"position": "mid"
+				}
+			]
+		},
+		{
+			"documentId": "3Ds8lVkrdnT49rLuompRaUjRcfw2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Даниел Ралчев",
+					"team": "10",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Емо Мишков",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "5Q0ENOcuAWVAVKPO28JL54rYkVT2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "5r8w8tsDx5VJpDL70RQH7yfrYNp1",
+			"teams": [
+				{
+					"name": "Борис Ников",
+					"team": "11Г",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Даниел Ралчев",
+					"team": "10",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Никола Лазаров",
+					"team": "11Б",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "7Nfegtzcs0cZul4APthW8KrDCTa2",
+			"teams": [
+				{
+					"team": "11Г",
+					"price": 4.5,
+					"position": "gk",
+					"name": "Борис Ников"
+				},
+				{
+					"team": "11А",
+					"position": "def",
+					"name": "Кристиян Пенев",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"team": "",
+					"points": null,
+					"position": ""
+				},
+				{
+					"price": 5,
+					"team": "11Г",
+					"position": "def",
+					"name": "Иван Петков"
+				},
+				{
+					"team": "11В",
+					"price": 7,
+					"position": "mid",
+					"name": "Антон Янков"
+				},
+				{
+					"team": "",
+					"name": "",
+					"points": null,
+					"position": ""
+				},
+				{
+					"team": "10",
+					"price": 6.5,
+					"position": "mid",
+					"name": "Самуил Деянов"
+				},
+				{
+					"points": null,
+					"name": "",
+					"team": "",
+					"position": ""
+				},
+				{
+					"team": "11Б",
+					"price": 10.5,
+					"position": "fwd",
+					"name": "Никола Тодоров",
+					"captain": true
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"position": "def",
+					"team": "11Е",
+					"price": 4,
+					"name": "Светослав Иванов"
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5
+				},
+				{
+					"team": "11В",
+					"name": "Никола Кунчев",
+					"position": "fwd",
+					"price": 12
+				}
+			]
+		},
+		{
+			"documentId": "8p2jd6cirhaKKSnyyGdiwQaBbIl2",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Кунчев",
+					"team": "11В",
+					"position": "fwd",
+					"price": 12,
+					"captain": true
+				},
+				{
+					"name": "Кристиян Огнянов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "A8g4VxkJT1OouMGw5gjs70dZax22",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "AdTIMwkB3tME1GNXPyHmwaJ8OCh2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"points": null,
+					"team": "",
+					"name": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"team": "",
+					"name": "",
+					"position": "",
+					"points": null,
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"team": "",
+					"name": "",
+					"points": null,
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "fwd",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "BldriVtALZcm9UgjEXWdtOiKG0B2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6
+				}
+			]
+		},
+		{
+			"documentId": "BwY4zvmyD4bC1NwYjE62USiVg8p2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Христо Младенов",
+					"team": "11А",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "CR2HXSD13KXqUKQnO9t1pz9rG792",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "Chc3aZRmDiMOoHF27lKWmFs0uPr1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "DNQcguuWUXgQUTaXc4AnhDHhRiy1",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "DTVakyNIlTSyVg1XB5vrNVBeRxi2",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Андрей Петрински",
+					"team": "11Г",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Емо Мишков",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Лъчезар Ралчев",
+					"team": "11Е",
+					"position": "fwd",
+					"price": 7,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "EurftNYc8CY3IcNyIhPs1D5CyTR2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "FAuxcrWgFTPqeH5QX3oCSsHzOBC2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "GAswKqGtyMZR3MYFx7EPNHXkqyB2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "GUBIrgzbjddm9LBDb6W3CALNvRA2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "IAdzQc3MzhNTuW3z9NgIflbD90v2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Кунчев",
+					"team": "11В",
+					"position": "fwd",
+					"price": 12
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "Ijg6nH9UQZfASNyM90VLss8g74n1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "Ilhj7ojOg7YInJCJGZf0CdC3iFa2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "JMAh20C66mNJEcB3HEvHLyDr3Jh2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "LF9XiYyq0EOGlenVav7HW29UaBq1",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Христо Младенов",
+					"team": "11А",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11A",
+					"position": "fwd",
+					"price": 9.5,
+					"captain": false
+				},
+				{
+					"name": "Велимир Гочков",
+					"team": "11Г",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "MHJ1dXOCvFZH26ICURQBvMCdbnb2",
+			"teams": [
+				{
+					"position": "gk",
+					"price": 5.5,
+					"team": "11А",
+					"name": "Димитър Бегов"
+				},
+				{
+					"team": "11Б",
+					"price": 5.5,
+					"name": "Атанас Филипов",
+					"position": "def"
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"points": null,
+					"position": "",
+					"team": "",
+					"price": "",
+					"name": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"price": 7.5,
+					"position": "mid"
+				},
+				{
+					"position": "",
+					"name": "",
+					"team": "",
+					"points": null
+				},
+				{
+					"price": 11,
+					"name": "Александър Малиновски",
+					"position": "mid",
+					"team": "11Б",
+					"captain": true
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"position": "fwd",
+					"price": 6.5,
+					"name": "Веселин Пенев",
+					"team": "10"
+				},
+				{
+					"team": "11Г",
+					"price": 7.5,
+					"name": "Евгени Комсалов",
+					"position": "fwd"
+				},
+				{
+					"price": 4,
+					"position": "def",
+					"team": "11Е",
+					"name": "Кристиян Огнянов"
+				},
+				{
+					"price": 5.5,
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid"
+				},
+				{
+					"team": "",
+					"name": "",
+					"position": "",
+					"points": null
+				}
+			]
+		},
+		{
+			"documentId": "NJYUlkcKcxVOgxX79wqCq23zvAc2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "Oucx9xi2gCZ8w00BVLiKKGROg0R2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"price": 5.5,
+					"position": "gk",
+					"team": "11А"
+				},
+				{
+					"team": "11В",
+					"name": "Никола Цикалов",
+					"price": 4,
+					"position": "def"
+				},
+				{
+					"name": "",
+					"points": null,
+					"position": "",
+					"team": ""
+				},
+				{
+					"position": "def",
+					"team": "10",
+					"name": "Георги Тодоров",
+					"price": 5
+				},
+				{
+					"points": null,
+					"name": "",
+					"position": "",
+					"team": ""
+				},
+				{
+					"name": "Калоян Радулов",
+					"price": 7,
+					"position": "mid",
+					"team": "11Е"
+				},
+				{
+					"name": "",
+					"team": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"name": "Никола Тодоров",
+					"position": "fwd",
+					"team": "11Б",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"position": "",
+					"name": "",
+					"team": "",
+					"points": null
+				},
+				{
+					"position": "fwd",
+					"price": 9.5,
+					"name": "Ивайло Василев",
+					"team": "11А"
+				},
+				{
+					"name": "Георги Колевски",
+					"position": "def",
+					"price": 5,
+					"team": "11В"
+				},
+				{
+					"position": "mid",
+					"team": "10",
+					"price": 6.5,
+					"name": "Самуил Деянов"
+				},
+				{
+					"team": "11Б",
+					"price": 7,
+					"name": "Божил Ненов",
+					"position": "mid"
+				}
+			]
+		},
+		{
+			"documentId": "RDYXEukP3oYik6Zb3bGLEkUUkci1",
+			"teams": [
+				{
+					"position": "gk",
+					"team": "11Г",
+					"name": "Борис Ников",
+					"price": 4.5
+				},
+				{
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"name": "Кристиян Пенев"
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"team": "11Б",
+					"name": "Виктор Аврамски",
+					"position": "def",
+					"price": 6
+				},
+				{
+					"name": "",
+					"team": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"name": "Ивелин Неев",
+					"price": 8.5,
+					"position": "mid",
+					"team": "11А"
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"team": "11Г",
+					"price": 7.5,
+					"position": "fwd",
+					"name": "Евгени Комсалов"
+				},
+				{
+					"position": "",
+					"points": null,
+					"team": "",
+					"name": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"position": "fwd",
+					"team": "11Б",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Кристиян Огнянов",
+					"position": "def",
+					"team": "11Е",
+					"price": 4
+				},
+				{
+					"name": "Антон Янков",
+					"price": 7,
+					"team": "11В",
+					"position": "mid"
+				},
+				{
+					"position": "mid",
+					"price": 6.5,
+					"team": "10",
+					"name": "Самуил Деянов"
+				}
+			]
+		},
+		{
+			"documentId": "Rj4B9KfisdX7glDPxyuLgvXZBKB2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Виктор Аврамски",
+					"team": "11Б",
+					"position": "def",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11А",
+					"position": "fwd",
+					"price": 9.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "RpdpiwfCUgNZWlwBjbkHgQ58R8B3",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "RuvKYAfpm8VMZvhpKgv2iWuKuCP2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "SCL3lOyFG2OyTdE0dq3pMrmPcfg2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "SKkLbRy7hgXLtRQflDF5suP6bPt2",
+			"teams": [
+				{
+					"team": "11А",
+					"price": 5.5,
+					"position": "gk",
+					"name": "Димитър Бегов"
+				},
+				{
+					"position": "def",
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"price": 5.5
+				},
+				{
+					"team": "",
+					"points": null,
+					"name": "",
+					"position": ""
+				},
+				{
+					"position": "def",
+					"team": "10",
+					"price": 5.5,
+					"name": "Даниел Ралчев"
+				},
+				{
+					"name": "",
+					"points": null,
+					"position": "",
+					"team": ""
+				},
+				{
+					"position": "mid",
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"position": "",
+					"team": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"position": "fwd",
+					"price": 6.5,
+					"team": "10"
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"position": "fwd",
+					"team": "11Б",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Иван Петков",
+					"position": "def",
+					"price": 5,
+					"team": "11Г"
+				},
+				{
+					"price": 7,
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid"
+				},
+				{
+					"price": 6,
+					"team": "11Е",
+					"position": "mid",
+					"name": "Никола Минков"
+				}
+			]
+		},
+		{
+			"documentId": "SUXbiMbSSKSlERPIrhBVTsTLxxJ3",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "Tygj3Zl2CtU1uEcg85jgFCWXStv1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "W3H903y3gNQJrqTiaM94LwrEYbd2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5
+				},
+				{
+					"name": "Явор Цветков",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 4.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "WIF8rp7TGHbtDScNhF7bSHkiLtm2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Огнянов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 8.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "WuKmbc57aXO7pbfux1k6yzZMfsG3",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"price": 4.5,
+					"position": "gk"
+				},
+				{
+					"price": 5.5,
+					"team": "11Б",
+					"name": "Атанас Филипов",
+					"position": "def"
+				},
+				{
+					"position": "",
+					"points": null,
+					"team": "",
+					"name": ""
+				},
+				{
+					"name": "Кристиян Огнянов",
+					"position": "def",
+					"team": "11Е",
+					"price": 4
+				},
+				{
+					"position": "mid",
+					"price": 11,
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"captain": true
+				},
+				{
+					"position": "",
+					"team": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"price": 7.5,
+					"name": "Никола Вулджев",
+					"position": "mid",
+					"team": "11В"
+				},
+				{
+					"position": "",
+					"points": null,
+					"name": "",
+					"team": ""
+				},
+				{
+					"position": "fwd",
+					"team": "11Е",
+					"price": 6.5,
+					"name": "Юлиан Жечев"
+				},
+				{
+					"team": "",
+					"points": null,
+					"position": "",
+					"name": ""
+				},
+				{
+					"team": "11Г",
+					"name": "Андрей Петрински",
+					"position": "def",
+					"price": 4.5
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11A",
+					"price": 9.5,
+					"position": "fwd"
+				}
+			]
+		},
+		{
+			"documentId": "X6YsXkLmyPRII74qf7gDohkZFuO2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "ZXKRLSBvgUdUgU86fdKAMVpSXsG2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "ZgRIzlavgUekgbR56qQOzivaosO2",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11А",
+					"position": "fwd",
+					"price": 9.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "a5N3b6SzjON4wvtgawR4UZTxjVG3",
+			"teams": [
+				{
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"name": "Даниел Гетов"
+				},
+				{
+					"team": "11В",
+					"name": "Георги Колевски",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"points": null,
+					"position": "",
+					"name": "",
+					"team": ""
+				},
+				{
+					"position": "def",
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"price": 7,
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid"
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"price": 6.5,
+					"position": "fwd",
+					"name": "Веселин Пенев",
+					"team": "10"
+				},
+				{
+					"team": "",
+					"position": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5
+				},
+				{
+					"team": "11А",
+					"price": 8.5,
+					"position": "mid",
+					"name": "Ивелин Неев"
+				},
+				{
+					"team": "11Е",
+					"name": "Калоян Радулов",
+					"position": "mid",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "aHVLGsoflqRy3X5z9JPA4jS1Crx2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "aL7iffP0JUVjseOe43GwueTZb143",
+			"teams": [
+				{
+					"position": "gk",
+					"price": 4.5,
+					"name": "Христиан Велинов",
+					"team": "11В"
+				},
+				{
+					"position": "def",
+					"team": "11Б",
+					"price": 5.5,
+					"name": "Атанас Филипов"
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"position": "def",
+					"team": "11В",
+					"price": 5,
+					"name": "Момчил Стаменов"
+				},
+				{
+					"team": "",
+					"points": null,
+					"name": "",
+					"position": ""
+				},
+				{
+					"team": "11Б",
+					"name": "Александър Малиновски",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"position": "",
+					"name": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"team": "11Г",
+					"name": "Георги Огнянов",
+					"position": "fwd",
+					"price": 8.5
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"price": 9.5,
+					"team": "11A",
+					"name": "Ивайло Василев",
+					"position": "fwd"
+				},
+				{
+					"position": "def",
+					"price": 4.5,
+					"name": "Георги Николов",
+					"team": "11А"
+				},
+				{
+					"position": "mid",
+					"name": "Никола Минков",
+					"team": "11Е",
+					"price": 6
+				},
+				{
+					"team": "11А",
+					"position": "mid",
+					"name": "Светлозар Йотов",
+					"price": 5
+				}
+			]
+		},
+		{
+			"documentId": "aWhEaeG5YQhuusviwlSq7XlM4Z93",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "aXOVSZfOJLguSvDpHVdqxbGZ2fC3",
+			"teams": [
+				{
+					"price": 5.5,
+					"team": "11А",
+					"name": "Димитър Бегов",
+					"position": "gk"
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Александър Малиновски",
+					"position": "mid",
+					"team": "11Б",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"price": 6,
+					"position": "mid",
+					"name": "Никола Минков",
+					"team": "11Е"
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				}
+			]
+		},
+		{
+			"documentId": "bIgOsL7ywoZBhBuDYthRYVyWOWN2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5
+				},
+				{
+					"position": "def",
+					"team": "11А",
+					"name": "Георги Николов",
+					"captain": false,
+					"price": 4.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"position": "def",
+					"price": 5,
+					"team": "10",
+					"name": "Георги Тодоров",
+					"captain": false
+				},
+				{
+					"captain": false,
+					"position": "mid",
+					"team": "11Б",
+					"price": 11,
+					"name": "Александър Малиновски"
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11A",
+					"position": "fwd",
+					"captain": false,
+					"price": 9.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Атанас Филипов",
+					"position": "def",
+					"price": 5.5,
+					"team": "11Б",
+					"captain": false
+				},
+				{
+					"team": "10",
+					"name": "Стефан Филев",
+					"price": 7,
+					"captain": true,
+					"position": "mid"
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6
+				}
+			]
+		},
+		{
+			"documentId": "cF0nLRjvlIRe0Q9uF4yReBLdQS42",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Никола Кунчев",
+					"team": "11В",
+					"position": "fwd",
+					"price": 12
+				}
+			]
+		},
+		{
+			"documentId": "cw5CxNHCEoOkXutmP01L28ynkWv1",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5
+				}
+			]
+		},
+		{
+			"documentId": "ewPXMNLY4LfCsDn29iEQU4nTo593",
+			"teams": [
+				{
+					"team": "11А",
+					"price": 5.5,
+					"position": "gk",
+					"name": "Димитър Бегов"
+				},
+				{
+					"price": 5.5,
+					"position": "def",
+					"team": "11А",
+					"name": "Кристиян Пенев"
+				},
+				{
+					"team": "",
+					"position": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"position": "def",
+					"price": 5,
+					"team": "11В",
+					"name": "Момчил Стаменов"
+				},
+				{
+					"team": "",
+					"name": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"team": "11Е",
+					"price": 7,
+					"position": "mid",
+					"name": "Калоян Радулов"
+				},
+				{
+					"position": "",
+					"team": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"team": "11Б",
+					"name": "Никола Тодоров",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"position": "",
+					"points": null,
+					"team": "",
+					"name": ""
+				},
+				{
+					"position": "fwd",
+					"name": "Явор Цветков",
+					"team": "11Б",
+					"price": 4.5
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"price": 5,
+					"position": "def"
+				},
+				{
+					"price": 6,
+					"team": "11Е",
+					"name": "Никола Минков",
+					"position": "mid"
+				},
+				{
+					"name": "Стефан Филев",
+					"position": "mid",
+					"team": "10",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "fX6zta7fUPO0gN8en9wDH2nlJ5E3",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "gKCbgjkEFXbluALdQxCHQGBtCFd2",
+			"teams": [
+				{
+					"position": "gk",
+					"price": 5.5,
+					"team": "11А",
+					"name": "Димитър Бегов"
+				},
+				{
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"name": "Атанас Филипов"
+				},
+				{
+					"points": null,
+					"team": "",
+					"name": "",
+					"position": ""
+				},
+				{
+					"price": 4,
+					"position": "def",
+					"team": "11Е",
+					"name": "Светослав Иванов"
+				},
+				{
+					"name": "Александър Малиновски",
+					"price": 11,
+					"position": "mid",
+					"team": "11Б",
+					"captain": true
+				},
+				{
+					"team": "",
+					"name": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"name": "Антон Янков",
+					"position": "mid",
+					"price": 7,
+					"team": "11В"
+				},
+				{
+					"position": "",
+					"name": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"name": "Веселин Пенев"
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"team": "10",
+					"name": "Георги Тодоров",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"position": "mid",
+					"price": 7.5,
+					"name": "Никола Вулджев",
+					"team": "11В"
+				},
+				{
+					"team": "11Е",
+					"name": "Юлиан Жечев",
+					"price": 6.5,
+					"position": "fwd"
+				}
+			]
+		},
+		{
+			"documentId": "gZCLP6sxf5Zl8AXHDtX0s903snM2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "gphd6CkMP0ZWJesxvUaoPFb8Blo1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "grpULRnNZpMG24h8t7jW5ROeME42",
+			"teams": [
+				{
+					"position": "gk",
+					"price": 5.5,
+					"team": "11А",
+					"name": "Димитър Бегов"
+				},
+				{
+					"price": 5.5,
+					"team": "11А",
+					"name": "Кристиян Пенев",
+					"position": "def"
+				},
+				{
+					"points": null,
+					"name": "",
+					"position": "",
+					"team": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"position": "mid",
+					"team": "11Б",
+					"name": "Александър Малиновски",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"team": "",
+					"points": null,
+					"position": "",
+					"name": ""
+				},
+				{
+					"name": "Самуил Деянов",
+					"position": "mid",
+					"team": "10",
+					"price": 6.5
+				},
+				{
+					"points": null,
+					"name": "",
+					"team": "",
+					"position": ""
+				},
+				{
+					"team": "11В",
+					"price": 12,
+					"name": "Никола Кунчев",
+					"position": "fwd"
+				},
+				{
+					"position": "",
+					"name": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"position": "mid",
+					"team": "11Е",
+					"price": 6,
+					"name": "Никола Минков"
+				},
+				{
+					"position": "fwd",
+					"price": 4.5,
+					"team": "11Б",
+					"name": "Явор Цветков"
+				}
+			]
+		},
+		{
+			"documentId": "hHebhz1mr0gKJaewOCSPkZ3jUvO2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5
+				}
+			]
+		},
+		{
+			"documentId": "hykcgt5xt0ROYDP4Wf7rbQSltaD2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Божил Ненов",
+					"team": "11Б",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				}
+			]
+		},
+		{
+			"documentId": "jcInHZRbzJXxmR7w9UTfQS0qQ4f2",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"price": 4.5,
+					"position": "gk"
+				},
+				{
+					"price": 5.5,
+					"name": "Атанас Филипов",
+					"position": "def",
+					"team": "11Б"
+				},
+				{
+					"name": "",
+					"position": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"price": 5.5,
+					"team": "11А",
+					"position": "def",
+					"name": "Кристиян Пенев"
+				},
+				{
+					"points": null,
+					"position": "",
+					"team": "",
+					"name": ""
+				},
+				{
+					"position": "mid",
+					"price": 11,
+					"team": "11Б",
+					"name": "Александър Малиновски",
+					"captain": true
+				},
+				{
+					"name": "",
+					"team": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"price": 7.5,
+					"position": "fwd"
+				},
+				{
+					"position": "",
+					"team": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"name": "Веселин Пенев",
+					"position": "fwd",
+					"price": 6.5,
+					"team": "10"
+				},
+				{
+					"price": 4,
+					"position": "def",
+					"team": "11Е",
+					"name": "Емо Мишков"
+				},
+				{
+					"name": "Самуил Деянов",
+					"price": 6.5,
+					"team": "10",
+					"position": "mid"
+				},
+				{
+					"price": 7,
+					"position": "mid",
+					"name": "Мартин Михайлов",
+					"team": "11Г"
+				}
+			]
+		},
+		{
+			"documentId": "jcRV6wGbmvQt0ZR3fVhgYYOHF6q2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Велимир Гочков",
+					"team": "11Г",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5
+				}
+			]
+		},
+		{
+			"documentId": "kFDHudbDheRvQnLxx1z3UlEqCns2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"price": 5.5,
+					"position": "gk"
+				},
+				{
+					"position": "def",
+					"team": "11Е",
+					"name": "Светослав Иванов",
+					"price": 4
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"price": 5,
+					"name": "Георги Колевски",
+					"position": "def",
+					"team": "11В"
+				},
+				{
+					"position": "",
+					"team": "",
+					"points": null,
+					"name": ""
+				},
+				{
+					"team": "11А",
+					"position": "mid",
+					"name": "Ивелин Неев",
+					"price": 8.5
+				},
+				{
+					"team": "",
+					"name": "",
+					"points": null,
+					"position": ""
+				},
+				{
+					"price": 6.5,
+					"team": "10",
+					"position": "fwd",
+					"name": "Веселин Пенев"
+				},
+				{
+					"name": "",
+					"team": "",
+					"position": "",
+					"points": null
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"price": 10.5,
+					"position": "fwd",
+					"captain": true
+				},
+				{
+					"position": "def",
+					"name": "Иван Петков",
+					"price": 5,
+					"team": "11Г"
+				},
+				{
+					"position": "mid",
+					"team": "11В",
+					"price": 7.5,
+					"name": "Никола Вулджев"
+				},
+				{
+					"position": "mid",
+					"team": "11А",
+					"name": "Светлозар Йотов",
+					"price": 5
+				}
+			]
+		},
+		{
+			"documentId": "kWyZZdxK0AZQhXcK4Ox56u7pO9a2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Даниел Ралчев",
+					"team": "10",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "Виктор Аврамски",
+					"team": "11Б",
+					"position": "def",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "kx0ls8GFPJS97vE0HqQ8i467eiA3",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Андрей Петрински",
+					"team": "11Г",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11А",
+					"position": "fwd",
+					"price": 9.5
+				},
+				{
+					"name": "Никола Янчев",
+					"team": "11Б",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6
+				}
+			]
+		},
+		{
+			"documentId": "m6VBLdKgCKb6yghp11cjhPeZi3z1",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Виктор Аврамски",
+					"team": "11Б",
+					"position": "def",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11A",
+					"position": "fwd",
+					"price": 9.5
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "m7OUT30Mr7PBMGSMnF8Mch8c36A2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "Юлиан Жечев",
+					"team": "11Е",
+					"position": "fwd",
+					"price": 6.5
+				}
+			]
+		},
+		{
+			"documentId": "nSvtXRwvrkZE68uQy31G7Blfg8C3",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"price": 5.5,
+					"team": "11А",
+					"position": "gk"
+				},
+				{
+					"position": "def",
+					"name": "Момчил Стаменов",
+					"price": 5,
+					"team": "11В"
+				},
+				{
+					"team": "",
+					"points": null,
+					"name": "",
+					"position": ""
+				},
+				{
+					"name": "Атанас Филипов",
+					"price": 5.5,
+					"team": "11Б",
+					"position": "def"
+				},
+				{
+					"price": 7,
+					"name": "Антон Янков",
+					"position": "mid",
+					"team": "11В"
+				},
+				{
+					"name": "",
+					"team": "",
+					"points": null,
+					"position": ""
+				},
+				{
+					"price": 7,
+					"position": "mid",
+					"team": "11Е",
+					"name": "Калоян Радулов"
+				},
+				{
+					"points": null,
+					"position": "",
+					"team": "",
+					"name": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"price": 10.5,
+					"team": "11Б",
+					"position": "fwd",
+					"captain": true
+				},
+				{
+					"position": "",
+					"name": "",
+					"team": "",
+					"points": null
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"price": 5.5,
+					"position": "def"
+				},
+				{
+					"position": "fwd",
+					"name": "Веселин Пенев",
+					"price": 6.5,
+					"team": "10"
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"price": 7,
+					"position": "mid"
+				}
+			]
+		},
+		{
+			"documentId": "oBz2kXFAToQtkiXFUpe6apcyhwQ2",
+			"teams": [
+				{
+					"position": "gk",
+					"name": "Христиан Велинов",
+					"price": 4.5,
+					"team": "11В"
+				},
+				{
+					"price": 4,
+					"name": "Светослав Иванов",
+					"position": "def",
+					"team": "11Е"
+				},
+				{
+					"position": "",
+					"team": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"price": 5,
+					"team": "10",
+					"name": "Георги Тодоров",
+					"position": "def"
+				},
+				{
+					"position": "",
+					"points": null,
+					"name": "",
+					"team": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"price": 11,
+					"position": "mid",
+					"team": "11Б",
+					"captain": true
+				},
+				{
+					"position": "",
+					"points": null,
+					"name": "",
+					"team": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5
+				},
+				{
+					"position": "",
+					"name": "",
+					"points": null,
+					"team": ""
+				},
+				{
+					"team": "11Е",
+					"name": "Юлиан Жечев",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "Велимир Гочков",
+					"price": 4,
+					"position": "def",
+					"team": "11Г"
+				},
+				{
+					"position": "mid",
+					"team": "11Г",
+					"name": "Мартин Михайлов",
+					"price": 7
+				},
+				{
+					"team": "11В",
+					"position": "mid",
+					"name": "Антон Янков",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "oYeHUp8rWbPn8b3dQh6Y5nksZ1x2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "q2GDso62zuThX9YxXm7IrJNenCt2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Христо Младенов",
+					"team": "11А",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "Николай Рогов",
+					"team": "11А",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "qJTSs28D6kMlFDr2K18M0OboGVn2",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "Георги Николов",
+					"team": "11А",
+					"position": "def",
+					"price": 4.5
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "qVKoHINLUJNRGo2WkJ9NAqlrrNl1",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "qfZvTG8vc6dxi6otizjNpmkQDgI2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "rGyK2iXYX7gx2TWTN6SznUIeIOo2",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Кунчев",
+					"team": "11В",
+					"position": "fwd",
+					"price": 12,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "s3mgt0123vgnIJmr0APg1qbNt8Z2",
+			"teams": [
+				{
+					"team": "11В",
+					"position": "gk",
+					"name": "Христиан Велинов",
+					"price": 4.5
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"price": 5.5,
+					"position": "def"
+				},
+				{
+					"name": "",
+					"team": "",
+					"points": null,
+					"position": ""
+				},
+				{
+					"team": "11В",
+					"position": "def",
+					"name": "Георги Колевски",
+					"price": 5
+				},
+				{
+					"points": null,
+					"name": "",
+					"team": "",
+					"position": ""
+				},
+				{
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"name": "Александър Малиновски",
+					"captain": true
+				},
+				{
+					"position": "",
+					"team": "",
+					"name": "",
+					"points": null
+				},
+				{
+					"position": "fwd",
+					"team": "11Г",
+					"name": "Евгени Комсалов",
+					"price": 7.5
+				},
+				{
+					"points": null,
+					"position": "",
+					"team": "",
+					"name": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"position": "fwd",
+					"team": "10",
+					"price": 6.5
+				},
+				{
+					"price": 4.5,
+					"position": "def",
+					"name": "Бакарди Родригез",
+					"team": "11Е"
+				},
+				{
+					"name": "Михаил Гочев",
+					"position": "mid",
+					"price": 5.5,
+					"team": "11А"
+				},
+				{
+					"price": 7,
+					"position": "mid",
+					"team": "11Г",
+					"name": "Мартин Михайлов"
+				}
+			]
+		},
+		{
+			"documentId": "sAM67BWKKHPAzM6orvwlLsPN9O53",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "sGMsrUsRBXPcrw7Xg0LDCNyd9Fz2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "tOwVitEaBEPk525v49GKmuev59S2",
+			"teams": [
+				{
+					"name": "Борис Ников ",
+					"team": "11Г",
+					"position": "gk",
+					"price": 4.5
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Светослав Иванов",
+					"team": "11Е",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "uFo6oLF2K1Z6sIImYMYRAHGWqVI2",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Момчил Стаменов",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Ивайло Василев",
+					"team": "11А",
+					"position": "fwd",
+					"price": 9.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": true
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Никола Минков",
+					"team": "11Е",
+					"position": "mid",
+					"price": 6,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "v5EkfQUNJkZV2xhdAEYdVMQ2k8G3",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "w92YfQr0C1eSubwQyLjUWLCCDYM2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "wJO5LODCPtOsNSPKfYEwg1BYFm63",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "wenzFag4hTg4HJsp3ornqm5M2Xl2",
+			"teams": [
+				{
+					"price": 4.5,
+					"team": "11В",
+					"name": "Христиан Велинов",
+					"position": "gk"
+				},
+				{
+					"team": "11Б",
+					"name": "Атанас Филипов",
+					"price": 5.5,
+					"position": "def"
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Кристиян Пенев",
+					"position": "def",
+					"team": "11А",
+					"price": 5.5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Александър Малиновски",
+					"position": "mid",
+					"price": 11,
+					"captain": true,
+					"team": "11Б"
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"price": 6.5,
+					"position": "fwd"
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"position": "fwd",
+					"team": "11А",
+					"price": 9.5,
+					"name": "Ивайло Василев"
+				},
+				{
+					"name": "Велимир Гочков",
+					"team": "11Г",
+					"position": "def",
+					"price": 4
+				},
+				{
+					"position": "mid",
+					"name": "Никола Минков",
+					"price": 6,
+					"team": "11Е"
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				}
+			]
+		},
+		{
+			"documentId": "wfvsKasXzmUPINOZqXRUhDNNyX32",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Виктор Аврамски",
+					"team": "11Б",
+					"position": "def",
+					"price": 6,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Мартин Михайлов",
+					"team": "11Г",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Евгени Комсалов",
+					"team": "11Г",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "Даниел Ралчев",
+					"team": "10",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Михаил Гочев",
+					"team": "11А",
+					"position": "mid",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Самуил Деянов",
+					"team": "10",
+					"position": "mid",
+					"price": 6.5
+				}
+			]
+		},
+		{
+			"documentId": "wgyo7wle9ySNyqlzKmyPwwrMeJ93",
+			"teams": [
+				{
+					"name": "Христиан Велинов",
+					"team": "11В",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "Бакарди Родригез",
+					"team": "11Е",
+					"position": "def",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": false
+				},
+				{
+					"name": "Светлозар Йотов",
+					"team": "11А",
+					"position": "mid",
+					"price": 5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "xcnYRiJJnsha8e73bV1R58tR4Rx2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "xiRHpNEbl8NNR3xIJMsHoYRi6R52",
+			"teams": [
+				{
+					"name": "Мартин Шопов",
+					"team": "11Б",
+					"position": "gk",
+					"price": 5.5
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Георги Колевски",
+					"team": "11В",
+					"position": "def",
+					"price": 5
+				},
+				{
+					"name": "Александър Малиновски",
+					"team": "11Б",
+					"position": "mid",
+					"price": 11,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Стефан Филев",
+					"team": "10",
+					"position": "mid",
+					"price": 7
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Иван Петков",
+					"team": "11Г",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Юлиан Жечев",
+					"team": "11Е",
+					"position": "fwd",
+					"price": 6.5
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "xlu19ZpVXsdl5exQLAgAkpPaWNY2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "xqNXUomPmubCVcWDws9g2T70ym22",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "zMHpzd3mzhNSKWpHESLjuut35eo2",
+			"teams": [
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				}
+			]
+		},
+		{
+			"documentId": "ztgrFYFf8cUKNnUTOmEazKivG4g1",
+			"teams": [
+				{
+					"name": "Димитър Бегов",
+					"team": "11А",
+					"position": "gk",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "Емо Мишков",
+					"team": "11Е",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Атанас Филипов",
+					"team": "11Б",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Калоян Радулов",
+					"team": "11Е",
+					"position": "mid",
+					"price": 7,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Никола Тодоров",
+					"team": "11Б",
+					"position": "fwd",
+					"price": 10.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": ""
+				},
+				{
+					"name": "Веселин Пенев",
+					"team": "10",
+					"position": "fwd",
+					"price": 6.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Тодоров",
+					"team": "10",
+					"position": "def",
+					"price": 5,
+					"captain": false
+				},
+				{
+					"name": "Никола Вулджев",
+					"team": "11В",
+					"position": "mid",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "Ивелин Неев",
+					"team": "11А",
+					"position": "mid",
+					"price": 8.5,
+					"captain": false
+				}
+			]
+		},
+		{
+			"documentId": "zxsiKKq7W9NqkxM6sPNIvY50Ohw2",
+			"teams": [
+				{
+					"name": "Даниел Гетов",
+					"team": "10",
+					"position": "gk",
+					"price": 4.5,
+					"captain": false
+				},
+				{
+					"name": "Никола Янчев",
+					"team": "11Б",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Кристиян Пенев",
+					"team": "11А",
+					"position": "def",
+					"price": 5.5,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Антон Янков",
+					"team": "11В",
+					"position": "mid",
+					"price": 7,
+					"captain": true
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Никола Кунчев",
+					"team": "11В",
+					"position": "fwd",
+					"price": 12,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"captain": false
+				},
+				{
+					"name": "Христо Младенов",
+					"team": "11А",
+					"position": "fwd",
+					"price": 7.5,
+					"captain": false
+				},
+				{
+					"name": "Георги Стоянов",
+					"team": "11Б",
+					"position": "def",
+					"price": 4,
+					"captain": false
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"price": ""
+				},
+				{
+					"name": "",
+					"points": null,
+					"team": "",
+					"position": "",
+					"price": ""
+				}
+			]
+		}
+	]
+}
