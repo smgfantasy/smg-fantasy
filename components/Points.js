@@ -135,7 +135,7 @@ const Points = ({ sessionCookie, userData }) => {
                 return;
             }
             try {
-                const storedPlayers = localStorage.getItem("user-team-v2");
+                const storedPlayers = localStorage.getItem("user-team-v3");
                 if (storedPlayers) {
                     setPlayers(JSON.parse(storedPlayers));
                     let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
@@ -151,7 +151,7 @@ const Points = ({ sessionCookie, userData }) => {
                     let savedFormation = calculateNewFormation(data.team);
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
-                    localStorage.setItem("user-team-v2", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v3", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
