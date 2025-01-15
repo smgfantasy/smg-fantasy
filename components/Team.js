@@ -215,9 +215,9 @@ const Team = ({ sessionCookie, userData }) => {
         try {
 
             const element = roundPlayers.teams.find((a) => a.documentId === userData.uid);
-            await updateUserTeam(sessionCookie, element.team, 0);
-            localStorage.setItem("user-team-v2", JSON.stringify(element.team));
-            setPlayers(element.team);
+            await updateUserTeam(sessionCookie, element.teams, 0);
+            localStorage.setItem("user-team-v2", JSON.stringify(element.teams));
+            setPlayers(element.teams);
             location.reload();
         } catch (err) {
             console.log(err);
