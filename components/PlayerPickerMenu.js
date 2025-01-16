@@ -180,7 +180,7 @@ export default function PlayerPickerMenu() {
                                                 className="w-20 h-20 object-cover"
                                             />
                                             <div>
-                                                <div className="font-semibold">{player.name}</div>
+                                                <div className="font-semibold">{player.name === "Никола Кунчев" ? "Александър Маринов" : player.name}</div>
                                                 <div className="text-sm text-gray-600">
                                                     {player.team} {player.position}
                                                 </div>

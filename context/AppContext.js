@@ -20,6 +20,7 @@ export function ContextProvider({ children }) {
     const [madeTransfers, setMadeTransfers] = useState(0);
     const [originalTransfers, setOriginalTransfers] = useState(null);
     const [isPlayerMatchMenuOpen, setIsPlayerMatchMenuOpen] = useState(false);
+    const [selectedPlayerMatchMenu, setSelectedPlayerMatchMenu] = useState(false);
 
     const swapPlayers = (index1, index2, callback) => {
         if (index1 === 0 || index2 === 0) return;
@@ -32,7 +33,7 @@ export function ContextProvider({ children }) {
     };
 
     return (
-        <AppContext.Provider value={{ variant, setVariant, switchMode, setSwitchMode, selectedSlot, setSelectedSlot, players, setPlayers, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, currBudget, setCurrBudget, benchPos, setBenchPos, points, setPoints, isPlayerMatchMenuOpen, setIsPlayerMatchMenuOpen, originalPlayers, setOriginalPlayers, madeTransfers, setMadeTransfers, originalTransfers, setOriginalTransfers }}>
+        <AppContext.Provider value={{ variant, setVariant, switchMode, setSwitchMode, selectedSlot, setSelectedSlot, players, setPlayers, swapPlayers, selectedSlotPos, setSelectedSlotPos, formation, setFormation, isPlayerPickerMenuOpen, setIsPlayerPickerMenuOpen, playerPickerPos, setPlayerPickerPos, currBudget, setCurrBudget, benchPos, setBenchPos, points, setPoints, isPlayerMatchMenuOpen, setIsPlayerMatchMenuOpen, originalPlayers, setOriginalPlayers, madeTransfers, setMadeTransfers, originalTransfers, setOriginalTransfers, selectedPlayerMatchMenu, setSelectedPlayerMatchMenu }}>
             {children}
         </AppContext.Provider>
     );

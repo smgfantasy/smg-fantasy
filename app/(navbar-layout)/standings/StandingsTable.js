@@ -1,10 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Loader2, Trophy, Medal } from 'lucide-react';
+import { Loader2, Trophy, Medal, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import data from '../../../data/leaderboard_round_1.json';
 
-const Table = ({ userData }) => {
+const getLeaderboardData = (gameweek) => {
+    if (gameweek === 3) {
+        return import(`../../../data/leaderboard_all.json`).then(module => module.default);
+    }
+    return import(`../../../data/leaderboard_round_${gameweek}.json`).then(module => module.default);
+};
+
+const Table = ({ userData, data }) => {
     const getPositionIcon = (index) => {
         switch (index) {
             case 0:
@@ -71,29 +77,62 @@ const Table = ({ userData }) => {
 
 const StandingsTable = ({ userData }) => {
     const [isLoading, setIsLoading] = useState(false);
+    const [gameweek, setGameweek] = useState(2);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        if (isLoading) {
-            const timer = setTimeout(() => {
-                setIsLoading(false);
-            }, 1500); // 1.5 seconds delay
+        setIsLoading(true);
+        getLeaderboardData(gameweek).then(leaderboardData => {
+            setData(leaderboardData);
+            setIsLoading(false);
+        }).catch(error => {
+            console.error("Error loading leaderboard data:", error);
+            setIsLoading(false);
+        });
+    }, [gameweek]);
 
-            return () => clearTimeout(timer);
+    const handlePrevGameweek = () => {
+        if (gameweek > 1) {
+            setGameweek(gameweek - 1);
         }
-    }, [isLoading]);
+    };
+
+    const handleNextGameweek = () => {
+        if (gameweek < 3) setGameweek(gameweek + 1);
+    };
 
     return (
         <div className='pt-8 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto'>
             <h1 className='font-bold text-3xl md:text-4xl lg:text-5xl text-purple text-center mb-8 tracking-tight'>STANDINGS</h1>
+            <div className="flex justify-between items-center mb-4">
+                <button
+                    onClick={handlePrevGameweek}
+                    disabled={gameweek === 1}
+                    className="p-2 rounded-full bg-purple-100 text-white disabled:opacity-50 bg-purple"
+                >
+                    <ChevronLeft className="h-6 w-6" />
+                </button>
+                <h2 className="text-2xl font-bold text-purple-700">
+                    {gameweek === 3 ? "Global Leaderboard" : `Gameweek ${gameweek}`}
+                </h2>
+
+                <button
+                    onClick={handleNextGameweek}
+                    className="p-2 rounded-full bg-purple-100 text-white bg-purple"
+                >
+                    <ChevronRight className="h-6 w-6" />
+                </button>
+            </div>
             {isLoading ? (
                 <div className="flex justify-center items-center h-64">
                     <Loader2 className="h-8 w-8 animate-spin text-purple" />
                 </div>
             ) : (
-                <Table userData={userData} />
+                <Table userData={userData} data={data} />
             )}
         </div>
     )
 }
 
 export default StandingsTable;
+

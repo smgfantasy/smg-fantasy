@@ -7,6 +7,7 @@ import { useAppContext } from '@/context/AppContext';
 import PlayerStats from './PlayerStats';
 import { ArrowRight, Star, Trash2 } from 'lucide-react';
 import playersPointsRound1 from '../data/round1Points.json';
+import playersPointsRound2 from '../data/round2Points.json';
 
 const enableChanges = true;
 
@@ -98,14 +99,19 @@ const PlayerInfoMenu = ({ currVariant }) => {
         if (team === '11Е') return masE[index];
         if (team === '10') return masF[index];
     };
-    const getRound1PlayerPoints = (targetPlayer) => {
+    const getRoundPlayerPoints = (targetPlayer, gameweek) => {
         try {
-            return playersPointsRound1.find(player => player.name === targetPlayer.name).points;
+            if (gameweek === 1) {
+                return playersPointsRound1.find(player => player.name === targetPlayer.name).points;
+            } else if (gameweek === 2) {
+                return playersPointsRound2.find(player => player.name === targetPlayer.name).points;
+            }
         } catch (e) {
             return '-';
         }
 
     }
+
     return (
         <>
             <div
@@ -158,14 +164,19 @@ const PlayerInfoMenu = ({ currVariant }) => {
                                 {players[selectedSlot] && players[selectedSlot].position}
                             </div>
                         </div>
-                        <div className='font-bold text-2xl underline'>{players[selectedSlot] && players[selectedSlot].name}</div>
+                        <div className='font-bold text-2xl underline'>
+                            {players[selectedSlot] && players[selectedSlot].name === "Никола Кунчев"
+                                ? "Александър Маринов"
+                                : players[selectedSlot]?.name}
+                        </div>
+
                         <div className='font-bold text-xl'>{players[selectedSlot] && players[selectedSlot].team}</div>
                     </div>
                 </div>
                 <PlayerStats />
                 {players[selectedSlot] && <div className='mt-5 w-full flex gap-2 justify-around'>
-                    <PlayerMatch gameWeek={1} points={getRound1PlayerPoints(players[selectedSlot])} opponent={returnMatch(players[selectedSlot].team, 0)} />
-                    <PlayerMatch gameWeek={2} points="-" opponent={returnMatch(players[selectedSlot].team, 1)} />
+                    <PlayerMatch gameWeek={1} points={getRoundPlayerPoints(players[selectedSlot], 1)} opponent={returnMatch(players[selectedSlot].team, 0)} />
+                    <PlayerMatch gameWeek={2} points={getRoundPlayerPoints(players[selectedSlot], 2)} opponent={returnMatch(players[selectedSlot].team, 1)} />
                     <PlayerMatch gameWeek={3} points="-" opponent={returnMatch(players[selectedSlot].team, 2)} />
                     <PlayerMatch gameWeek={4} points="-" opponent={returnMatch(players[selectedSlot].team, 3)} />
                     <PlayerMatch gameWeek={5} points="-" opponent={returnMatch(players[selectedSlot].team, 4)} />

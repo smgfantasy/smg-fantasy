@@ -1,0 +1,733 @@
+[
+	{
+		"name": "Даниел Гетов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 1,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Георги Тодоров",
+		"breakdown": {
+			"goals": 6,
+			"assists": 3,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 10
+		}
+	},
+	{
+		"name": "Даниел Ралчев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Стефан Филев",
+		"breakdown": {
+			"goals": 5,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 7
+		}
+	},
+	{
+		"name": "Веселин Пенев",
+		"breakdown": {
+			"goals": 4,
+			"assists": 3,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 9
+		}
+	},
+	{
+		"name": "Димитър Дилчев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Лазар Касабов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Ивайло Василев",
+		"breakdown": {
+			"goals": 8,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": -3,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 4,
+			"total": 11
+		}
+	},
+	{
+		"name": "Димитър Бегов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 3,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 4
+		}
+	},
+	{
+		"name": "Кристиян Пенев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Ивелин Неев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 6,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 8
+		}
+	},
+	{
+		"name": "Христо Младенов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Николай Рогов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Георги Николов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Светлозар Йотов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Михаил Гочев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Мартин Шопов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 4,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 4
+		}
+	},
+	{
+		"name": "Атанас Филипов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Георги Стоянов ",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Виктор Аврамски",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Божил Ненов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 3,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 5
+		}
+	},
+	{
+		"name": "Александър Малиновски",
+		"breakdown": {
+			"goals": 5,
+			"assists": 3,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 9
+		}
+	},
+	{
+		"name": "Никола Тодоров",
+		"breakdown": {
+			"goals": 12,
+			"assists": 3,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 4,
+			"total": 21
+		}
+	},
+	{
+		"name": "Христиан Велинов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 3,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 5
+		}
+	},
+	{
+		"name": "Георги Колевски",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Момчил Стаменов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Никола Цикалов ",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Виктор Кулев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Антон Янков",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Никола Кунчев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Никола Вулджев",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 2
+		}
+	},
+	{
+		"name": "Борис Ников ",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 2,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 3
+		}
+	},
+	{
+		"name": "Андрей Петрински",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Иван Петков",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": -1,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 0
+		}
+	},
+	{
+		"name": "Мартин Михайлов",
+		"breakdown": {
+			"goals": 5,
+			"assists": 9,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 16
+		}
+	},
+	{
+		"name": "Евгени Комсалов",
+		"breakdown": {
+			"goals": 12,
+			"assists": 3,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 17
+		}
+	},
+	{
+		"name": "Георги Огнянов",
+		"breakdown": {
+			"goals": 12,
+			"assists": 3,
+			"minutes30": 2,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 4,
+			"total": 20
+		}
+	},
+	{
+		"name": "Велимир Гочков",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 1
+		}
+	},
+	{
+		"name": "Александър Попов ",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"saves": 3,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -2,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 3
+		}
+	},
+	{
+		"name": "Кристиян Огнянов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -2,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 0
+		}
+	},
+	{
+		"name": "Бакарди Родригез",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": -3,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": -1
+		}
+	},
+	{
+		"name": "Никола Минков",
+		"breakdown": {
+			"goals": 0,
+			"assists": 6,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 8
+		}
+	},
+	{
+		"name": "Калоян Радулов",
+		"breakdown": {
+			"goals": 5,
+			"assists": 3,
+			"cleanSheets": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 10
+		}
+	},
+	{
+		"name": "Юлиан Жечев",
+		"breakdown": {
+			"goals": 8,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 10
+		}
+	},
+	{
+		"name": "Светли Иванов",
+		"breakdown": {
+			"goals": 0,
+			"assists": 0,
+			"cleanSheets": 0,
+			"participation": 1,
+			"yellowCards": -1,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 0
+		}
+	},
+	{
+		"name": "Лъчезар Ралчев",
+		"breakdown": {
+			"goals": 8,
+			"assists": 0,
+			"minutes30": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"allowedGoals": 0,
+			"missedPenalties": 0,
+			"wonPenalties": 0,
+			"playerOfMatch": 0,
+			"total": 10
+		}
+	}
+]

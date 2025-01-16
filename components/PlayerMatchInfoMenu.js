@@ -3,6 +3,7 @@ import { useAppContext } from '@/context/AppContext';
 // import playersData from '../data/players.json';
 import { X, ChevronDown } from 'lucide-react';
 import round1PlayersMatch from '../data/round1PlayersMatch.json';
+import round2PlayersMatch from '../data/round2PlayersMatch.json';
 
 const MatchResult = ({ resultA, resultB }) => {
     return (
@@ -30,38 +31,52 @@ const MatchRow = ({ teamA, teamB, resultA, resultB, time }) => {
 
 }
 const PlayerStats = ({ player }) => {
+    const { selectedPlayerMatchMenu } = useAppContext();
     if (!player) return;
-    const playerStatistic = round1PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
+    let playerStatistic;
+    if (selectedPlayerMatchMenu === 1) {
+        playerStatistic = round1PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
+    } else if (selectedPlayerMatchMenu === 2) {
+        playerStatistic = round2PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
+    } else {
+        playerStatistic = {};
+    }
     let breakdown;
     try {
         breakdown = playerStatistic.breakdown;
     } catch (err) {
         return;
     }
-
+    if (!selectedPlayerMatchMenu) return;
     // Filter keys where value is not 0
-    const stats = Object.entries(breakdown).filter(([key, value]) => value !== 0);
-    const statisticKeys = [];
-    statisticKeys["goals"] = 'Goals';
-    statisticKeys["assists"] = 'Assists';
-    statisticKeys["cleanSheets"] = 'Clean Sheets';
-    statisticKeys["saves"] = 'Saves';
-    statisticKeys["minutes30"] = '30+ Minutes';
-    statisticKeys["participation"] = 'Participation';
-    statisticKeys["yellowCards"] = 'Yellow Cards';
-    statisticKeys["redCards"] = 'Red Cards';
-    statisticKeys["allowedGoals"] = 'Allowed Goals';
-    statisticKeys["missedPenalties"] = 'Missed Penalties';
-    statisticKeys["wonPenalties"] = 'Won Penalties';
-    statisticKeys["playerOfMatch"] = 'Player of the Match';
+    let stats, statisticKeys;
+    try {
+        stats = Object.entries(breakdown).filter(([key, value]) => value !== 0);
+        statisticKeys = [];
+        statisticKeys["goals"] = 'Goals';
+        statisticKeys["assists"] = 'Assists';
+        statisticKeys["cleanSheets"] = 'Clean Sheets';
+        statisticKeys["saves"] = 'Saves';
+        statisticKeys["minutes30"] = '30+ Minutes';
+        statisticKeys["participation"] = 'Participation';
+        statisticKeys["yellowCards"] = 'Yellow Cards';
+        statisticKeys["redCards"] = 'Red Cards';
+        statisticKeys["allowedGoals"] = 'Allowed Goals';
+        statisticKeys["missedPenalties"] = 'Missed Penalties';
+        statisticKeys["wonPenalties"] = 'Won Penalties';
+        statisticKeys["playerOfMatch"] = 'Player of the Match';
+    } catch (err) {
+
+    }
+
 
     return (
         <div className="mt-4 space-y-4">
-            {stats.map(([key, value]) => (
+            {stats && stats.map(([key, value]) => (
                 (key !== 'total' &&
                     <div key={key} className="flex items-center justify-between">
                         <span className="text-lg text-purple-900 capitalize">
-                            {statisticKeys[key]}
+                            {statisticKeys && statisticKeys[key]}
                         </span>
                         <div className="flex gap-8">
                             <span className="font-bold text-purple-900">
@@ -74,7 +89,7 @@ const PlayerStats = ({ player }) => {
             <div className="mt-6 flex items-center justify-between border-t pt-4">
                 <span className="text-xl font-bold text-purple-900">Total Points</span>
                 <span className="text-xl font-bold text-purple-900">
-                    {breakdown.total}pts
+                    {breakdown && breakdown.total}pts
                 </span>
             </div>
         </div>
@@ -173,6 +188,22 @@ const PlayerMatchInfoMenu = () => {
                         {players[selectedSlot] &&
                             (players[selectedSlot].team === '11В' || players[selectedSlot].team === '11Е') && (
                                 <MatchRow teamA="11В" resultA={1} resultB={0} teamB="11Е" />
+                            )
+                        }
+
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11А' || players[selectedSlot].team === '11В') && (
+                                <MatchRow teamA="11А" resultA={2} resultB={1} teamB="11В" />
+                            )
+                        }
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11Г' || players[selectedSlot].team === '11Е') && (
+                                <MatchRow teamA="11Г" resultA={8} resultB={5} teamB="11Е" />
+                            )
+                        }
+                        {players[selectedSlot] &&
+                            (players[selectedSlot].team === '11Б' || players[selectedSlot].team === '10') && (
+                                <MatchRow teamA="11Б" resultA={4} resultB={3} teamB="10" />
                             )
                         }
 
