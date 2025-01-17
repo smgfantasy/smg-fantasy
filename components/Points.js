@@ -2,17 +2,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
-import PlayerSlot from './PlayerSlot';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
 import getUserTeam from '@/utils/team/getUserTeam';
-import playersPoints1 from '../data/round1Points.json';
-import playersPoints2 from '../data/round2Points.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import { useSearchParams } from 'next/navigation';
-import round1Players from '../data/round1Players.json';
 import PitchContent from './PitchContent';
-import round2Players from '../data/round2Players.json';
+import round1Players from '../data/gameweek1/roundPlayers.json';
+import round2Players from '../data/gameweek2/roundPlayers.json';
 
 const Header = ({ gameweek, setGameweek }) => {
     const minGameweek = 1, maxGameweek = 2;
@@ -59,7 +56,6 @@ const Points = ({ sessionCookie, userData }) => {
         } else {
             setGameweek(parseInt(urlGameweek));
         }
-        console.log(gameweek);
     }, [searchParams]);
 
     const { players, setPlayers, setFormation, points, setPoints } = useAppContext();
@@ -76,87 +72,56 @@ const Points = ({ sessionCookie, userData }) => {
     };
 
     useEffect(() => {
-        // if (points === 0) {
-        let curPts = 0;
-        for (let i in players) {
-            if (i === '10') {
-                break;
-            }
-            let currPlayerPoints = 0;
-            try {
-                if (gameweek === 1) {
-                    currPlayerPoints = playersPoints1.find(player => (player.name === players[i].name)).points;
-                } else if (gameweek === 2) {
-                    currPlayerPoints = playersPoints2.find(player => (player.name === players[i].name)).points;
-                }
-            } catch {
-            }
-            if (players[i].captain) {
-                currPlayerPoints = currPlayerPoints * 2;
-            }
-            curPts += currPlayerPoints;
-        }
-        setPoints(curPts);
-        // }
+        const loadPointsData = async () => {
+            let curPts = 0;
 
+            try {
+                const roundData = await import(`../data/gameweek${gameweek}/roundPoints.json`);
+
+                for (let i in players) {
+                    if (i === '10') break;
+
+                    let currPlayerPoints = 0;
+
+                    const playerData = roundData.default.find(player => player.name === players[i].name);
+                    currPlayerPoints = playerData ? playerData.points : 0;
+
+                    if (players[i].captain) {
+                        currPlayerPoints *= 2;
+                    }
+
+                    curPts += currPlayerPoints;
+                }
+
+            } catch {
+                curPts = 0;
+            }
+            setPoints(curPts);
+        };
+
+        loadPointsData();
     }, [players, gameweek]);
+
 
     useEffect(() => {
         const fetchTeamData = async () => {
-            if (gameweek === null) return; // Skip if gameweek is not set
-            console.log(gameweek);
-
-            if (gameweek === 1) {
-                console.log('Wow!');
-                const currUserUid = userData.uid;
-                console.log(currUserUid);
-                const element = round1Players.teams.find((a) => a.documentId === currUserUid);
-                console.log(element.team);
-                setPlayers(element.team);
-                let savedFormation = calculateNewFormation(element.team);
-                if (savedFormation === '0-0-0') savedFormation = '2-1-2';
-                console.log(savedFormation);
-                setFormation(savedFormation);
-                console.log('Team fetched from prev gameweek');
-                return;
-            }
-            if (gameweek === 2) {
-                console.log('Wow!');
-                const currUserUid = userData.uid;
-                console.log(currUserUid);
-                const element = round2Players.teams.find((a) => a.documentId === currUserUid);
-                console.log(element.teams);
-                setPlayers(element.teams);
-                let savedFormation = calculateNewFormation(element.teams);
-                if (savedFormation === '0-0-0') savedFormation = '2-1-2';
-                console.log(savedFormation);
-                setFormation(savedFormation);
-                console.log('Team fetched from prev gameweek');
-                return;
-            }
+            if (gameweek === null) return;
             try {
-                const storedPlayers = localStorage.getItem("user-team-v3");
-                if (storedPlayers) {
-                    setPlayers(JSON.parse(storedPlayers));
-                    let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
-                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
-                    setFormation(savedFormation);
-                    console.log('Team fetched from localStorage...');
-                    return;
-                }
+                const currUserUid = userData.uid;
 
-                const data = await getUserTeam(sessionCookie);
-                if (data) {
-                    setPlayers(data.team);
-                    let savedFormation = calculateNewFormation(data.team);
-                    if (savedFormation === '0-0-0') savedFormation = '2-1-2';
-                    setFormation(savedFormation);
-                    localStorage.setItem("user-team-v3", JSON.stringify(data.team));
-                } else {
-                    console.error("Failed to fetch team data");
-                }
+                // Dynamically import the correct JSON file based on the gameweek
+                const roundData = await import(`../data/gameweek${gameweek}/roundPlayers.json`);
+
+                // Access `.team` for gameweek 1 and `.teams` for others
+                const userTeamData = roundData.teams.find((a) => a.documentId === currUserUid);
+                const playerData = gameweek === 1 ? userTeamData.team : userTeamData.teams;
+                setPlayers(playerData);
+
+                let savedFormation = calculateNewFormation(playerData);
+                if (savedFormation === '0-0-0') savedFormation = '2-1-2';
+                setFormation(savedFormation);
             } catch (err) {
-                console.error(err.message);
+                console.error("Error fetching team data:", err.message);
             }
         };
 
@@ -164,6 +129,7 @@ const Points = ({ sessionCookie, userData }) => {
             fetchTeamData();
         }
     }, [players.length, sessionCookie, setPlayers, gameweek]);
+
 
     return (
         <div className='pt-0 px-1'>

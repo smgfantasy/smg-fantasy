@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useAppContext } from '@/context/AppContext';
 // import playersData from '../data/players.json';
 import { X, ChevronDown } from 'lucide-react';
-import round1PlayersMatch from '../data/round1PlayersMatch.json';
-import round2PlayersMatch from '../data/round2PlayersMatch.json';
+import round1PlayersMatch from '../data/gameweek1/roundPlayersMatch.json';
+import round2PlayersMatch from '../data/gameweek2/roundPlayersMatch.json';
 
 const MatchResult = ({ resultA, resultB }) => {
     return (

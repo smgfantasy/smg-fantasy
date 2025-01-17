@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
 import PlayerSlot from '@/components/PlayerSlot';
-import playersPoints from '../../../../data/round2Points.json';
+import playersPoints from '../../../../data/gameweek2/roundPoints.json';
 import PlayerMatchInfoMenu from '@/components/PlayerMatchInfoMenu';
 // import PlayerInfoMenu from '@/components/PlayerInfoMenu';
 // import PlayerMatchInfoMenu from '@/components/PlayerMatchInfoMenu';

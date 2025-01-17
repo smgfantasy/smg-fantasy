@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useRef } from 'react';
 import { useAppContext } from '@/context/AppContext';
-import playersPoints from '../data/round1Points.json';
+import playersPoints from '../data/gameweek1/roundPoints.json';
 
 const PlayerStats = () => {
 

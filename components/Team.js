@@ -7,7 +7,7 @@ import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerPickerMenu from './PlayerPickerMenu';
 import { SaveAll } from 'lucide-react';
 import updateUserTeam from '@/utils/team/updateTeam';
-import roundPlayers from '../data/round2Players.json';
+import roundPlayers from '../data/gameweek2/roundPlayers.json';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import PitchContent from './PitchContent';
 import getUserMadeTransfers from '@/utils/team/getUserTransfers';

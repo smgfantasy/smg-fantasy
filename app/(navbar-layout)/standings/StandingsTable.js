@@ -7,7 +7,7 @@ const getLeaderboardData = (gameweek) => {
     if (gameweek === 3) {
         return import(`../../../data/leaderboard_all.json`).then(module => module.default);
     }
-    return import(`../../../data/leaderboard_round_${gameweek}.json`).then(module => module.default);
+    return import(`../../../data/gameweek${gameweek}/leaderboard_round.json`).then(module => module.default);
 };
 
 const Table = ({ userData, data }) => {

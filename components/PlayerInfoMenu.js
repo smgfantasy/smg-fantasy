@@ -6,8 +6,6 @@ import PlayerMatch from './PlayerMatch';
 import { useAppContext } from '@/context/AppContext';
 import PlayerStats from './PlayerStats';
 import { ArrowRight, Star, Trash2 } from 'lucide-react';
-import playersPointsRound1 from '../data/round1Points.json';
-import playersPointsRound2 from '../data/round2Points.json';
 
 const enableChanges = true;
 
@@ -101,16 +99,15 @@ const PlayerInfoMenu = ({ currVariant }) => {
     };
     const getRoundPlayerPoints = (targetPlayer, gameweek) => {
         try {
-            if (gameweek === 1) {
-                return playersPointsRound1.find(player => player.name === targetPlayer.name).points;
-            } else if (gameweek === 2) {
-                return playersPointsRound2.find(player => player.name === targetPlayer.name).points;
-            }
+            const roundData = require(`../data/gameweek${gameweek}/roundPoints.json`);
+            const playerData = roundData.find(player => player.name === targetPlayer.name);
+
+            return playerData ? playerData.points : '-';
         } catch (e) {
             return '-';
         }
-
     }
+
 
     return (
         <>
