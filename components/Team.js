@@ -58,7 +58,6 @@ const Header = () => {
 
     useEffect(() => {
         const MAX_TRANSFERS = 2;
-        console.log("Tits", madeTransfers, MAX_TRANSFERS, originalTransfers);
         // window.location.reload();
         let currCost = (madeTransfers - (MAX_TRANSFERS - originalTransfers)) * 8;
         if (madeTransfers <= MAX_TRANSFERS - originalTransfers) currCost = 0;
@@ -67,7 +66,6 @@ const Header = () => {
         let freeTrans = (MAX_TRANSFERS - originalTransfers) - madeTransfers;
         if (freeTrans < 0) freeTrans = 0;
         setFreeTransfers(freeTrans);
-        console.log(madeTransfers);
     }, [players, originalTransfers]);
 
 
@@ -88,8 +86,6 @@ const Header = () => {
                         <span className='font-bold font text-sm'> Sat 7 Dec 13:00</span>
                     </div>
                     <div className='h-px w-full mb-4' style={{ backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)' }}></div>
-                    {console.log("Transfers log")}
-                    {console.log(freeTransfers, cost, currBudget)}
                     <TransferInfo freeTransfers={freeTransfers} cost={cost} budget={currBudget} />
                 </div>
             </div>
@@ -113,7 +109,6 @@ const Pitch = ({ sessionCookie, userData }) => {
     useEffect(() => {
         const fetchTeamData = async () => {
             const origTrans = await getUserMadeTransfers(sessionCookie);
-            console.log("Curr made transfers: ", origTrans);
             setOriginalTransfers(origTrans);
 
             try {

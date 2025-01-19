@@ -4,9 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
 import PlayerSlot from '@/components/PlayerSlot';
 import playersPoints from '../../../../data/gameweek2/roundPoints.json';
-import PlayerMatchInfoMenu from '@/components/PlayerMatchInfoMenu';
-// import PlayerInfoMenu from '@/components/PlayerInfoMenu';
-// import PlayerMatchInfoMenu from '@/components/PlayerMatchInfoMenu';
+import getSpectatedUser from '@/utils/user/getSpectatedUser';
+
 const Subs = ({ players, formation }) => {
 
     return (
@@ -65,8 +64,8 @@ const Pitch = ({ players, formation }) => {
 
     );
 }
-const SpectateView = ({ userData, players }) => {
-
+const SpectateView = ({ userData, players, spectatedUserUid }) => {
+    const [specatatedTeam, setSpectatedTeam] = useState(null);
     // const points = 69;
     const [formation, setFormation] = useState(null);
     const [points, setPoints] = useState(0);
@@ -98,11 +97,22 @@ const SpectateView = ({ userData, players }) => {
         let currFormation = calculateNewFormation(players);
         setFormation(currFormation);
         // console.log(currFormation);
+        console.log(spectatedUserUid);
+        const fetchSpecatatedUser = async () => {
+            const spectatedUser = await getSpectatedUser(spectatedUserUid);
+            setSpectatedTeam(spectatedUser);
+        }
+        fetchSpecatatedUser();
+
     }, [players])
 
     return (
         <div className='pt-8 px-1'>
-            {/* <h1 className='font-bold text-xl text-purple'>Points - {userData.clubName}</h1> */}
+            {specatatedTeam && (
+                <h1 className='text-center font-bold text-xl text-purple'>
+                    {specatatedTeam.name} - {specatatedTeam.clubName}
+                </h1>
+            )}
             <div style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0) 30px, rgba(255, 255, 255, 0.5) 75px, white 120px), url(https://fantasy.premierleague.com/static/media/pattern-2-crop-90.0e86ae39.png), linear-gradient(to right, rgb(2, 239, 255), rgb(98, 123, 255))', backgroundSize: 'auto, 90px 60px, auto', backgroundRepeat: 'no-repeat', backgroundPosition: '0px center, right top, 0px center' }} className='mt-10 w-full bg-[#2C3E50] h-[650px] rounded-md'>
                 <Header></Header>
                 <div className='flex justify-center mt-3 gap-2'>

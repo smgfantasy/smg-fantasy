@@ -11,7 +11,7 @@ const page = async ({ params }) => {
     }
     return (
         <>
-            <SpectateView players={players} userData={{ clubName: 'chris', name: 'Ivo' }} />
+            <SpectateView spectatedUserUid={spectatedUserUid} players={players} userData={{ clubName: 'chris', name: 'Ivo' }} />
         </>
     )
 }
