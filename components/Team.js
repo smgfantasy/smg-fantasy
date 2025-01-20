@@ -119,7 +119,7 @@ const Pitch = ({ sessionCookie, userData }) => {
 
 
                 // Check if data exists in localStorage
-                const storedPlayers = localStorage.getItem("user-team-v3");
+                const storedPlayers = localStorage.getItem("user-team-v4");
                 if (storedPlayers) {
                     setPlayers(JSON.parse(storedPlayers));
                     let savedFormation = calculateNewFormation(JSON.parse(storedPlayers));
@@ -136,7 +136,7 @@ const Pitch = ({ sessionCookie, userData }) => {
                     if (savedFormation === '0-0-0') savedFormation = '2-1-2';
                     setFormation(savedFormation);
                     // Save the fetched data to localStorage
-                    localStorage.setItem("user-team-v3", JSON.stringify(data.team));
+                    localStorage.setItem("user-team-v4", JSON.stringify(data.team));
                 } else {
                     console.error("Failed to fetch team data");
                 }
@@ -196,7 +196,7 @@ const Team = ({ sessionCookie, userData }) => {
             await updateUserTeam(sessionCookie, players, madeTransfers);
 
             // Update localStorage with the new players data
-            localStorage.setItem("user-team-v3", JSON.stringify(players));
+            localStorage.setItem("user-team-v4", JSON.stringify(players));
         } catch (err) {
             console.error(err); // Fix typo: use console.error instead of console.err
         } finally {
@@ -211,7 +211,7 @@ const Team = ({ sessionCookie, userData }) => {
 
             const element = roundPlayers.teams.find((a) => a.documentId === userData.uid);
             await updateUserTeam(sessionCookie, element.teams, 0);
-            localStorage.setItem("user-team-v3", JSON.stringify(element.teams));
+            localStorage.setItem("user-team-v4", JSON.stringify(element.teams));
             setPlayers(element.teams);
             location.reload();
         } catch (err) {
