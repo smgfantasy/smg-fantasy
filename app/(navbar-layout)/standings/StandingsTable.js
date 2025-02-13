@@ -4,7 +4,7 @@ import { Loader2, Trophy, Medal, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link';
 
 const getLeaderboardData = (gameweek) => {
-    if (gameweek === 3) {
+    if (gameweek === 4) {
         return import(`../../../data/leaderboard_all.json`).then(module => module.default);
     }
     return import(`../../../data/gameweek${gameweek}/leaderboard_round.json`).then(module => module.default);
@@ -77,7 +77,7 @@ const Table = ({ userData, data }) => {
 
 const StandingsTable = ({ userData }) => {
     const [isLoading, setIsLoading] = useState(false);
-    const [gameweek, setGameweek] = useState(2);
+    const [gameweek, setGameweek] = useState(3);
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -98,7 +98,7 @@ const StandingsTable = ({ userData }) => {
     };
 
     const handleNextGameweek = () => {
-        if (gameweek < 3) setGameweek(gameweek + 1);
+        if (gameweek < 4) setGameweek(gameweek + 1);
     };
 
     return (
@@ -113,7 +113,7 @@ const StandingsTable = ({ userData }) => {
                     <ChevronLeft className="h-6 w-6" />
                 </button>
                 <h2 className="text-2xl font-bold text-purple-700">
-                    {gameweek === 3 ? "Global Leaderboard" : `Gameweek ${gameweek}`}
+                    {gameweek === 4 ? "Global Leaderboard" : `Gameweek ${gameweek}`}
                 </h2>
 
                 <button

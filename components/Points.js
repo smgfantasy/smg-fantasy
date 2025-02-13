@@ -4,20 +4,17 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from 'lucide-react';
 import Subs from './Subs';
 import { useAppContext } from '@/context/AppContext';
-import getUserTeam from '@/utils/team/getUserTeam';
 import PlayerMatchInfoMenu from './PlayerMatchInfoMenu';
 import { useSearchParams } from 'next/navigation';
 import PitchContent from './PitchContent';
-import round1Players from '../data/gameweek1/roundPlayers.json';
-import round2Players from '../data/gameweek2/roundPlayers.json';
 
 const Header = ({ gameweek, setGameweek }) => {
-    const minGameweek = 1, maxGameweek = 2;
+    const minGameweek = 1, maxGameweek = 3;
     const handleArrowClick = (dir) => {
-
         gameweek += dir === 'prev' ? -1 : 1;
         if (gameweek < minGameweek) gameweek = minGameweek;
-        if (gameweek > minGameweek) gameweek = maxGameweek;
+        if (gameweek > maxGameweek) gameweek = maxGameweek;
+        console.log('The button was clicked', gameweek);
         setGameweek(gameweek);
 
     }
@@ -52,7 +49,7 @@ const Points = ({ sessionCookie, userData }) => {
     useEffect(() => {
         const urlGameweek = searchParams.get('gameweek');
         if (urlGameweek === null) {
-            setGameweek(2);
+            setGameweek(3);
         } else {
             setGameweek(parseInt(urlGameweek));
         }

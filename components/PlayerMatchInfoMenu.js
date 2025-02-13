@@ -4,6 +4,7 @@ import { useAppContext } from '@/context/AppContext';
 import { X, ChevronDown } from 'lucide-react';
 import round1PlayersMatch from '../data/gameweek1/roundPlayersMatch.json';
 import round2PlayersMatch from '../data/gameweek2/roundPlayersMatch.json';
+import round3PlayersMatch from '../data/gameweek3/roundPlayersMatch.json';
 
 const MatchResult = ({ resultA, resultB }) => {
     return (
@@ -38,6 +39,8 @@ const PlayerStats = ({ player }) => {
         playerStatistic = round1PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
     } else if (selectedPlayerMatchMenu === 2) {
         playerStatistic = round2PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
+    } else if (selectedPlayerMatchMenu === 3) {
+        playerStatistic = round3PlayersMatch.find((currPlayer) => currPlayer.name === player.name);
     } else {
         playerStatistic = {};
     }

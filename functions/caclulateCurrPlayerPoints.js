@@ -1,11 +1,13 @@
 import playersPoints1 from '../data/gameweek1/roundPoints.json';
 import playersPoints2 from '../data/gameweek2/roundPoints.json';
+import playersPoints3 from '../data/gameweek3/roundPoints.json';
 // Add more imports as needed for other gameweeks
 
 // Mapping gameweek numbers to their respective data
 const playersPointsMap = {
     1: playersPoints1,
     2: playersPoints2,
+    3: playersPoints3
     // Add more mappings as needed
 };
 

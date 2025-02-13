@@ -36,7 +36,7 @@ const Header = () => {
                 {/* <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
                     <ArrowLeftCircleIcon size={20} />
                 </div> */}
-                <div className='font-bold'>Gameweek 2</div>
+                <div className='font-bold'>Gameweek 3</div>
                 {/* <div className='py-1 px-3 bg-[#ffffff99] rounded-xl'>
                     <ArrowRightCircleIcon size={20} />
                 </div> */}

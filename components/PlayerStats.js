@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 
-const totalGameweeks = 2;  // Set the total number of gameweeks
+const totalGameweeks = 3;  // Set the total number of gameweeks
 
 const loadGameweekData = async (week) => {
     try {
